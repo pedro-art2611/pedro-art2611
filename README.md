@@ -20,7 +20,7 @@
 </p>
 
 <p align="center">
-  <img src="./assets/divisor-perfil.png" alt="Divisor de seção com torii digital" width="100%" />
+  <img src="./assets/divisor-horizontal.png" alt="Divisor de seção com torii digital" width="100%" />
 </p>
 
 <table>
@@ -48,7 +48,7 @@
 </table>
 
 <p align="center">
-  <img src="./assets/divisor-perfil.png" alt="Divisor de seção com torii digital" width="100%" />
+  <img src="./assets/divisor-horizontal.png" alt="Divisor de seção com torii digital" width="100%" />
 </p>
 
 ## Forja técnica
@@ -66,7 +66,7 @@
 </p>
 
 <p align="center">
-  <img src="./assets/divisor-perfil.png" alt="Divisor de seção com torii digital" width="100%" />
+  <img src="./assets/divisor-horizontal.png" alt="Divisor de seção com torii digital" width="100%" />
 </p>
 
 ## Crônicas de engenharia
@@ -78,7 +78,7 @@
 | **Hermix** | Sistema interno de agentes de IA | Produto completo, engenharia, segurança e operação |
 
 <p align="center">
-  <img src="./assets/divisor-perfil.png" alt="Divisor de seção com torii digital" width="100%" />
+  <img src="./assets/divisor-horizontal.png" alt="Divisor de seção com torii digital" width="100%" />
 </p>
 
 ## Jardim de contribuições
@@ -90,7 +90,7 @@
 <p align="center"><sub>A árvore acompanha o ritmo das contribuições recentes.</sub></p>
 
 <p align="center">
-  <img src="./assets/divisor-perfil.png" alt="Divisor de seção com torii digital" width="100%" />
+  <img src="./assets/divisor-horizontal.png" alt="Divisor de seção com torii digital" width="100%" />
 </p>
 
 <p align="center">
