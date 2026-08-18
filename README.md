@@ -84,7 +84,7 @@
 ## Jardim de contribuições
 
 <p align="center">
-  <img src="./assets/arvore-nivel-1.jpg" alt="Árvore de contribuições em pixel art" width="100%" />
+  <img src="./assets/arvore-atual.jpg" alt="Árvore de contribuições em pixel art" width="100%" />
 </p>
 
 <p align="center"><sub>A árvore acompanha o ritmo das contribuições recentes.</sub></p>

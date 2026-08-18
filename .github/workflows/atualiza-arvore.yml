@@ -1,0 +1,69 @@
+name: Atualiza árvore de contribuições
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  atualiza-arvore:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Obtém o repositório
+        uses: actions/checkout@v4
+
+      - name: Calcula a atividade recente
+        id: atividade
+        uses: actions/github-script@v7
+        with:
+          result-encoding: string
+          script: |
+            const agora = new Date();
+            const inicio = new Date(agora);
+            inicio.setDate(agora.getDate() - 28);
+
+            const resultado = await github.graphql(`
+              query($login: String!, $inicio: DateTime!, $fim: DateTime!) {
+                user(login: $login) {
+                  contributionsCollection(from: $inicio, to: $fim) {
+                    contributionCalendar {
+                      totalContributions
+                    }
+                  }
+                }
+              }
+            `, {
+              login: "pedro-art2611",
+              inicio: inicio.toISOString(),
+              fim: agora.toISOString(),
+            });
+
+            const total = resultado.user.contributionsCollection.contributionCalendar.totalContributions;
+            let nivel = 1;
+            if (total >= 30) nivel = 5;
+            else if (total >= 15) nivel = 4;
+            else if (total >= 5) nivel = 3;
+            else if (total >= 1) nivel = 2;
+
+            core.setOutput("nivel", String(nivel));
+            core.setOutput("total", String(total));
+
+      - name: Atualiza a arte exibida
+        run: cp "assets/arvore-nivel-${{ steps.atividade.outputs.nivel }}.jpg" assets/arvore-atual.jpg
+
+      - name: Registra a mudança quando necessário
+        run: |
+          if git diff --quiet -- assets/arvore-atual.jpg; then
+            echo "A árvore já representa o nível atual."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/arvore-atual.jpg
+          git commit -m "chore: atualiza árvore de contribuições"
+          git push
