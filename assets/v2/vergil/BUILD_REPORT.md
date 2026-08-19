@@ -1,23 +1,23 @@
-# Build report — Vergil footer V2
+# Build report — Vergil footer V3
 
-Frames finais: **268**
-Duração aproximada: **38.1s**
-Canvas: **1000×235**
+Frames finais: **256**
+Duração aproximada: **41.1s**
+Canvas: **1000×230**
 Piso autoral: **sim**
 
-## Correções estruturais
+## Correções estruturais V3
 
-- chroma removido apenas quando conectado à borda; detalhes internos do Vergil não são mais apagados por cor;
-- chroma-spill corrigido somente na borda externa, sem reduzir alpha do personagem;
-- todos os pixels transparentes têm RGB zerado e alpha final é binário para evitar silhueta roxa no GIF;
-- sprites ancorados pela região dos pés em vez do centro do recorte;
-- turn reduzido a 8 poses e reutilizado em reverso para manter consistência;
-- walk-left usa ciclo de caminhada espelhado estável, não poses de virada;
-- timings ampliados em ações, cabelo e viradas;
-- Judgment Cut usa grid 4×3 e fit simultâneo de largura/altura;
-- piso autoral floor.jpg integrado à renderização;
-- loop fecha fisicamente no ponto inicial, sem teleporte.
+- cada célula da sprite sheet é recortada antes da remoção de fundo;
+- remoção de chroma é adaptativa à paleta da borda de cada célula;
+- resíduos magenta próximos ao contorno são substituídos por cor vizinha, não por transparência;
+- manchas magenta no solo dos próprios sprites são descartadas;
+- cada sequência usa um único fator de escala calculado pela mediana de altura; não existe zoom frame-a-frame;
+- anchor horizontal usa a região central dos pés, reduzindo drift causado por Yamato/casaco;
+- virada reduzida para 5 poses fortes, em linguagem low-frame-rate deliberada;
+- GIF reserva o índice 0 exclusivamente para transparência; preto/azul escuro do Vergil não pode mais virar transparente;
+- APNG RGBA de QA gerado em rendered/vergil-footer-v3.png;
+- piso autoral é detectado pela região ocupada por pedra, sem carregar o chroma superior inteiro.
 
-## Observação
+## Direção
 
-A V2 prioriza preservação do personagem e fluidez. Se a virada ainda não convencer visualmente, o próximo passo será substituir a rotação por uma transição autoral curta construída a partir de poses selecionadas, em vez de insistir na sheet do Gemini.
+Se a V3 ainda apresentar deformações grandes nas poses, o gargalo restante será a inconsistência artística entre sprites. Nesse ponto faz mais sentido refazer o personagem em uma linguagem 8/16-bit mais simples e canônica do que continuar compensando os sheets atuais por código.
