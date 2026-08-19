@@ -104,6 +104,8 @@ Trabalho do segundo período de Sistemas de Informação. Aqui comecei a prestar
 
 <a href="https://www.linkedin.com/in/pedroart-bm/"><img src="./assets/v2/linkedin-pixel.svg" width="180" alt="LinkedIn" /></a>&nbsp;&nbsp;<a href="mailto:pedroart2611@gmail.com"><img src="./assets/v2/email-pixel.svg" width="180" alt="Contato por e-mail" /></a>
 
-<!-- Easter egg: inserir assets/v2/vergil-walk.gif aqui quando o sprite transparente estiver pronto. -->
+<br /><br />
+
+<img src="./assets/v2/vergil/rendered/vergil-footer-draft.gif" alt="Vergil em pixel art vivendo no rodapé do perfil" width="100%" />
 
 </div>
