@@ -8,6 +8,7 @@ on:
       - ".github/workflows/render-vergil-footer.yml"
       - "scripts/build_vergil_footer.py"
       - "assets/v2/vergil/source_raw/**"
+      - "floor.jpg"
   workflow_dispatch:
 
 permissions:
@@ -35,5 +36,5 @@ jobs:
             echo "No render changes."
             exit 0
           fi
-          git commit -m "feat: renderiza primeira animação do Vergil"
+          git commit -m "feat: atualiza animacao do Vergil"
           git push origin HEAD:feat/profile-readme-v2
