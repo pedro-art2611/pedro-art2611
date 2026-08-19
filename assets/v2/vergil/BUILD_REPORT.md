@@ -1,28 +1,23 @@
-# Build report — Vergil footer V1
+# Build report — Vergil footer V2
 
-Frames finais: **188**
-Duração aproximada: **33.4s**
-Canvas: **920×210**
+Frames finais: **268**
+Duração aproximada: **38.1s**
+Canvas: **1000×235**
+Piso autoral: **sim**
 
-## Correções desta versão
+## Correções estruturais
 
-- removido movimento de sprite right-facing para a esquerda; walk-left é um ciclo espelhado estável;
-- removidas poses traseiras do Judgment Cut cast;
-- chroma magenta agora é alpha binário sem borda semi-transparente;
-- pixels transparentes têm RGB zerado para evitar halo roxo no GIF;
-- Judgment Cut source 06 recortado em grid 4×3, evitando cortes no VFX;
-- timings aumentados em caminhada, cabelo, viradas e Judgment Cut;
-- loop fecha retornando fisicamente ao ponto inicial, sem teleporte horizontal.
+- chroma removido apenas quando conectado à borda; detalhes internos do Vergil não são mais apagados por cor;
+- chroma-spill corrigido somente na borda externa, sem reduzir alpha do personagem;
+- todos os pixels transparentes têm RGB zerado e alpha final é binário para evitar silhueta roxa no GIF;
+- sprites ancorados pela região dos pés em vez do centro do recorte;
+- turn reduzido a 8 poses e reutilizado em reverso para manter consistência;
+- walk-left usa ciclo de caminhada espelhado estável, não poses de virada;
+- timings ampliados em ações, cabelo e viradas;
+- Judgment Cut usa grid 4×3 e fit simultâneo de largura/altura;
+- piso autoral floor.jpg integrado à renderização;
+- loop fecha fisicamente no ponto inicial, sem teleporte.
 
-## Mapeamento manual
+## Observação
 
-- walk-right: 09
-- turn: 01
-- iai: 10
-- hair: 07
-- judgment cast: 08 (somente primeira fileira + neutral final)
-- judgment FX: 06 (4×3)
-
-## Pendente
-
-O piso continua procedural até o asset autoral de pedra ser disponibilizado separadamente.
+A V2 prioriza preservação do personagem e fluidez. Se a virada ainda não convencer visualmente, o próximo passo será substituir a rotação por uma transição autoral curta construída a partir de poses selecionadas, em vez de insistir na sheet do Gemini.
