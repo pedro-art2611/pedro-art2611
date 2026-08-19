@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="330" viewBox="0 0 1000 330">
+  <rect width="1000" height="330" fill="#070b14"/>
+  <rect x="18" y="18" width="964" height="294" fill="#0b1220" stroke="#223451" stroke-width="4"/>
+  <rect x="32" y="32" width="936" height="266" fill="none" stroke="#4e79a7" stroke-width="2" stroke-dasharray="8 8"/>
+  <text x="500" y="65" text-anchor="middle" fill="#d7e9ff" font-family="monospace" font-size="24" font-weight="700">TECH ARSENAL // LOADOUT</text>
+  <text x="500" y="88" text-anchor="middle" fill="#6f8fb8" font-family="monospace" font-size="12">BACKEND · AI AGENTS · AUTOMATION · SYSTEMS</text>
+
+  <g font-family="monospace" font-weight="700" text-anchor="middle">
+    <g transform="translate(58 112)"><rect width="160" height="72" fill="#0e1828" stroke="#395878" stroke-width="3"/><rect x="8" y="8" width="8" height="8" fill="#8bbd9c"/><text x="80" y="31" fill="#e7f1ff" font-size="18">NODE.JS</text><text x="80" y="53" fill="#7f9dbd" font-size="10">RUNTIME</text></g>
+    <g transform="translate(239 112)"><rect width="160" height="72" fill="#0e1828" stroke="#395878" stroke-width="3"/><rect x="8" y="8" width="8" height="8" fill="#d6d6d6"/><text x="80" y="31" fill="#e7f1ff" font-size="18">EXPRESS</text><text x="80" y="53" fill="#7f9dbd" font-size="10">HTTP CORE</text></g>
+    <g transform="translate(420 112)"><rect width="160" height="72" fill="#0e1828" stroke="#395878" stroke-width="3"/><rect x="8" y="8" width="8" height="8" fill="#78d7ff"/><text x="80" y="31" fill="#e7f1ff" font-size="18">REACT</text><text x="80" y="53" fill="#7f9dbd" font-size="10">INTERFACE</text></g>
+    <g transform="translate(601 112)"><rect width="160" height="72" fill="#0e1828" stroke="#395878" stroke-width="3"/><rect x="8" y="8" width="8" height="8" fill="#8cb8ff"/><text x="80" y="31" fill="#e7f1ff" font-size="18">POSTGRES</text><text x="80" y="53" fill="#7f9dbd" font-size="10">DATA</text></g>
+    <g transform="translate(782 112)"><rect width="160" height="72" fill="#0e1828" stroke="#395878" stroke-width="3"/><rect x="8" y="8" width="8" height="8" fill="#ff7b7b"/><text x="80" y="31" fill="#e7f1ff" font-size="18">REDIS</text><text x="80" y="53" fill="#7f9dbd" font-size="10">QUEUES</text></g>
+
+    <g transform="translate(58 202)"><rect width="160" height="72" fill="#0e1828" stroke="#395878" stroke-width="3"/><rect x="8" y="8" width="8" height="8" fill="#7cc8ff"/><text x="80" y="31" fill="#e7f1ff" font-size="18">DOCKER</text><text x="80" y="53" fill="#7f9dbd" font-size="10">RUNTIME</text></g>
+    <g transform="translate(239 202)"><rect width="160" height="72" fill="#0e1828" stroke="#395878" stroke-width="3"/><rect x="8" y="8" width="8" height="8" fill="#f0f0f0"/><text x="80" y="31" fill="#e7f1ff" font-size="18">OPENAI</text><text x="80" y="53" fill="#7f9dbd" font-size="10">AGENTS</text></g>
+    <g transform="translate(420 202)"><rect width="160" height="72" fill="#0e1828" stroke="#395878" stroke-width="3"/><rect x="8" y="8" width="8" height="8" fill="#f09a5c"/><text x="80" y="31" fill="#e7f1ff" font-size="18">N8N</text><text x="80" y="53" fill="#7f9dbd" font-size="10">AUTOMATION</text></g>
+    <g transform="translate(601 202)"><rect width="160" height="72" fill="#0e1828" stroke="#395878" stroke-width="3"/><rect x="8" y="8" width="8" height="8" fill="#ccb0ff"/><text x="80" y="31" fill="#e7f1ff" font-size="18">ELEVENLABS</text><text x="80" y="53" fill="#7f9dbd" font-size="10">VOICE AI</text></g>
+    <g transform="translate(782 202)"><rect width="160" height="72" fill="#0e1828" stroke="#395878" stroke-width="3"/><rect x="8" y="8" width="8" height="8" fill="#f1c56a"/><text x="80" y="31" fill="#e7f1ff" font-size="18">LINUX</text><text x="80" y="53" fill="#7f9dbd" font-size="10">SYSTEMS</text></g>
+  </g>
+</svg>
