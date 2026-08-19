@@ -1,0 +1,8 @@
+/home/runner/work/pedro-art2611/pedro-art2611/scripts/build_vergil_footer.py:440: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  qdata = list(q.getdata())
+/home/runner/work/pedro-art2611/pedro-art2611/scripts/build_vergil_footer.py:441: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  adata = list(alpha.getdata())
+/home/runner/work/pedro-art2611/pedro-art2611/assets/v2/vergil/rendered/vergil-footer-draft.gif 6747976 bytes
+/home/runner/work/pedro-art2611/pedro-art2611/assets/v2/vergil/rendered/vergil-footer-v3.png 3783342 bytes
+duration_ms 41053
+exit_code=0
