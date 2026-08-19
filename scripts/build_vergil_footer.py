@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import math
+import statistics
 from collections import deque
 from pathlib import Path
 
@@ -12,8 +13,8 @@ OUT = ROOT / "assets" / "v2" / "vergil" / "rendered"
 REPORT = ROOT / "assets" / "v2" / "vergil" / "BUILD_REPORT.md"
 FLOOR_PATH = ROOT / "floor.jpg"
 
-W, H = 1000, 235
-CHAR_H = 150
+W, H = 1000, 230
+CHAR_H = 148
 FILES = {i: next(SRC.glob(f"{i:02d}-*.png")) for i in range(1, 11)}
 
 GRID = {
@@ -22,57 +23,94 @@ GRID = {
     3: (8, 1),
     4: (6, 2),
     5: (6, 2),
-    6: (4, 3),  # Judgment Cut real: Gemini gerou 4x3
+    6: (4, 3),
     7: (6, 2),
     8: (6, 2),
     9: (6, 2),
     10: (6, 2),
 }
 
+CHARACTER_SOURCES = {1, 3, 4, 5, 7, 8, 9, 10}
+
 
 def magenta_like(c: tuple[int, int, int]) -> bool:
     r, g, b = c
-    # Amplo o suficiente para JPEG/variação do Gemini, mas usado APENAS em fundo
-    # conectado à borda, nunca globalmente no personagem.
     return (
-        r >= 120
-        and b >= 120
+        r >= 105
+        and b >= 110
         and g <= 150
-        and g < min(r, b) * 0.74
-        and abs(r - b) <= 115
+        and g < min(r, b) * 0.78
+        and abs(r - b) <= 125
     )
+
+
+def strong_magenta(c: tuple[int, int, int]) -> bool:
+    r, g, b = c
+    return r >= 75 and b >= 82 and g <= 92 and (r + b) > g * 2.45 and abs(r - b) < 95
 
 
 def gray_checker_like(c: tuple[int, int, int]) -> bool:
     r, g, b = c
     avg = (r + g + b) / 3
-    return max(c) - min(c) <= 32 and 108 <= avg <= 248
+    return max(c) - min(c) <= 28 and 112 <= avg <= 245
+
+
+def border_palette(rgb: Image.Image) -> list[tuple[int, int, int]]:
+    w, h = rgb.size
+    colors: list[tuple[int, int, int]] = []
+    step_x = max(1, w // 24)
+    step_y = max(1, h // 18)
+    for x in range(0, w, step_x):
+        colors.append(rgb.getpixel((x, 0)))
+        colors.append(rgb.getpixel((x, h - 1)))
+    for y in range(0, h, step_y):
+        colors.append(rgb.getpixel((0, y)))
+        colors.append(rgb.getpixel((w - 1, y)))
+    return colors
 
 
 def detect_bg_kind(im: Image.Image) -> str:
     rgb = im.convert("RGB")
-    w, h = rgb.size
-    pts = [
-        (0, 0), (w - 1, 0), (0, h - 1), (w - 1, h - 1),
-        (w // 2, 0), (w // 2, h - 1), (0, h // 2), (w - 1, h // 2),
-    ]
-    colors = [rgb.getpixel(p) for p in pts]
-    if sum(magenta_like(c) for c in colors) >= 3:
+    colors = border_palette(rgb)
+    if sum(magenta_like(c) for c in colors) >= max(4, len(colors) // 4):
         return "magenta"
-    if sum(gray_checker_like(c) for c in colors) >= 3:
+    if sum(gray_checker_like(c) for c in colors) >= max(4, len(colors) // 4):
         return "checker"
     return "unknown"
+
+
+def color_distance(a: tuple[int, int, int], b: tuple[int, int, int]) -> float:
+    return ((a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2 + (a[2] - b[2]) ** 2) ** 0.5
 
 
 def connected_background_mask(rgb: Image.Image, kind: str) -> list[list[bool]]:
     w, h = rgb.size
     seen = [[False] * w for _ in range(h)]
     q: deque[tuple[int, int]] = deque()
+    border = border_palette(rgb)
 
     if kind == "magenta":
-        candidate = lambda x, y: magenta_like(rgb.getpixel((x, y)))
+        refs = [c for c in border if magenta_like(c)]
+        if not refs:
+            refs = [(255, 0, 255)]
+
+        def candidate(x: int, y: int) -> bool:
+            c = rgb.getpixel((x, y))
+            if not magenta_like(c):
+                return False
+            return min(color_distance(c, ref) for ref in refs[:: max(1, len(refs) // 12)]) <= 95
+
     elif kind == "checker":
-        candidate = lambda x, y: gray_checker_like(rgb.getpixel((x, y)))
+        refs = [c for c in border if gray_checker_like(c)]
+        if not refs:
+            refs = [(170, 175, 180), (220, 225, 230)]
+
+        def candidate(x: int, y: int) -> bool:
+            c = rgb.getpixel((x, y))
+            if not gray_checker_like(c):
+                return False
+            return min(color_distance(c, ref) for ref in refs[:: max(1, len(refs) // 16)]) <= 38
+
     else:
         return seen
 
@@ -90,49 +128,92 @@ def connected_background_mask(rgb: Image.Image, kind: str) -> list[list[bool]]:
 
     while q:
         x, y = q.popleft()
-        for nx, ny in ((x - 1, y), (x + 1, y), (x, y - 1), (x, y + 1)):
+        for nx, ny in (
+            (x - 1, y), (x + 1, y), (x, y - 1), (x, y + 1),
+            (x - 1, y - 1), (x + 1, y - 1), (x - 1, y + 1), (x + 1, y + 1),
+        ):
             if 0 <= nx < w and 0 <= ny < h and not seen[ny][nx] and candidate(nx, ny):
                 seen[ny][nx] = True
                 q.append((nx, ny))
     return seen
 
 
-def remove_background(im: Image.Image) -> Image.Image:
+def nearest_non_magenta(px, w: int, h: int, x: int, y: int, radius: int = 3):
+    best = None
+    best_d = 999
+    for yy in range(max(0, y - radius), min(h, y + radius + 1)):
+        for xx in range(max(0, x - radius), min(w, x + radius + 1)):
+            r, g, b, a = px[xx, yy]
+            if a == 0 or strong_magenta((r, g, b)):
+                continue
+            d = abs(xx - x) + abs(yy - y)
+            if d < best_d:
+                best = (r, g, b, 255)
+                best_d = d
+    return best
+
+
+def decontaminate_magenta_edges(im: Image.Image) -> Image.Image:
+    rgba = im.convert("RGBA")
+    src = rgba.copy()
+    sp = src.load()
+    dp = rgba.load()
+    w, h = rgba.size
+
+    for y in range(h):
+        for x in range(w):
+            r, g, b, a = sp[x, y]
+            if a == 0 or not strong_magenta((r, g, b)):
+                continue
+            touches_clear = False
+            for yy in range(max(0, y - 2), min(h, y + 3)):
+                for xx in range(max(0, x - 2), min(w, x + 3)):
+                    if sp[xx, yy][3] == 0:
+                        touches_clear = True
+                        break
+                if touches_clear:
+                    break
+            if touches_clear:
+                replacement = nearest_non_magenta(sp, w, h, x, y, radius=4)
+                if replacement:
+                    dp[x, y] = replacement
+                else:
+                    dp[x, y] = (0, 0, 0, 0)
+    return rgba
+
+
+def remove_bottom_magenta_artifacts(im: Image.Image) -> Image.Image:
+    rgba = im.convert("RGBA")
+    px = rgba.load()
+    w, h = rgba.size
+    start = round(h * 0.84)
+    for y in range(start, h):
+        for x in range(w):
+            r, g, b, a = px[x, y]
+            if a and strong_magenta((r, g, b)):
+                px[x, y] = (0, 0, 0, 0)
+    return rgba
+
+
+def remove_background_cell(im: Image.Image, character: bool = True) -> Image.Image:
     rgba = im.convert("RGBA")
     rgb = rgba.convert("RGB")
     kind = detect_bg_kind(im)
     mask = connected_background_mask(rgb, kind)
-    w, h = rgba.size
     px = rgba.load()
+    w, h = rgba.size
 
-    # Fundo: alpha 0 e RGB zerado. Isso evita o magenta reaparecer na quantização GIF.
     for y in range(h):
         for x in range(w):
             if mask[y][x]:
                 px[x, y] = (0, 0, 0, 0)
             else:
-                r, g, b, a = px[x, y]
+                r, g, b, _ = px[x, y]
                 px[x, y] = (r, g, b, 255)
 
-    # Chroma-spill: só corrige pixels opacos imediatamente adjacentes ao fundo removido.
-    # Não apaga nada; apenas reduz vermelho de uma borda magenta para um azul/cinza frio.
-    original = rgba.copy()
-    op = original.load()
-    for y in range(1, h - 1):
-        for x in range(1, w - 1):
-            r, g, b, a = op[x, y]
-            if a == 0:
-                continue
-            touches_transparent = any(
-                op[nx, ny][3] == 0
-                for nx, ny in ((x - 1, y), (x + 1, y), (x, y - 1), (x, y + 1))
-            )
-            if not touches_transparent:
-                continue
-            if r > 75 and b > 85 and g < min(r, b) * 0.68 and abs(r - b) < 105:
-                r2 = min(r, max(g + 20, int(b * 0.48)))
-                b2 = max(b, g + 18)
-                px[x, y] = (r2, g, b2, 255)
+    if character:
+        rgba = remove_bottom_magenta_artifacts(rgba)
+        rgba = decontaminate_magenta_edges(rgba)
     return rgba
 
 
@@ -145,9 +226,10 @@ def trim(im: Image.Image, pad: int = 2) -> Image.Image:
 
 
 def split_sheet(source_id: int) -> list[Image.Image]:
-    im = remove_background(Image.open(FILES[source_id]))
+    # V3: recorta a grade PRIMEIRO e só então remove o fundo de cada célula.
+    raw = Image.open(FILES[source_id]).convert("RGBA")
     cols, rows = GRID[source_id]
-    w, h = im.size
+    w, h = raw.size
     frames: list[Image.Image] = []
     for row in range(rows):
         y0 = round(row * h / rows)
@@ -155,8 +237,31 @@ def split_sheet(source_id: int) -> list[Image.Image]:
         for col in range(cols):
             x0 = round(col * w / cols)
             x1 = round((col + 1) * w / cols)
-            frames.append(trim(im.crop((x0, y0, x1, y1))))
+            cell = raw.crop((x0, y0, x1, y1))
+            clean = remove_background_cell(cell, character=source_id in CHARACTER_SOURCES)
+            frames.append(trim(clean, pad=2))
     return frames
+
+
+def sequence_scale(frames: list[Image.Image], target_h: int = CHAR_H) -> float:
+    heights: list[int] = []
+    for fr in frames:
+        box = fr.getchannel("A").getbbox()
+        if box:
+            heights.append(box[3] - box[1])
+    if not heights:
+        return 1.0
+    med = statistics.median(heights)
+    return target_h / max(1.0, med)
+
+
+def scale_sequence(frames: list[Image.Image], target_h: int = CHAR_H) -> list[Image.Image]:
+    # Um único fator por sequência. Nada de zoom involuntário frame a frame.
+    s = sequence_scale(frames, target_h)
+    out: list[Image.Image] = []
+    for fr in frames:
+        out.append(fr.resize((max(1, round(fr.width * s)), max(1, round(fr.height * s))), Image.Resampling.NEAREST))
+    return out
 
 
 def foot_anchor(im: Image.Image) -> tuple[float, float]:
@@ -165,12 +270,15 @@ def foot_anchor(im: Image.Image) -> tuple[float, float]:
     if not box:
         return im.width / 2, im.height
     x0, y0, x1, y1 = box
-    # pixels nos ~9 px inferiores: normalmente as botas, não Yamato/casaco.
-    start_y = max(y0, y1 - max(6, round((y1 - y0) * 0.07)))
+    width = x1 - x0
+    # Exclui extremos horizontais para Yamato/casaco não puxarem o anchor.
+    cx0 = round(x0 + width * 0.24)
+    cx1 = round(x1 - width * 0.20)
+    start_y = max(y0, y1 - max(8, round((y1 - y0) * 0.10)))
     xs: list[int] = []
     for y in range(start_y, y1):
-        for x in range(x0, x1):
-            if alpha.getpixel((x, y)) >= 200:
+        for x in range(max(x0, cx0), min(x1, cx1)):
+            if alpha.getpixel((x, y)) >= 180:
                 xs.append(x)
     if not xs:
         return (x0 + x1) / 2, y1 - 1
@@ -178,60 +286,65 @@ def foot_anchor(im: Image.Image) -> tuple[float, float]:
     return xs[len(xs) // 2], y1 - 1
 
 
-def scale_with_anchor(im: Image.Image, target_h: int = CHAR_H) -> tuple[Image.Image, float, float]:
-    box = im.getchannel("A").getbbox()
-    if not box:
-        return im, im.width / 2, im.height
-    bbox_h = max(1, box[3] - box[1])
-    scale = target_h / bbox_h
-    nw = max(1, round(im.width * scale))
-    nh = max(1, round(im.height * scale))
-    ax, ay = foot_anchor(im)
-    out = im.resize((nw, nh), Image.Resampling.NEAREST)
-    return out, ax * scale, ay * scale
-
-
 def mirror_frames(frames: list[Image.Image]) -> list[Image.Image]:
     return [fr.transpose(Image.Transpose.FLIP_LEFT_RIGHT) for fr in frames]
 
 
-def load_floor() -> tuple[Image.Image, int]:
+def prepare_floor() -> tuple[Image.Image, int]:
     layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     if not FLOOR_PATH.exists():
         d = ImageDraw.Draw(layer)
-        top = H - 42
-        d.rectangle((0, top, W, H), fill=(15, 22, 33, 255))
-        d.line((0, top, W, top), fill=(74, 96, 118, 255), width=2)
+        top = H - 48
+        d.rectangle((0, top, W, H), fill=(14, 21, 31, 255))
+        d.line((0, top, W, top), fill=(69, 94, 115, 255), width=2)
         return layer, top + 3
 
-    floor = trim(remove_background(Image.open(FLOOR_PATH)), pad=0)
-    if floor.width <= 1 or floor.height <= 1:
-        return layer, H - 40
-    scale = W / floor.width
-    floor = floor.resize((W, max(1, round(floor.height * scale))), Image.Resampling.NEAREST)
-    if floor.height > 92:
-        # O asset tem espaço acima do piso; depois do trim ainda limitamos para não engolir a cena.
-        ratio = 92 / floor.height
-        floor = floor.resize((round(floor.width * ratio), 92), Image.Resampling.NEAREST)
-        if floor.width < W:
-            floor = floor.resize((W, floor.height), Image.Resampling.NEAREST)
-    y = H - floor.height
-    layer.alpha_composite(floor, (0, y))
-    return layer, y + 4
+    raw = Image.open(FLOOR_PATH).convert("RGB")
+    w, h = raw.size
+
+    # O piso gerado tem chroma acima. Detecta a primeira faixa realmente ocupada por pedra.
+    row_scores: list[float] = []
+    for y in range(h):
+        non_magenta = 0
+        for x in range(0, w, max(1, w // 250)):
+            c = raw.getpixel((x, y))
+            if not magenta_like(c) and sum(c) < 620:
+                non_magenta += 1
+        samples = len(range(0, w, max(1, w // 250)))
+        row_scores.append(non_magenta / max(1, samples))
+
+    start = 0
+    for y in range(max(0, h // 4), h):
+        window = row_scores[y : min(h, y + 4)]
+        if len(window) >= 3 and sum(v >= 0.34 for v in window) >= 3:
+            start = max(0, y - 2)
+            break
+
+    crop = Image.open(FLOOR_PATH).convert("RGBA").crop((0, start, w, h))
+    crop = remove_background_cell(crop, character=False)
+    crop = trim(crop, pad=0)
+
+    if crop.width <= 1 or crop.height <= 1:
+        return layer, H - 46
+
+    desired_h = min(82, max(54, round(crop.height * (W / crop.width))))
+    crop = crop.resize((W, desired_h), Image.Resampling.NEAREST)
+    y = H - crop.height
+    layer.alpha_composite(crop, (0, y))
+    return layer, y + 7
 
 
-def paste_sprite(canvas: Image.Image, fr: Image.Image, x: float, ground_y: int, target_h: int = CHAR_H) -> None:
-    sprite, ax, ay = scale_with_anchor(fr, target_h)
+def paste_sprite(canvas: Image.Image, sprite: Image.Image, x: float, ground_y: int) -> None:
+    ax, ay = foot_anchor(sprite)
     px = round(x - ax)
     py = round(ground_y - ay)
     canvas.alpha_composite(sprite, (px, py))
 
 
 def fit_effect(fr: Image.Image, max_w: int, max_h: int) -> Image.Image:
-    box = fr.getchannel("A").getbbox()
-    if not box:
+    fr = trim(fr, pad=1)
+    if fr.width <= 1 or fr.height <= 1:
         return Image.new("RGBA", (1, 1), (0, 0, 0, 0))
-    fr = trim(fr)
     s = min(max_w / fr.width, max_h / fr.height)
     return fr.resize((max(1, round(fr.width * s)), max(1, round(fr.height * s))), Image.Resampling.NEAREST)
 
@@ -243,7 +356,7 @@ def isolate_cyan(fr: Image.Image) -> Image.Image:
     for y in range(src.height):
         for x in range(src.width):
             r, g, b, a = sp[x, y]
-            if a and b >= 125 and g >= 85 and b > r * 1.14 and g > r * 1.02:
+            if a and b >= 120 and g >= 78 and b > r * 1.10 and g > r * 0.96:
                 dp[x, y] = (r, g, b, 255)
     return out
 
@@ -253,13 +366,11 @@ def blue_cast_fx(canvas: Image.Image, x: int, y: int, phase: float) -> None:
     intensity = math.sin(math.pi * max(0.0, min(1.0, phase)))
     if intensity < 0.08:
         return
-    radius = round(8 + 22 * intensity)
+    radius = round(8 + 20 * intensity)
     for k in range(5):
         ang = k * (math.pi * 2 / 5) + phase * 0.8
-        inner = 4
-        outer = round(radius * (0.72 + 0.08 * k))
-        p1 = (round(x + math.cos(ang) * inner), round(y + math.sin(ang) * inner))
-        p2 = (round(x + math.cos(ang) * outer), round(y + math.sin(ang) * outer))
+        p1 = (round(x + math.cos(ang) * 4), round(y + math.sin(ang) * 4))
+        p2 = (round(x + math.cos(ang) * radius), round(y + math.sin(ang) * radius))
         d.line((p1, p2), fill=(70, 168, 255, 255), width=1)
     d.rectangle((x - 2, y - 2, x + 2, y + 2), fill=(205, 245, 255, 255))
     if intensity > 0.74:
@@ -269,21 +380,19 @@ def blue_cast_fx(canvas: Image.Image, x: int, y: int, phase: float) -> None:
 
 def iai_trail(canvas: Image.Image, x: int, y: int, phase: float) -> None:
     d = ImageDraw.Draw(canvas)
-    length = round(58 + phase * 125)
-    d.line((x - length // 2, y + 13, x + length // 2, y - 10), fill=(202, 244, 255, 255), width=2)
-    if phase > 0.30:
-        d.line((x - length // 2 + 7, y + 18, x + length // 2 - 13, y - 3), fill=(69, 163, 255, 255), width=1)
+    length = round(48 + phase * 112)
+    d.line((x - length // 2, y + 11, x + length // 2, y - 9), fill=(202, 244, 255, 255), width=2)
+    if phase > 0.34:
+        d.line((x - length // 2 + 7, y + 16, x + length // 2 - 13, y - 3), fill=(69, 163, 255, 255), width=1)
 
 
 def floor_reflection(canvas: Image.Image, x: int, ground_y: int, strength: float) -> None:
     if strength <= 0:
         return
     d = ImageDraw.Draw(canvas)
-    span = round(35 + 75 * strength)
-    y = ground_y + 7
-    d.line((x - span, y, x + span, y), fill=(45, 118, 170, 255), width=1)
-    if strength > 0.65:
-        d.line((x - span // 2, y + 4, x + span // 2, y + 4), fill=(85, 158, 202, 255), width=1)
+    span = round(22 + 58 * strength)
+    y = min(H - 5, ground_y + 10)
+    d.line((x - span, y, x + span, y), fill=(42, 107, 157, 255), width=1)
 
 
 def binary_alpha(im: Image.Image) -> Image.Image:
@@ -292,23 +401,14 @@ def binary_alpha(im: Image.Image) -> Image.Image:
     for y in range(rgba.height):
         for x in range(rgba.width):
             r, g, b, a = px[x, y]
-            if a < 96:
+            if a < 128:
                 px[x, y] = (0, 0, 0, 0)
             else:
                 px[x, y] = (r, g, b, 255)
     return rgba
 
 
-def append_scene(
-    frames: list[Image.Image],
-    durations: list[int],
-    floor_layer: Image.Image,
-    ground_y: int,
-    sprites: list[Image.Image],
-    xs: list[float],
-    ds: list[int],
-    fx=None,
-) -> None:
+def append_scene(frames, durations, floor_layer, ground_y, sprites, xs, ds, fx=None) -> None:
     for idx, (sprite, x, duration) in enumerate(zip(sprites, xs, ds)):
         canvas = floor_layer.copy()
         paste_sprite(canvas, sprite, x, ground_y)
@@ -324,27 +424,45 @@ def linear_positions(a: float, b: float, n: int) -> list[float]:
     return [a + (b - a) * i / (n - 1) for i in range(n)]
 
 
+def gif_safe_frame(im: Image.Image) -> Image.Image:
+    # Reserva explicitamente palette index 0 para transparência.
+    rgba = binary_alpha(im)
+    alpha = rgba.getchannel("A")
+    rgb = Image.new("RGB", rgba.size, (8, 12, 20))
+    rgb.paste(rgba.convert("RGB"), mask=alpha)
+    q = rgb.quantize(colors=255, method=Image.Quantize.FASTOCTREE, dither=Image.Dither.NONE)
+    src_palette = q.getpalette()[: 255 * 3]
+    palette = [0, 0, 0] + src_palette
+    palette += [0] * (768 - len(palette))
+
+    out = Image.new("P", rgba.size, 0)
+    out.putpalette(palette[:768])
+    qdata = list(q.getdata())
+    adata = list(alpha.getdata())
+    out.putdata([0 if a < 128 else min(255, idx + 1) for idx, a in zip(qdata, adata)])
+    out.info["transparency"] = 0
+    out.info["disposal"] = 2
+    return out
+
+
 def render() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
-    floor_layer, ground_y = load_floor()
+    floor_layer, ground_y = prepare_floor()
 
-    # Mapeamento manual validado pela V1/conversa. Sem classificador automático nesta fase.
-    walk_right = split_sheet(9)
-    idle = split_sheet(3)
-    turn_full = split_sheet(1)
-    iai = split_sheet(10)
-    hair = split_sheet(7)
-    cast = split_sheet(8)
+    # Recorta/limpa e normaliza cada sequência com UM fator fixo por sheet.
+    walk_right = scale_sequence(split_sheet(9))
+    idle = scale_sequence(split_sheet(3))
+    turn_full = scale_sequence(split_sheet(1))
+    iai = scale_sequence(split_sheet(10))
+    hair = scale_sequence(split_sheet(7))
+    cast = scale_sequence(split_sheet(8))
     judgment = split_sheet(6)
 
-    # Caminhada esquerda suave: espelha a caminhada mais estável. A prioridade da V2 é fluidez;
-    # a fidelidade de orientação da Yamato pode ser refinada depois com recorte manual dedicado.
     walk_left = mirror_frames(walk_right)
     idle_left = mirror_frames(idle)
 
-    # Virada curta: elimina poses redundantes e estabiliza timing. A volta usa exatamente a
-    # mesma sequência ao contrário para evitar duas animações incompatíveis.
-    turn_indices = [0, 1, 2, 4, 7, 9, 10, 11]
+    # V3 abraça uma virada low-frame-rate deliberada: cinco poses fortes, sem frames ruins.
+    turn_indices = [0, 3, 5, 8, 11]
     turn_right_to_left = [turn_full[i] for i in turn_indices if i < len(turn_full)]
     turn_left_to_right = list(reversed(turn_right_to_left))
 
@@ -354,93 +472,98 @@ def render() -> None:
     frames: list[Image.Image] = []
     durations: list[int] = []
 
-    # 1. Idle inicial: presença constante, sem congelar.
     idle_seq = (idle * 2)[:12]
-    append_scene(frames, durations, floor_layer, ground_y, idle_seq, [120] * len(idle_seq), [180] * len(idle_seq))
+    append_scene(frames, durations, floor_layer, ground_y, idle_seq, [120] * len(idle_seq), [210] * len(idle_seq))
 
-    # 2. Caminha para a direita em 3 ciclos completos.
     wr = (walk_right * 3)[:36]
-    append_scene(frames, durations, floor_layer, ground_y, wr, linear_positions(120, 675, len(wr)), [108] * len(wr))
+    append_scene(frames, durations, floor_layer, ground_y, wr, linear_positions(120, 665, len(wr)), [125] * len(wr))
 
-    # 3. Iai: preparação legível, golpe rápido, recuperação lenta.
-    iai_ds = [240, 210, 180, 145, 105, 78, 62, 72, 105, 145, 190, 320][: len(iai)]
+    iai_ds = [270, 230, 195, 160, 115, 80, 62, 72, 110, 155, 205, 380][: len(iai)]
+
     def iai_fx(canvas, idx, n, x, gy):
         if 4 <= idx <= 8:
             phase = (idx - 3) / 5
-            iai_trail(canvas, round(x + 70), gy - 86, phase)
-            floor_reflection(canvas, round(x + 38), gy, max(0, 1 - abs(phase - 0.7)))
-    append_scene(frames, durations, floor_layer, ground_y, iai, [675] * len(iai), iai_ds, iai_fx)
+            iai_trail(canvas, round(x + 66), gy - 84, phase)
+            floor_reflection(canvas, round(x + 34), gy, max(0, 1 - abs(phase - 0.7)))
 
-    # 4. Cabelo - leitura de uma mão. Pausas maiores para o gesto ser reconhecível.
+    append_scene(frames, durations, floor_layer, ground_y, iai, [665] * len(iai), iai_ds, iai_fx)
+
     one_hand_indices = [0, 1, 2, 3, 4, 5, 9, 10, 11]
     hair_one = [hair[i] for i in one_hand_indices if i < len(hair)]
-    hair_one_ds = [220, 190, 170, 155, 165, 190, 210, 230, 360][: len(hair_one)]
-    append_scene(frames, durations, floor_layer, ground_y, hair_one, [675] * len(hair_one), hair_one_ds)
+    hair_one_ds = [250, 220, 195, 175, 185, 215, 245, 260, 430][: len(hair_one)]
+    append_scene(frames, durations, floor_layer, ground_y, hair_one, [665] * len(hair_one), hair_one_ds)
 
-    # 5. Anda até a borda direita e vira.
     wr_short = walk_right[:12]
-    append_scene(frames, durations, floor_layer, ground_y, wr_short, linear_positions(675, 845, len(wr_short)), [112] * len(wr_short))
-    turn_ds = [230, 190, 175, 170, 175, 190, 215, 300][: len(turn_right_to_left)]
-    append_scene(frames, durations, floor_layer, ground_y, turn_right_to_left, [845] * len(turn_right_to_left), turn_ds)
+    append_scene(frames, durations, floor_layer, ground_y, wr_short, linear_positions(665, 835, len(wr_short)), [128] * len(wr_short))
 
-    # 6. Caminha para a esquerda de forma contínua, sem usar frames traseiros como walk cycle.
+    turn_ds = [260, 220, 235, 220, 330][: len(turn_right_to_left)]
+    append_scene(frames, durations, floor_layer, ground_y, turn_right_to_left, [835] * len(turn_right_to_left), turn_ds)
+
     wl = (walk_left * 3)[:36]
-    append_scene(frames, durations, floor_layer, ground_y, wl, linear_positions(845, 255, len(wl)), [110] * len(wl))
+    append_scene(frames, durations, floor_layer, ground_y, wl, linear_positions(835, 265, len(wl)), [125] * len(wl))
 
-    # 7. Idle voltado para a esquerda + mesma virada em reverso.
     il = (idle_left * 1)[:8]
-    append_scene(frames, durations, floor_layer, ground_y, il, [255] * len(il), [190] * len(il))
-    append_scene(frames, durations, floor_layer, ground_y, turn_left_to_right, [255] * len(turn_left_to_right), list(reversed(turn_ds)))
+    append_scene(frames, durations, floor_layer, ground_y, il, [265] * len(il), [210] * len(il))
+    append_scene(frames, durations, floor_layer, ground_y, turn_left_to_right, [265] * len(turn_left_to_right), list(reversed(turn_ds)))
 
-    # 8. Caminha até o centro para Judgment Cut.
     wr_mid = (walk_right * 2)[:18]
-    append_scene(frames, durations, floor_layer, ground_y, wr_mid, linear_positions(255, 455, len(wr_mid)), [108] * len(wr_mid))
+    append_scene(frames, durations, floor_layer, ground_y, wr_mid, linear_positions(265, 445, len(wr_mid)), [125] * len(wr_mid))
 
-    # 9. Judgment Cast: somente primeira fileira + neutral; nada de costas.
     cast_seq = cast[:6] + [neutral_r]
-    cast_ds = [260, 220, 190, 155, 120, 105, 280][: len(cast_seq)]
+    cast_ds = [290, 245, 205, 170, 140, 120, 340][: len(cast_seq)]
+
     def cast_fx(canvas, idx, n, x, gy):
         phase = idx / max(1, n - 1)
-        blue_cast_fx(canvas, round(x + 22), gy - 95, phase)
-        floor_reflection(canvas, round(x + 18), gy, math.sin(math.pi * phase) * 0.7)
-    append_scene(frames, durations, floor_layer, ground_y, cast_seq, [455] * len(cast_seq), cast_ds, cast_fx)
+        blue_cast_fx(canvas, round(x + 20), gy - 94, phase)
+        floor_reflection(canvas, round(x + 16), gy, math.sin(math.pi * phase) * 0.65)
 
-    # 10. Judgment Cut: efeito completo, 4x3, fit por largura+altura e bastante margem.
-    j_ds = [120, 105, 95, 90, 100, 115, 135, 160, 190, 230, 280, 380][: len(judgment)]
+    append_scene(frames, durations, floor_layer, ground_y, cast_seq, [445] * len(cast_seq), cast_ds, cast_fx)
+
+    j_ds = [150, 125, 110, 105, 110, 125, 145, 175, 210, 250, 310, 430][: len(judgment)]
     for idx, (jfr, dur) in enumerate(zip(judgment, j_ds)):
         canvas = floor_layer.copy()
-        paste_sprite(canvas, neutral_r, 455, ground_y)
-        fx = fit_effect(isolate_cyan(jfr), 335, 145)
+        paste_sprite(canvas, neutral_r, 445, ground_y)
+        fx = fit_effect(isolate_cyan(jfr), 300, 132)
         if fx.width > 1 and fx.height > 1:
-            fx_x = min(W - fx.width - 28, 610)
-            fx_y = max(14, ground_y - fx.height - 17)
+            fx_x = min(W - fx.width - 32, 615)
+            fx_y = max(16, ground_y - fx.height - 20)
             canvas.alpha_composite(fx, (fx_x, fx_y))
             strength = math.sin(math.pi * idx / max(1, len(judgment) - 1))
             floor_reflection(canvas, fx_x + fx.width // 2, ground_y, strength)
         frames.append(binary_alpha(canvas))
         durations.append(dur)
 
-    # 11. Cabelo - versão mais longa/duas mãos após o Judgment Cut.
-    hair_two = hair[:]
-    hair_two_ds = [210, 185, 170, 160, 165, 175, 190, 205, 220, 225, 240, 390][: len(hair_two)]
-    append_scene(frames, durations, floor_layer, ground_y, hair_two, [455] * len(hair_two), hair_two_ds)
+    hair_two_ds = [245, 220, 195, 185, 190, 205, 220, 235, 250, 260, 280, 450][: len(hair)]
+    append_scene(frames, durations, floor_layer, ground_y, hair, [445] * len(hair), hair_two_ds)
 
-    # 12. Caminha à direita, vira, volta ao ponto inicial e vira de novo: loop sem teleporte.
     wr_end = (walk_right * 2)[:24]
-    append_scene(frames, durations, floor_layer, ground_y, wr_end, linear_positions(455, 845, len(wr_end)), [110] * len(wr_end))
-    append_scene(frames, durations, floor_layer, ground_y, turn_right_to_left, [845] * len(turn_right_to_left), turn_ds)
+    append_scene(frames, durations, floor_layer, ground_y, wr_end, linear_positions(445, 835, len(wr_end)), [125] * len(wr_end))
+    append_scene(frames, durations, floor_layer, ground_y, turn_right_to_left, [835] * len(turn_right_to_left), turn_ds)
+
     wl_end = (walk_left * 3)[:36]
-    append_scene(frames, durations, floor_layer, ground_y, wl_end, linear_positions(845, 120, len(wl_end)), [108] * len(wl_end))
+    append_scene(frames, durations, floor_layer, ground_y, wl_end, linear_positions(835, 120, len(wl_end)), [123] * len(wl_end))
     append_scene(frames, durations, floor_layer, ground_y, turn_left_to_right, [120] * len(turn_left_to_right), list(reversed(turn_ds)))
+    append_scene(frames, durations, floor_layer, ground_y, [neutral_r, neutral_r], [120, 120], [300, 380])
 
-    # Fecha com o mesmo neutral do primeiro trecho, evitando salto visual do último para o primeiro.
-    append_scene(frames, durations, floor_layer, ground_y, [neutral_r, neutral_r], [120, 120], [260, 320])
-
-    gif_path = OUT / "vergil-footer-draft.gif"
+    # QA RGBA: APNG preserva alpha verdadeiro, útil para separar defeitos de composição dos de GIF.
+    apng_path = OUT / "vergil-footer-v3.png"
     frames[0].save(
-        gif_path,
+        apng_path,
         save_all=True,
         append_images=frames[1:],
+        duration=durations,
+        loop=0,
+        disposal=0,
+        blend=0,
+    )
+
+    # GIF final de QA com índice 0 reservado exclusivamente para transparência.
+    gif_frames = [gif_safe_frame(fr) for fr in frames]
+    gif_path = OUT / "vergil-footer-draft.gif"
+    gif_frames[0].save(
+        gif_path,
+        save_all=True,
+        append_images=gif_frames[1:],
         duration=durations,
         loop=0,
         disposal=2,
@@ -449,32 +572,34 @@ def render() -> None:
     )
 
     report = [
-        "# Build report — Vergil footer V2",
+        "# Build report — Vergil footer V3",
         "",
         f"Frames finais: **{len(frames)}**",
         f"Duração aproximada: **{sum(durations) / 1000:.1f}s**",
         f"Canvas: **{W}×{H}**",
         f"Piso autoral: **{'sim' if FLOOR_PATH.exists() else 'não'}**",
         "",
-        "## Correções estruturais",
+        "## Correções estruturais V3",
         "",
-        "- chroma removido apenas quando conectado à borda; detalhes internos do Vergil não são mais apagados por cor;",
-        "- chroma-spill corrigido somente na borda externa, sem reduzir alpha do personagem;",
-        "- todos os pixels transparentes têm RGB zerado e alpha final é binário para evitar silhueta roxa no GIF;",
-        "- sprites ancorados pela região dos pés em vez do centro do recorte;",
-        "- turn reduzido a 8 poses e reutilizado em reverso para manter consistência;",
-        "- walk-left usa ciclo de caminhada espelhado estável, não poses de virada;",
-        "- timings ampliados em ações, cabelo e viradas;",
-        "- Judgment Cut usa grid 4×3 e fit simultâneo de largura/altura;",
-        "- piso autoral floor.jpg integrado à renderização;",
-        "- loop fecha fisicamente no ponto inicial, sem teleporte.",
+        "- cada célula da sprite sheet é recortada antes da remoção de fundo;",
+        "- remoção de chroma é adaptativa à paleta da borda de cada célula;",
+        "- resíduos magenta próximos ao contorno são substituídos por cor vizinha, não por transparência;",
+        "- manchas magenta no solo dos próprios sprites são descartadas;",
+        "- cada sequência usa um único fator de escala calculado pela mediana de altura; não existe zoom frame-a-frame;",
+        "- anchor horizontal usa a região central dos pés, reduzindo drift causado por Yamato/casaco;",
+        "- virada reduzida para 5 poses fortes, em linguagem low-frame-rate deliberada;",
+        "- GIF reserva o índice 0 exclusivamente para transparência; preto/azul escuro do Vergil não pode mais virar transparente;",
+        "- APNG RGBA de QA gerado em rendered/vergil-footer-v3.png;",
+        "- piso autoral é detectado pela região ocupada por pedra, sem carregar o chroma superior inteiro.",
         "",
-        "## Observação",
+        "## Direção",
         "",
-        "A V2 prioriza preservação do personagem e fluidez. Se a virada ainda não convencer visualmente, o próximo passo será substituir a rotação por uma transição autoral curta construída a partir de poses selecionadas, em vez de insistir na sheet do Gemini.",
+        "Se a V3 ainda apresentar deformações grandes nas poses, o gargalo restante será a inconsistência artística entre sprites. Nesse ponto faz mais sentido refazer o personagem em uma linguagem 8/16-bit mais simples e canônica do que continuar compensando os sheets atuais por código.",
     ]
     REPORT.write_text("\n".join(report) + "\n", encoding="utf-8")
-    print(gif_path, gif_path.stat().st_size, "bytes", "duration_ms", sum(durations))
+    print(gif_path, gif_path.stat().st_size, "bytes")
+    print(apng_path, apng_path.stat().st_size, "bytes")
+    print("duration_ms", sum(durations))
 
 
 if __name__ == "__main__":
