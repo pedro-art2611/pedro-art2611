@@ -1,8 +1,8 @@
 from __future__ import annotations
 
 import math
-from pathlib import Path
 from collections import deque
+from pathlib import Path
 
 from PIL import Image, ImageDraw
 
@@ -11,32 +11,47 @@ SRC = ROOT / "assets" / "v2" / "vergil" / "source_raw"
 OUT = ROOT / "assets" / "v2" / "vergil" / "rendered"
 REPORT = ROOT / "assets" / "v2" / "vergil" / "BUILD_REPORT.md"
 
-W, H = 920, 190
-GROUND_Y = 168
-CHAR_H = 142
+W, H = 920, 210
+GROUND_Y = 186
+CHAR_H = 148
 
 FILES = {i: next(SRC.glob(f"{i:02d}-*.png")) for i in range(1, 11)}
 
 
 def is_magenta(c):
     r, g, b = c
-    return r >= 175 and b >= 170 and g <= 115 and abs(r - b) <= 82
+    # Gemini varia bastante o chroma. Preferimos um corte duro: pixel-art não
+    # precisa de borda antialias e isso evita halo roxo no GIF.
+    return r >= 165 and b >= 160 and g <= 130 and abs(r - b) <= 105
 
 
 def is_gray_bg(c):
     r, g, b = c
-    return max(c) - min(c) <= 30 and 112 <= (r + g + b) / 3 <= 247
+    return max(c) - min(c) <= 34 and 105 <= (r + g + b) / 3 <= 248
 
 
 def bg_kind(im: Image.Image) -> str:
     rgb = im.convert("RGB")
     w, h = rgb.size
-    corners = [rgb.getpixel(p) for p in ((0,0),(w-1,0),(0,h-1),(w-1,h-1))]
+    corners = [rgb.getpixel(p) for p in ((0, 0), (w - 1, 0), (0, h - 1), (w - 1, h - 1))]
     if sum(is_magenta(c) for c in corners) >= 2:
         return "magenta"
     if sum(is_gray_bg(c) for c in corners) >= 2:
         return "checker"
     return "unknown"
+
+
+def sanitize_transparency(rgba: Image.Image) -> Image.Image:
+    px = rgba.load()
+    for y in range(rgba.height):
+        for x in range(rgba.width):
+            r, g, b, a = px[x, y]
+            if a < 20:
+                px[x, y] = (0, 0, 0, 0)
+            elif a < 255:
+                # Sem alpha parcial em pixel-art: evita contaminação da paleta GIF.
+                px[x, y] = (r, g, b, 255)
+    return rgba
 
 
 def remove_bg(im: Image.Image) -> Image.Image:
@@ -50,287 +65,354 @@ def remove_bg(im: Image.Image) -> Image.Image:
         for y in range(h):
             for x in range(w):
                 r, g, b, a = px[x, y]
-                # Gemini gera vários tons próximos do chroma; limiar amplo é seguro
-                # para o Vergil, cuja paleta é azul/preto/cinza.
                 if is_magenta((r, g, b)):
-                    px[x, y] = (r, g, b, 0)
-                elif r > 145 and b > 145 and g < 135 and abs(r-b) < 95:
-                    strength = max(0, min(255, int((135-g) * 2.2)))
-                    if strength > 80:
-                        px[x, y] = (r, g, b, max(0, 255-strength))
-        return rgba
+                    px[x, y] = (0, 0, 0, 0)
+        return sanitize_transparency(rgba)
 
     if kind == "checker":
-        # Flood fill só pelo fundo conectado às bordas para não apagar cabelo/metal cinza.
+        # Remove apenas o checker conectado às bordas; cabelo/metal cinza interno fica.
         q = deque()
         seen = [[False] * w for _ in range(h)]
-        def cand(x,y):
-            return is_gray_bg(rgb.getpixel((x,y)))
+
+        def cand(x, y):
+            return is_gray_bg(rgb.getpixel((x, y)))
+
         for x in range(w):
-            for y in (0,h-1):
-                if cand(x,y) and not seen[y][x]: seen[y][x]=True; q.append((x,y))
+            for y in (0, h - 1):
+                if cand(x, y) and not seen[y][x]:
+                    seen[y][x] = True
+                    q.append((x, y))
         for y in range(h):
-            for x in (0,w-1):
-                if cand(x,y) and not seen[y][x]: seen[y][x]=True; q.append((x,y))
+            for x in (0, w - 1):
+                if cand(x, y) and not seen[y][x]:
+                    seen[y][x] = True
+                    q.append((x, y))
+
         while q:
-            x,y=q.popleft()
-            for nx,ny in ((x-1,y),(x+1,y),(x,y-1),(x,y+1)):
-                if 0<=nx<w and 0<=ny<h and not seen[ny][nx] and cand(nx,ny):
-                    seen[ny][nx]=True; q.append((nx,ny))
+            x, y = q.popleft()
+            for nx, ny in ((x - 1, y), (x + 1, y), (x, y - 1), (x, y + 1)):
+                if 0 <= nx < w and 0 <= ny < h and not seen[ny][nx] and cand(nx, ny):
+                    seen[ny][nx] = True
+                    q.append((nx, ny))
+
         for y in range(h):
             for x in range(w):
                 if seen[y][x]:
-                    r,g,b,a=px[x,y]; px[x,y]=(r,g,b,0)
-        return rgba
+                    px[x, y] = (0, 0, 0, 0)
+        return sanitize_transparency(rgba)
 
-    return rgba
+    return sanitize_transparency(rgba)
 
 
-def split_sheet(source_id: int) -> list[Image.Image]:
-    im = remove_bg(Image.open(FILES[source_id]))
-    w,h=im.size
-    if h <= 160:
-        cols,rows=8,1
-    else:
-        cols,rows=6,2
-    frames=[]
+def split_grid(im: Image.Image, cols: int, rows: int) -> list[Image.Image]:
+    w, h = im.size
+    frames = []
     for r in range(rows):
-        y0=round(r*h/rows); y1=round((r+1)*h/rows)
+        y0 = round(r * h / rows)
+        y1 = round((r + 1) * h / rows)
         for c in range(cols):
-            x0=round(c*w/cols); x1=round((c+1)*w/cols)
-            cell=im.crop((x0,y0,x1,y1))
-            box=cell.getbbox()
+            x0 = round(c * w / cols)
+            x1 = round((c + 1) * w / cols)
+            cell = im.crop((x0, y0, x1, y1))
+            box = cell.getbbox()
             if box:
-                cell=cell.crop(box)
+                cell = cell.crop(box)
             frames.append(cell)
     return frames
 
 
-def stats(frames: list[Image.Image]) -> dict:
-    upper=[]; mid=[]; widths=[]; cyan=[]
-    for fr in frames:
-        rgba=fr.convert("RGBA")
-        w,h=rgba.size
-        if not w or not h: continue
-        alpha=rgba.getchannel("A")
-        bbox=alpha.getbbox()
-        if not bbox: continue
-        widths.append((bbox[2]-bbox[0])/max(1,h))
-        p=rgba.load()
-        counts=[0,0,0]; cyan_n=fg=0
-        for y in range(h):
-            region=0 if y < h*0.38 else (1 if y < h*0.72 else 2)
-            for x in range(w):
-                r,g,b,a=p[x,y]
-                if a<40: continue
-                counts[region]+=1; fg+=1
-                if b>140 and g>105 and b>r*1.25: cyan_n+=1
-        upper.append(counts[0]/max(1,fg)); mid.append(counts[1]/max(1,fg)); cyan.append(cyan_n/max(1,fg))
-    def var(vals):
-        if not vals: return 0
-        m=sum(vals)/len(vals); return sum((x-m)**2 for x in vals)/len(vals)
-    return {
-        "upper_var":var(upper), "mid_var":var(mid), "width_var":var(widths),
-        "cyan_max":max(cyan or [0]), "upper_max":max(upper or [0]), "mid_max":max(mid or [0])
-    }
+def split_sheet(source_id: int) -> list[Image.Image]:
+    im = remove_bg(Image.open(FILES[source_id]))
+    # O Judgment Cut (06) foi gerado pelo Gemini em 4x3, apesar do prompt pedir 6x2.
+    # O grid antigo 6x2 literalmente cortava os círculos no meio.
+    if source_id == 6:
+        return split_grid(im, 4, 3)
+    if im.height <= 160:
+        # Sheet horizontal; não é usado como idle na V1.
+        return split_grid(im, 8, 1)
+    return split_grid(im, 6, 2)
 
 
 def scale_sprite(fr: Image.Image, target_h=CHAR_H) -> Image.Image:
-    if fr.height <= 0: return fr
-    s=target_h/fr.height
-    nw=max(1,round(fr.width*s)); nh=max(1,round(fr.height*s))
-    return fr.resize((nw,nh),Image.Resampling.NEAREST)
+    if fr.height <= 0:
+        return fr
+    s = target_h / fr.height
+    nw = max(1, round(fr.width * s))
+    nh = max(1, round(fr.height * s))
+    return fr.resize((nw, nh), Image.Resampling.NEAREST)
+
+
+def flip_sprite(fr: Image.Image) -> Image.Image:
+    return fr.transpose(Image.Transpose.FLIP_LEFT_RIGHT)
 
 
 def isolate_cyan(fr: Image.Image) -> Image.Image:
-    rgba=fr.convert("RGBA")
-    out=Image.new("RGBA",rgba.size,(0,0,0,0)); src=rgba.load(); dst=out.load()
+    rgba = fr.convert("RGBA")
+    out = Image.new("RGBA", rgba.size, (0, 0, 0, 0))
+    src = rgba.load()
+    dst = out.load()
     for y in range(rgba.height):
         for x in range(rgba.width):
-            r,g,b,a=src[x,y]
-            if a>20 and b>=125 and g>=90 and b>r*1.18 and g>r*1.08:
-                dst[x,y]=(r,g,b,min(255,a))
+            r, g, b, a = src[x, y]
+            if a > 20 and b >= 120 and g >= 85 and b > r * 1.14 and g > r * 1.03:
+                dst[x, y] = (r, g, b, 255)
     return out
 
 
 def draw_floor(base: Image.Image):
-    # Placeholder técnico até o piso autoral entrar no pacote.
-    d=ImageDraw.Draw(base)
-    y=GROUND_Y
-    d.rectangle((0,y, W,H), fill=(9,13,22,255))
-    # pedras irregulares discretas, sem moldura
-    widths=[92,118,84,126,97,112,79,121,104]
-    x=-18
-    for i,ww in enumerate(widths*2):
-        if x>W: break
-        top=y + (i%3-1)*2
-        col=(22+(i%3)*4,31+(i%4)*3,45+(i%2)*5,255)
-        d.rectangle((x,top,x+ww,H-2),fill=col)
-        d.line((x+ww,top,x+ww-7,H-2),fill=(6,10,17,255),width=2)
-        if i%2==0:
-            cx=x+ww//2
-            d.line((cx,top+5,cx-8,top+11,cx-3,top+18),fill=(47,68,87,255),width=1)
-        x+=ww-3
-    d.line((0,y,W,y), fill=(67,91,112,255), width=1)
+    # Piso provisório; será substituído pelo asset autoral quando estiver disponível.
+    d = ImageDraw.Draw(base)
+    y = GROUND_Y
+    d.rectangle((0, y, W, H), fill=(8, 12, 20, 255))
+    widths = [92, 118, 84, 126, 97, 112, 79, 121, 104]
+    x = -18
+    for i, ww in enumerate(widths * 2):
+        if x > W:
+            break
+        top = y + (i % 3 - 1) * 2
+        col = (21 + (i % 3) * 4, 30 + (i % 4) * 3, 44 + (i % 2) * 5, 255)
+        d.rectangle((x, top, x + ww, H - 2), fill=col)
+        d.line((x + ww, top, x + ww - 7, H - 2), fill=(5, 9, 16, 255), width=2)
+        if i % 2 == 0:
+            cx = x + ww // 2
+            d.line((cx, top + 5, cx - 8, top + 11, cx - 3, top + 18), fill=(44, 65, 84, 255), width=1)
+        x += ww - 3
+    d.line((0, y, W, y), fill=(61, 84, 105, 255), width=1)
 
 
 def base_frame() -> Image.Image:
-    im=Image.new("RGBA",(W,H),(0,0,0,0)); draw_floor(im); return im
+    im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    draw_floor(im)
+    return im
 
 
 def put_sprite(canvas: Image.Image, fr: Image.Image, x: float, target_h=CHAR_H, y_offset=0):
-    s=scale_sprite(fr,target_h)
-    px=round(x-s.width/2); py=GROUND_Y-s.height+y_offset
-    canvas.alpha_composite(s,(px,py))
+    s = scale_sprite(fr, target_h)
+    px = round(x - s.width / 2)
+    py = GROUND_Y - s.height + y_offset
+    canvas.alpha_composite(s, (px, py))
 
 
 def blue_cast_fx(canvas: Image.Image, x: int, y: int, phase: float):
-    d=ImageDraw.Draw(canvas)
-    intensity=math.sin(math.pi*max(0,min(1,phase)))
-    if intensity<=0.05:return
-    core=(185,235,255,220)
-    mid=(70,165,255,190)
-    radius=round(8+16*intensity)
-    d.rectangle((x-2,y-2,x+2,y+2),fill=core)
-    for k in range(4):
-        ang=(k*math.pi/2)+phase*0.7
-        length=round(radius*(0.7+0.25*k))
-        x2=round(x+math.cos(ang)*length); y2=round(y+math.sin(ang)*length)
-        d.line((x,y,x2,y2),fill=mid,width=1)
-    if intensity>0.72:
-        d.rectangle((x-5,y-1,x+5,y+1),fill=(220,250,255,235))
-        d.rectangle((x-1,y-5,x+1,y+5),fill=(130,215,255,220))
+    d = ImageDraw.Draw(canvas)
+    intensity = math.sin(math.pi * max(0, min(1, phase)))
+    if intensity <= 0.04:
+        return
+    core = (210, 245, 255, 255)
+    mid = (76, 176, 255, 255)
+    radius = round(7 + 22 * intensity)
+    d.rectangle((x - 2, y - 2, x + 2, y + 2), fill=core)
+    for k in range(6):
+        ang = (k * math.pi / 3) + phase * 0.55
+        length = round(radius * (0.72 + 0.09 * k))
+        x2 = round(x + math.cos(ang) * length)
+        y2 = round(y + math.sin(ang) * length)
+        d.line((x, y, x2, y2), fill=mid, width=1)
+    if intensity > 0.68:
+        d.rectangle((x - 6, y - 1, x + 6, y + 1), fill=(226, 252, 255, 255))
+        d.rectangle((x - 1, y - 6, x + 1, y + 6), fill=(132, 220, 255, 255))
 
 
 def slash_fx(canvas: Image.Image, x: int, y: int, phase: float):
-    d=ImageDraw.Draw(canvas)
-    length=round(42+90*phase)
-    d.line((x-length//2,y+10,x+length//2,y-8),fill=(187,235,255,230),width=2)
-    if phase>0.35:
-        d.line((x-length//2+5,y+14,x+length//2-9,y-3),fill=(72,166,255,170),width=1)
+    d = ImageDraw.Draw(canvas)
+    length = round(45 + 115 * phase)
+    d.line((x - length // 2, y + 12, x + length // 2, y - 8), fill=(202, 241, 255, 255), width=2)
+    if phase > 0.30:
+        d.line((x - length // 2 + 5, y + 16, x + length // 2 - 9, y - 2), fill=(78, 177, 255, 255), width=1)
 
 
-def add(frames, durations, sprite_frames, x_positions, ds, *, target_h=CHAR_H, fx=None):
-    for idx,(sf,x,dur) in enumerate(zip(sprite_frames,x_positions,ds)):
-        c=base_frame(); put_sprite(c,sf,x,target_h)
-        if fx: fx(c,idx,len(sprite_frames),x)
-        frames.append(c); durations.append(dur)
-
-
-def pick_sequences():
-    seq={i:split_sheet(i) for i in range(1,11)}
-    metrics={i:stats(seq[i]) for i in range(1,11) if i != 6}
-    # Confirmados/fortes pelo inventário e histórico das gerações.
-    walk_right=9
-    compact_idle=3
-    turn_a=1
-    judgment_fx=6
-    aura_source=2
-    # Iai tende a ser o sheet de personagem com mais pixels ciano residuais.
-    iai=max((i for i in metrics if i not in {2,3,9}), key=lambda i:metrics[i]["cyan_max"])
-    # Hair-fix: mãos sobem à cabeça => maior variação de massa no terço superior.
-    pool=[i for i in metrics if i not in {1,2,3,6,9,iai}]
-    hair=max(pool,key=lambda i:metrics[i]["upper_var"])
-    pool=[i for i in pool if i!=hair]
-    # Cast: maior variação no tronco/mãos sem ser hair/iai.
-    cast=max(pool,key=lambda i:metrics[i]["mid_var"])
-    pool=[i for i in pool if i!=cast]
-    turn_b=max(pool,key=lambda i:metrics[i]["width_var"]) if pool else 4
-    remaining=[i for i in pool if i!=turn_b]
-    extra=remaining[0] if remaining else 7
-    return seq,metrics,{"walk_right":walk_right,"compact_idle":compact_idle,"turn_a":turn_a,"turn_b":turn_b,"iai":iai,"hair":hair,"cast":cast,"judgment_fx":judgment_fx,"aura":aura_source,"extra":extra}
+def add(frames, durations, sprite_frames, x_positions, ds, *, target_h=CHAR_H, fx=None, y_offsets=None):
+    if y_offsets is None:
+        y_offsets = [0] * len(sprite_frames)
+    for idx, (sf, x, dur, yo) in enumerate(zip(sprite_frames, x_positions, ds, y_offsets)):
+        c = base_frame()
+        put_sprite(c, sf, x, target_h, yo)
+        if fx:
+            fx(c, idx, len(sprite_frames), x)
+        frames.append(c)
+        durations.append(dur)
 
 
 def render():
-    OUT.mkdir(parents=True,exist_ok=True)
-    seq,metrics,pick=pick_sequences()
-    frames=[]; durations=[]
+    OUT.mkdir(parents=True, exist_ok=True)
+    seq = {i: split_sheet(i) for i in range(1, 11)}
 
-    neutral=seq[pick["walk_right"]][0]
-    idle_src=seq[pick["compact_idle"]]
-    walk=seq[pick["walk_right"]]
-    turn_a=seq[pick["turn_a"]]
-    turn_b=seq[pick["turn_b"]]
-    iai=seq[pick["iai"]]
-    hair=seq[pick["hair"]]
-    cast=seq[pick["cast"]]
-    jfx=seq[pick["judgment_fx"]]
+    # Mapeamento manual validado a partir das gerações da conversa.
+    walk_right = seq[9]
+    turn_right_to_left = seq[1]
+    iai = seq[10]
+    hair = seq[7]
+    cast_raw = seq[8]
+    judgment_fx = seq[6]
 
-    # 1) idle vivo curto
-    idle_frames=(idle_src[:4] if len(idle_src)>=4 else [neutral]*4)
-    add(frames,durations,idle_frames,[120]*len(idle_frames),[180,150,180,260][:len(idle_frames)])
+    neutral = walk_right[0]
+    walk_left = [flip_sprite(fr) for fr in walk_right]
+    # Reverter a virada mantém a transição física contínua no sentido oposto.
+    turn_left_to_right = list(reversed(turn_right_to_left))
 
-    # 2) caminhada para a direita
-    wr=(walk*2)[:18]
-    xs=[120+i*(520/(len(wr)-1)) for i in range(len(wr))]
-    add(frames,durations,wr,xs,[90]*len(wr))
+    # Hair sheet: Gemini acabou entregando duas leituras em fileiras diferentes.
+    hair_one = hair[:6]
+    hair_two = hair[6:12] if len(hair) >= 12 else hair[max(0, len(hair) // 2):]
 
-    # 3) iai slash + trail procedural
-    def iaifx(c,idx,n,x):
-        if 4<=idx<=8:
-            slash_fx(c,round(x+65),GROUND_Y-82,(idx-3)/5)
-    iai_ds=[130,100,85,70,48,38,34,42,65,90,120,220][:len(iai)]
-    add(frames,durations,iai,[650]*len(iai),iai_ds,fx=iaifx)
+    # Judgment cast: a segunda fileira contém poses de costas que causavam o
+    # "teleporte" visual. Mantemos a primeira fileira + retorno neutral.
+    cast = cast_raw[:6]
+    if cast_raw:
+        cast = cast + [cast_raw[-1]]
 
-    # 4) cabelo: duas leituras do mesmo sheet com timings diferentes
-    hair_one=hair[:max(6,len(hair)//2+1)]
-    add(frames,durations,hair_one,[650]*len(hair_one),[120,110,105,95,100,130,230][:len(hair_one)])
+    frames = []
+    durations = []
 
-    # 5) anda até a direita e vira
-    wr2=walk[:8]
-    xs=[650+i*(155/(len(wr2)-1)) for i in range(len(wr2))]
-    add(frames,durations,wr2,xs,[95]*len(wr2))
-    add(frames,durations,turn_a,[805]*len(turn_a),[85]*len(turn_a))
+    # 1) Idle inicial bem legível — mesma pose, micro respiração procedural.
+    idle = [neutral] * 8
+    add(
+        frames, durations, idle,
+        [120] * 8,
+        [280, 220, 220, 220, 220, 220, 220, 420],
+        y_offsets=[0, -1, -1, 0, 1, 1, 0, 0],
+    )
 
-    # 6) volta para a esquerda. Como os sheets de left-walk vieram inconsistentes,
-    # usamos os últimos 3 frames left-facing da virada e oscilamos a ordem.
-    left_seed=turn_a[-3:] if len(turn_a)>=3 else turn_a
-    left_cycle=(left_seed + left_seed[-2:0:-1]) * 5
-    left_cycle=left_cycle[:20]
-    xs=[805-i*(555/(len(left_cycle)-1)) for i in range(len(left_cycle))]
-    add(frames,durations,left_cycle,xs,[105]*len(left_cycle))
+    # 2) Caminhada direita: ~5 s para atravessar boa parte do rodapé.
+    wr = (walk_right * 3)[:22]
+    xs = [120 + i * (500 / (len(wr) - 1)) for i in range(len(wr))]
+    add(frames, durations, wr, xs, [145] * len(wr))
 
-    # 7) idle + segunda virada
-    add(frames,durations,[neutral,neutral],[250,250],[280,220])
-    add(frames,durations,turn_b,[250]*len(turn_b),[90]*len(turn_b))
+    # 3) Pausa antes do Iai.
+    add(frames, durations, [neutral] * 3, [620] * 3, [320, 260, 360])
 
-    # 8) Judgment Cut: cast corporal + energia azul concentrada
-    def castfx(c,idx,n,x):
-        phase=idx/max(1,n-1)
-        blue_cast_fx(c,round(x+20),GROUND_Y-91,phase)
-    cast_ds=[140,110,95,80,65,50,42,48,70,95,130,230][:len(cast)]
-    add(frames,durations,cast,[250]*len(cast),cast_ds,fx=castfx)
+    # 4) Iai: preparação perceptível, golpe rápido, recuperação lenta.
+    def iaifx(c, idx, n, x):
+        if 4 <= idx <= 8:
+            phase = min(1.0, max(0.0, (idx - 3) / 5))
+            slash_fx(c, round(x + 78), GROUND_Y - 86, phase)
 
-    # 9) efeito espacial separado, Vergil em neutral enquanto o corte acontece à frente.
-    for idx,vfx in enumerate(jfx):
-        c=base_frame(); put_sprite(c,neutral,250)
-        vf=isolate_cyan(vfx)
+    iai_ds_full = [220, 190, 160, 130, 82, 58, 48, 58, 88, 135, 190, 360]
+    iai_ds = iai_ds_full[:len(iai)] + [180] * max(0, len(iai) - len(iai_ds_full))
+    add(frames, durations, iai, [620] * len(iai), iai_ds, fx=iaifx)
+
+    # 5) Cabelo com UMA mão — bem mais lento, para o gesto realmente aparecer.
+    if hair_one:
+        one_ds = [220, 210, 200, 210, 240, 420][:len(hair_one)]
+        add(frames, durations, hair_one, [620] * len(hair_one), one_ds)
+
+    # 6) Caminha até a borda direita.
+    wr2 = walk_right[:8]
+    xs = [620 + i * (175 / max(1, len(wr2) - 1)) for i in range(len(wr2))]
+    add(frames, durations, wr2, xs, [150] * len(wr2))
+
+    # 7) Virada real direita -> esquerda, sem trocar de posição.
+    add(frames, durations, turn_right_to_left, [795] * len(turn_right_to_left), [155] * len(turn_right_to_left))
+    add(frames, durations, [walk_left[0]] * 2, [795, 795], [300, 260])
+
+    # 8) Caminhada esquerda suave usando o mesmo ciclo espelhado.
+    wl = (walk_left * 3)[:24]
+    xs = [795 - i * (535 / (len(wl) - 1)) for i in range(len(wl))]
+    add(frames, durations, wl, xs, [150] * len(wl))
+
+    # 9) Virada esquerda -> direita usando a mesma animação ao contrário.
+    add(frames, durations, turn_left_to_right, [260] * len(turn_left_to_right), [155] * len(turn_left_to_right))
+    add(frames, durations, [neutral] * 3, [260] * 3, [320, 280, 420])
+
+    # 10) Judgment Cut cast corporal com concentração azul local.
+    def castfx(c, idx, n, x):
+        # pico ocorre perto do penúltimo frame, não no meio do gesto inteiro
+        phase = idx / max(1, n - 1)
+        shaped = min(1.0, phase * 1.35)
+        blue_cast_fx(c, round(x + 31), GROUND_Y - 95, shaped)
+
+    cast_ds = [240, 210, 180, 150, 120, 170, 420][:len(cast)]
+    add(frames, durations, cast, [260] * len(cast), cast_ds, fx=castfx)
+
+    # 11) Judgment Cut espacial. O source 06 agora é recortado corretamente em 4x3.
+    # Vergil fica imóvel e o FX tem área generosa à frente dele.
+    jfx_ds = [180, 150, 135, 125, 120, 130, 145, 170, 200, 240, 300, 420]
+    for idx, vfx in enumerate(judgment_fx[:12]):
+        c = base_frame()
+        put_sprite(c, neutral, 260)
+        vf = isolate_cyan(vfx)
         if vf.getbbox():
-            vf=scale_sprite(vf,118)
-            c.alpha_composite(vf,(380,GROUND_Y-vf.height-18))
-        frames.append(c); durations.append([55,45,40,38,42,46,52,60,70,85,110,180][idx] if idx<12 else 70)
+            # Mantém o efeito inteiro dentro da tela; escala menor que a V0.
+            vf = scale_sprite(vf, 105)
+            x = 430
+            y = max(12, GROUND_Y - vf.height - 34)
+            if x + vf.width > W - 18:
+                x = W - 18 - vf.width
+            c.alpha_composite(vf, (x, y))
+        frames.append(c)
+        durations.append(jfx_ds[idx] if idx < len(jfx_ds) else 180)
 
-    # 10) hair-fix mais demorado (segunda metade/reordenação) após o Judgment Cut.
-    hair_two=hair[max(0,len(hair)//3):]
-    add(frames,durations,hair_two,[250]*len(hair_two),[120]*max(0,len(hair_two)-1)+[320])
+    # 12) Pequena pausa após o corte antes do cabelo.
+    add(frames, durations, [neutral] * 2, [260, 260], [340, 300])
 
-    # 11) encerra caminhando para o centro; loop volta ao idle da esquerda.
-    wr3=walk[:12]
-    xs=[250+i*( -130/(len(wr3)-1)) for i in range(len(wr3))]
-    add(frames,durations,wr3,xs,[100]*len(wr3))
+    # 13) Cabelo com DUAS mãos — segunda variação e ainda mais deliberada.
+    if hair_two:
+        two_ds = [230] * len(hair_two)
+        if two_ds:
+            two_ds[-1] = 480
+        add(frames, durations, hair_two, [260] * len(hair_two), two_ds)
 
-    # Salva GIF transparente. Piso é opaco somente na base.
-    gif=OUT/"vergil-footer-draft.gif"
-    frames[0].save(gif,save_all=True,append_images=frames[1:],duration=durations,loop=0,disposal=2,optimize=True,transparency=0)
+    # 14) Caminha para a direita, vira e volta ao ponto inicial para fechar o loop
+    # sem teleporte de posição nem sprite andando para trás.
+    wr3 = (walk_right * 2)[:16]
+    xs = [260 + i * (440 / (len(wr3) - 1)) for i in range(len(wr3))]
+    add(frames, durations, wr3, xs, [150] * len(wr3))
 
-    lines=["# Build report — Vergil footer","",f"Frames finais: **{len(frames)}**",f"Duração aproximada: **{sum(durations)/1000:.1f}s**",f"Canvas: **{W}×{H}**","","## Seleção automática de sheets","", "| Papel | Asset |", "|---|---:|"]
-    for k,v in pick.items(): lines.append(f"| `{k}` | **{v:02d}** |")
-    lines += ["","## Métricas por sheet","","| Asset | upper_var | mid_var | width_var | cyan_max |","|---:|---:|---:|---:|---:|"]
-    for i,m in metrics.items(): lines.append(f"| {i:02d} | {m['upper_var']:.5f} | {m['mid_var']:.5f} | {m['width_var']:.5f} | {m['cyan_max']:.3f} |")
-    lines += ["","## Observação","","O piso desta primeira renderização é um placeholder procedural porque nenhum dos 10 arquivos extraídos foi classificado como environment/floor. O piso autoral gerado anteriormente precisa ser adicionado ao pacote para a render final."]
-    REPORT.write_text("\n".join(lines)+"\n",encoding="utf-8")
-    print(gif, gif.stat().st_size, "bytes")
+    add(frames, durations, turn_right_to_left, [700] * len(turn_right_to_left), [155] * len(turn_right_to_left))
+
+    wl2 = (walk_left * 2)[:18]
+    xs = [700 - i * (580 / (len(wl2) - 1)) for i in range(len(wl2))]
+    add(frames, durations, wl2, xs, [150] * len(wl2))
+
+    # Últimos frames equivalem ao começo (x=120, neutral visual), evitando salto no loop.
+    end_neutral = walk_left[0] if walk_left else neutral
+    add(frames, durations, [end_neutral] * 3, [120] * 3, [300, 260, 360])
+
+    gif = OUT / "vergil-footer-draft.gif"
+    # Todos os pixels transparentes foram zerados para impedir halo magenta/roxo.
+    frames[0].save(
+        gif,
+        save_all=True,
+        append_images=frames[1:],
+        duration=durations,
+        loop=0,
+        disposal=2,
+        optimize=True,
+        transparency=0,
+    )
+
+    lines = [
+        "# Build report — Vergil footer V1",
+        "",
+        f"Frames finais: **{len(frames)}**",
+        f"Duração aproximada: **{sum(durations) / 1000:.1f}s**",
+        f"Canvas: **{W}×{H}**",
+        "",
+        "## Correções desta versão",
+        "",
+        "- removido movimento de sprite right-facing para a esquerda; walk-left é um ciclo espelhado estável;",
+        "- removidas poses traseiras do Judgment Cut cast;",
+        "- chroma magenta agora é alpha binário sem borda semi-transparente;",
+        "- pixels transparentes têm RGB zerado para evitar halo roxo no GIF;",
+        "- Judgment Cut source 06 recortado em grid 4×3, evitando cortes no VFX;",
+        "- timings aumentados em caminhada, cabelo, viradas e Judgment Cut;",
+        "- loop fecha retornando fisicamente ao ponto inicial, sem teleporte horizontal.",
+        "",
+        "## Mapeamento manual",
+        "",
+        "- walk-right: 09",
+        "- turn: 01",
+        "- iai: 10",
+        "- hair: 07",
+        "- judgment cast: 08 (somente primeira fileira + neutral final)",
+        "- judgment FX: 06 (4×3)",
+        "",
+        "## Pendente",
+        "",
+        "O piso continua procedural até o asset autoral de pedra ser disponibilizado separadamente.",
+    ]
+    REPORT.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(gif, gif.stat().st_size, "bytes", "duration", sum(durations) / 1000)
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     render()
