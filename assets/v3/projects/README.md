@@ -27,6 +27,8 @@ Links públicos verificados: Unimangas, Casa Rara e Conferência Quantitativa. O
 
 `details/pontos-digitando.svg`: anima somente os três pontos do terminal de Next Chapter, aparecendo em sequência num ciclo de 2 segundos, sem deslocar a frase. Mantém os três pontos estáticos quando o navegador solicita movimento reduzido. SVG local, sem scripts ou serviço externo.
 
+`details/cadeado.svg`: cadeado geométrico navy/cyan com detalhe vermelho, antes de `PRIVATE REPOSITORY` em Hermix e Maestro CRM. Sem link ou animação.
+
 ## Refinamento dos micro-assets
 
 Fonte: PNG `micro-assets.png` anexado, idêntico por SHA-256 a `../source/micro-assets.png`. Apenas cinco elementos foram recortados em `details/`; coordenadas em `details/crop-map.json`. Bounding box calculado pelo conteúdo com alpha maior que 8/255, ignorando resíduos praticamente invisíveis fora da arte; pixels e alpha dentro do recorte preservados, sem reescala, com padding transparente de 4 px.

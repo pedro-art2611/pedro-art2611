@@ -83,7 +83,7 @@
 <p>O projeto que mais marcou minha evolução como desenvolvedor até aqui. Participei desde a concepção do produto, incluindo nome, identidade visual, experiência e regras de negócio, até a construção e evolução da plataforma, atuando em frontend, backend, banco de dados, filas, infraestrutura, mensageria, automações e integrações com IA.</p>
 <p>Foi minha principal prova de fogo como desenvolvedor fullstack, envolvendo não apenas código, mas também produto, arquitetura, UX, resiliência e operação de um sistema profissional.</p>
 <p><img src="./assets/v3/projects/details/colchete-esquerdo.png" height="22" align="absmiddle" alt="" />&nbsp;<kbd>Node.js</kbd> · <kbd>React</kbd> · <kbd>PostgreSQL</kbd> · <kbd>Redis/BullMQ</kbd> · <kbd>Docker</kbd> · <kbd>OpenAI</kbd> · <kbd>n8n</kbd> · <kbd>ElevenLabs</kbd>&nbsp;<img src="./assets/v3/projects/details/colchete-direito.png" height="22" align="absmiddle" alt="" /></p>
-<p><sub>PRIVATE REPOSITORY</sub></p>
+<p><img src="./assets/v3/projects/details/cadeado.svg" width="16" height="18" align="absmiddle" alt="" /> <sub>PRIVATE REPOSITORY</sub></p>
 <br clear="all" />
 
 <p align="center"><img src="./assets/v3/projects/node-05.svg" width="30" height="40" alt="05" /></p>
@@ -97,7 +97,7 @@
 <p>CRM profissional voltado à operação e gestão de planos de saúde, atualmente em desenvolvimento. Participo de sua construção desde as primeiras etapas, trabalhando na base técnica, autenticação e sessões, controles de acesso, auditoria, navegação e evolução das primeiras interfaces e fluxos do produto.</p>
 <p>É um projeto ainda no início e que continuará evoluindo junto com a minha atuação profissional.</p>
 <p><img src="./assets/v3/projects/details/colchete-esquerdo.png" height="22" align="absmiddle" alt="" />&nbsp;<kbd>TypeScript</kbd> · <kbd>React</kbd> · <kbd>Next.js</kbd> · <kbd>PostgreSQL</kbd> · <kbd>Tailwind CSS</kbd>&nbsp;<img src="./assets/v3/projects/details/colchete-direito.png" height="22" align="absmiddle" alt="" /></p>
-<p><sub>PRIVATE REPOSITORY</sub></p>
+<p><img src="./assets/v3/projects/details/cadeado.svg" width="16" height="18" align="absmiddle" alt="" /> <sub>PRIVATE REPOSITORY</sub></p>
 <br clear="all" />
 
 <p align="center"><img src="./assets/v3/projects/node-06.svg" width="30" height="40" alt="06" /></p>

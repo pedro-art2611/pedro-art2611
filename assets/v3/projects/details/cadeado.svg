@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="22" viewBox="0 0 20 22" role="img" aria-label="Repositório privado" shape-rendering="crispEdges">
+  <path d="M5 10V5H7V3H13V5H15V10" fill="none" stroke="#07516e" stroke-width="4"/>
+  <path d="M6 10V5H8V4H12V5H14V10" fill="none" stroke="#25d6ef" stroke-width="2"/>
+  <path d="M3 10H17V12H18V19H16V21H4V19H2V12H3Z" fill="#08131d" stroke="#087c9d"/>
+  <path d="M4 11H16M3 13V17M17 13V17M5 20H15" fill="none" stroke="#1ac7e3"/>
+  <path d="M8 13H12V16H11V18H9V16H8Z" fill="#a2f7ff"/>
+  <path d="M3 18H5V20H3Z" fill="#f3455a"/>
+</svg>
