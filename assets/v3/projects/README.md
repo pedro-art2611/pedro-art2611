@@ -25,6 +25,8 @@ Os seis nodes leves `node-01.svg` a `node-06.svg`, explicitamente autorizados no
 
 Links públicos verificados: Unimangas, Casa Rara e Conferência Quantitativa. O repositório de Casa Rara é `https://github.com/ozelfls/1.1.1_site_ong`, informado pelo usuário, que participou usando sua conta acadêmica. Hermix e Maestro CRM exibem apenas `PRIVATE REPOSITORY`, sem URLs ou dados internos adicionais. Next Chapter encerra a sequência com o texto e terminal fornecidos.
 
+`details/pontos-digitando.svg`: anima somente os três pontos do terminal de Next Chapter, aparecendo em sequência num ciclo de 2 segundos, sem deslocar a frase. Mantém os três pontos estáticos quando o navegador solicita movimento reduzido. SVG local, sem scripts ou serviço externo.
+
 ## Refinamento dos micro-assets
 
 Fonte: PNG `micro-assets.png` anexado, idêntico por SHA-256 a `../source/micro-assets.png`. Apenas cinco elementos foram recortados em `details/`; coordenadas em `details/crop-map.json`. Bounding box calculado pelo conteúdo com alpha maior que 8/255, ignorando resíduos praticamente invisíveis fora da arte; pixels e alpha dentro do recorte preservados, sem reescala, com padding transparente de 4 px.

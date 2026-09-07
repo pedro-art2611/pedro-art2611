@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18" role="img" aria-label="Três pontos sendo digitados">
+  <style>@media (prefers-reduced-motion: reduce) { .digitando { display: none; } } @media (prefers-reduced-motion: no-preference) { .estatico { display: none; } }</style>
+  <g fill="#e6edf3" font-family="monospace" font-size="14">
+    <text class="estatico" y="13"><tspan x="2">.</tspan><tspan x="11">.</tspan><tspan x="20">.</tspan></text>
+    <g class="digitando">
+      <text x="2" y="13" opacity="0">.<animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.2;0.4;0.6;1" dur="2s" calcMode="discrete" repeatCount="indefinite"/></text>
+      <text x="11" y="13" opacity="0">.<animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.2;0.4;0.6;1" dur="2s" calcMode="discrete" repeatCount="indefinite"/></text>
+      <text x="20" y="13" opacity="0">.<animate attributeName="opacity" values="0;0;0;1;0" keyTimes="0;0.2;0.4;0.6;1" dur="2s" calcMode="discrete" repeatCount="indefinite"/></text>
+    </g>
+  </g>
+</svg>

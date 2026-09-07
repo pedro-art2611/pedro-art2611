@@ -109,7 +109,7 @@
 
 <p><img src="./assets/v3/projects/details/lua.png" width="20" align="absmiddle" alt="" /> <strong>NEXT CHAPTER</strong><br />Próximo capítulo</p>
 <p>Novos problemas.<br />Novas tecnologias.<br />Mais uma coisa para construir.</p>
-<p><code>&gt; waiting for the next challenge...</code></p>
+<p><code>&gt; waiting for the next challenge<img src="./assets/v3/projects/details/pontos-digitando.svg" width="28" height="18" align="absmiddle" alt="..." /></code></p>
 <br clear="all" />
 
 <!-- Projetos: fim da timeline. -->
