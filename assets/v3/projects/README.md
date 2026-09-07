@@ -19,7 +19,7 @@ As imagens são referências visuais fornecidas pelo usuário; textos e métrica
 
 ## Montagem
 
-Header a 60%. Capas alternadas por `align`, com dimensões intrínsecas de 300 × 200 no desktop; Next Chapter usa 260 × 173,33. `<picture>` e `<source media>` usam os mesmos arquivos com dimensões originais no celular, limitados pela largura disponível do GitHub, para que o texto apareça abaixo. O fallback também usa a capa original. Textos reais em HTML, sem CSS customizado ou tabelas.
+Header a 60%. Capas alternadas por `align`, com arte de 300 × 200 no desktop; Next Chapter usa 260 × 173,33. Somente Unimangas, Conferência Quantitativa e Maestro CRM usam SVGs em `layout/`, que embutem os PNGs originais sem alteração dos pixels e acrescentam 16 px transparentes à direita, no lado voltado ao texto. Casa Rara, Hermix e Next Chapter mantêm a montagem anterior. Essa margem se soma aos 20 px nativos do GitHub. `<picture>` e `<source media>` usam os PNGs originais no celular, limitados pela largura disponível do GitHub, para que o texto apareça abaixo. O fallback também usa a capa original. Textos reais em HTML, sem CSS customizado ou tabelas.
 
 Os seis nodes leves `node-01.svg` a `node-06.svg`, explicitamente autorizados no prompt, aparecem centralizados, com pequenos segmentos verticais; a linha é segmentada para funcionar no README sem CSS de posicionamento e sem bordas de tabela.
 
@@ -39,6 +39,6 @@ Fonte: PNG `micro-assets.png` anexado, idêntico por SHA-256 a `../source/micro-
 | `details/estrela.png` | 184 × 188 | Na linha abaixo dos títulos 01 a 05, antes da identificação, a 14 px. |
 | `details/lua.png` | 190 × 195 | Uso exclusivo antes do título Next Chapter, a 20 px. |
 
-Stacks em `<kbd>`, com cada tecnologia como texto real entre os dois colchetes azuis e quebra de linha entre tags. Espaços inseparáveis mantêm cada colchete junto à primeira ou última tag. Cores e bordas nativas do tema do GitHub. Os números ficam sozinhos no eixo central da timeline. O botão usa SVG local, sem serviço de badges, com fundo navy, borda cyan, texto claro e o recorte aprovado embutido. Nenhum link adicionado aos projetos privados.
+Stacks em `<kbd>`, com cada tecnologia como texto real entre os dois colchetes azuis, separadores discretos `·` e quebra de linha entre tags. Espaços inseparáveis mantêm cada colchete junto à primeira ou última tag. Cores e bordas nativas do tema do GitHub. Os números ficam sozinhos no eixo central da timeline. O botão usa SVG local, sem serviço de badges, com fundo navy, borda cyan, texto claro e o recorte aprovado embutido. Nenhum link adicionado aos projetos privados.
 
 `../dividers/divisor-projetos.png`: divisor anexado, 780 × 38, exibido a 92% entre o fim da Forja e o header Projetos. Fundo externo removido por código com autorização do usuário: preenchimento conectado às bordas, restrito à faixa RGB do fundo (R 23–34, G 28–36, B 34–50). Somente o alpha dos 21.621 pixels de fundo foi zerado; RGB, dimensões e demais pixels preservados.
