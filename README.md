@@ -126,5 +126,8 @@
 
 <!-- Fim da montagem inicial. Rodapé aprovado preservado visível. -->
 <p align="center">
+  <img src="./assets/v3/footer/divisor-vergil/divisor-vergil.webp" width="96%" alt="Show me your motivation — divisória com raios azuis animados" />
+</p>
+<p align="center">
   <img src="./assets/v3/footer/vergil-emoldurado.webp" width="100%" alt="Vergil em pixel art sobre a plataforma do rodapé" />
 </p>

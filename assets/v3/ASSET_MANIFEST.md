@@ -166,6 +166,8 @@ Branch reconfirmada pelo usuário: `feat/profile-readme-v3`. Inserida somente a 
 
 ## Divisor abaixo do banner
 
+O rodapé também possui uma divisória animada independente: `footer/divisor-vergil/divisor-vergil.webp`, final, 1600 × 277 px, 60 quadros, 3 segundos, transparência real. Fontes: os quatro PNGs enviados pelo usuário, preservados em `footer/divisor-vergil/source/`. Fallback estático e parâmetros em `footer/divisor-vergil/`. Substitui a divisória inferior do painel de Contribuições; painel agora com 2164 × 534 px e dados preservados.
+
 - Nome: divisor de katana do banner.
 - Path: `dividers/divisor-banner.png`.
 - Origem: `codex-clipboard-2fd76c49-43a0-4b39-8155-df5d56d01656.png`, anexo do usuário.

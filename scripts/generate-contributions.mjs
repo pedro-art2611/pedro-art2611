@@ -136,13 +136,13 @@ export function renderCalendar(calendar) {
   }).join('\n');
   const legend = Object.entries(COLORS).map(([level, color], i) => `<g transform="translate(1940 ${302 + i * 34})"><rect width="21" height="21" rx="2" fill="${color}" stroke="#0a3043"/><text x="35" y="16" font-size="16" fill="#a0bfd0">${['Nenhuma','Pouca','Média','Alta','Máxima'][i]}</text></g>`).join('\n');
   const total = new Intl.NumberFormat('pt-BR').format(calendar.totalContributions);
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="2164" height="637" viewBox="0 0 2164 637" fill="none" role="img" aria-labelledby="title description">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="2164" height="534" viewBox="0 0 2164 534" fill="none" role="img" aria-labelledby="title description">
 <title id="title">Contribuições de ${LOGIN}</title>
 <desc id="description">${total} contribuições nos últimos 12 meses no GitHub. ${calendar.weeks.length} semanas e ${days} dias, de ${calendar.weeks[0].contributionDays[0].date} a ${calendar.weeks.at(-1).contributionDays.at(-1).date}. Contagens e níveis oficiais, incluindo atividade privada anonimizada disponibilizada pelo GitHub.</desc>
 <defs>
   <linearGradient id="panel" x2="0" y2="1"><stop stop-color="#03101c"/><stop offset="1" stop-color="#04111b"/></linearGradient>
 </defs>
-<rect width="2164" height="637" fill="#0d1117"/>
+<rect width="2164" height="534" fill="#0d1117"/>
 ${divider(45)}
 <g transform="translate(0 -35)">
 ${frame()}
@@ -156,7 +156,6 @@ ${legend}
 <text id="total" data-total="${calendar.totalContributions}" x="1082" y="515" text-anchor="middle" font-size="26" font-weight="bold" fill="#98eaff">${total} contribuições</text>
 </g>
 </g>
-${divider(580)}
 </svg>\n`;
 }
 
