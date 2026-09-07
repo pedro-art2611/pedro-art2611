@@ -2,7 +2,7 @@
 
 Fonte autoritativa: `github-profile-assets-v3.zip`, fornecido em 2026-09-07. Branch: `feat/profile-readme-v3`.
 
-Os três WebPs animados são cópias byte a byte dos originais. PNGs: alpha real confirmado; removido apenas resíduo quase invisível (alpha <= 8/255) antes do bounding box, sem remover preto interno da arte. Padding transparente 8px (6px nos micro-assets). Famílias estáticas têm derivados proporcionais normalizados; os masters permanecem em `source/`, sem redução. Sem OCR. Coordenadas reproduzíveis em `crop-map.json`.
+Os três WebPs animados são cópias byte a byte dos originais. PNGs: alpha real confirmado; removido apenas resíduo quase invisível (alpha <= 8/255) antes do bounding box, sem remover preto interno da arte. Padding transparente 8px (6px nos micro-assets); molduras sem padding após refinamento e header limpo com 4px. Famílias estáticas têm derivados proporcionais normalizados; os masters permanecem em `source/`, sem redução. Sem OCR. Coordenadas reproduzíveis em `crop-map.json`.
 
 Jardim de contribuições adiado por solicitação do usuário: não renderizar seção nem exigir sua placa neste checkpoint. Os seis arquivos `assets/arvore-*.jpg` foram recuperados de `origin/main` apenas para preservar o workflow existente, sem alterar a branch main.
 
@@ -25,11 +25,11 @@ O checkpoint contém entrada, Sobre mim e divisor; Vergil permanece visível com
 | stack-icons-1 | source/stack-icons-1.png | stack-icons-1.png | source | 1448 × 1086 | Original do ZIP; não usar diretamente no README. |
 | vite-ico | source/vite-ico.png | vite-ico.png | source | 1254 × 1254 | Original do ZIP; não usar diretamente no README. |
 | Katana original | source/katana_asset_transparente_v4.gif | katana_asset_transparente_v4.gif | source | 1600 × 380 | GIF original preservado. |
-| frame-top | frame/frame-top.png | border-top.png | final | 2188 × 353 | Recorte [0, 165, 2172, 502]; padding 8px. Escala nativa. |
-| frame-bottom | frame/frame-bottom.png | border-bottom.png | final | 2188 × 356 | Recorte [0, 313, 2172, 653]; padding 8px. Escala nativa. |
+| frame-top | frame/frame-top.png | border-top.png | final | 2172 × 337 | Recorte [0, 165, 2172, 502]; padding 0px. Escala nativa.  Encaixada diretamente ao conteúdo no mesmo parágrafo. |
+| frame-bottom | frame/frame-bottom.png | border-bottom.png | final | 2172 × 340 | Recorte [0, 313, 2172, 653]; padding 0px. Escala nativa.  Encaixada diretamente ao conteúdo no mesmo parágrafo. |
 | divisor-principal | dividers/divisor-principal.png | divisor principal.png | final | 2159 × 174 | Recorte [15, 282, 2158, 440]; padding 8px. Escala nativa. |
 | divisor-secundario | dividers/divisor-secundario.png | divisor-secundario.png | final | 2038 × 130 | Recorte [75, 302, 2097, 416]; padding 8px. Escala nativa. |
-| sobre-mim | headers/sobre-mim.png | header-sobre-mim.png | final | 1962 × 545 | Recorte [113, 98, 2059, 627]; padding 8px. Escala nativa. |
+| sobre-mim | headers/sobre-mim.png | header-sobre-mim.png | source | 1962 × 545 | Recorte [113, 98, 2059, 627]; padding 8px. Versão floral anterior preservada; substituída no README pela versão limpa. |
 | forja-tecnica | headers/forja-tecnica.png | header-tecnica.png | final | 1962 × 448 | Recorte [113, 138, 2059, 570]; padding 8px. Escala nativa. |
 | github | contact/github.png | contatos-icons.png | final | 440 × 440 | Recorte [180, 189, 571, 584]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
 | linkedin | contact/linkedin.png | contatos-icons.png | final | 440 × 440 | Recorte [697, 196, 1107, 587]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
@@ -83,7 +83,7 @@ O checkpoint contém entrada, Sobre mim e divisor; Vergil permanece visível com
 | personagem-fallback | about/personagem-fallback.png | programador-transparente.webp | fallback | 448 × 528 | Primeiro frame; não substitui animação nesta montagem. |
 | vergil-animado | footer/vergil-animado.webp | vergil-runtime-v3.7-exact-color.webp | final | 1200 × 240 | WebP original intacto; 20.60 MiB. |
 | vergil-fallback | footer/vergil-fallback.png | vergil-runtime-v3.7-exact-color.webp | fallback | 1200 × 240 | Primeiro frame; não substitui animação nesta montagem. |
-| Katana acento | dividers/katana-acento.webp | katana_asset_transparente_v4.gif | final | 1265 × 150 | Recorte união de 63 frames (128, 133, 1377, 267); WebP lossless; tempos e loop preservados; exibir a 24%. |
+| Katana acento | dividers/katana-acento.webp | katana_asset_transparente_v4.gif | reservado | 1265 × 150 | Recorte união de 63 frames (128, 133, 1377, 267); WebP lossless; tempos e loop preservados; Aprovada e reservada para reposicionamento futuro; fora do README. |
 | Projetos | headers/projetos.png | Não consta no ZIP | MISSING_APPROVED_ASSET | — | Não substituir por asset inventado. |
 | Contato (placa) | headers/contato.png | Não consta no ZIP | MISSING_APPROVED_ASSET | — | Não substituir por asset inventado. |
 | REST API | stack/rest-api.png | Não consta no ZIP | MISSING_APPROVED_ASSET | — | Não substituir por asset inventado. |
@@ -91,11 +91,33 @@ O checkpoint contém entrada, Sobre mim e divisor; Vergil permanece visível com
 ## Verificação do checkpoint
 
 - README passou pelo endpoint Markdown do GitHub: percentuais, `align="right"` e `br clear="right"` foram preservados pelo sanitizador.
-- Preview local usa esse HTML e aproxima o tema escuro do GitHub; conferido a 1100px e 390px, com as oito imagens carregadas e sem overflow horizontal. Não é screenshot da página remota.
+- Preview local usa esse HTML e aproxima o tema escuro do GitHub; conferido a 1100px e 390px, com as oito imagens da primeira montagem carregadas e sem overflow horizontal. Não é screenshot da página remota.
 - Banner: 2172 × 724; personagem: 448 × 528; Vergil: 1200 × 240. Os três WebPs são byte a byte iguais ao ZIP, sem recompressão.
-- Molduras: 2188 × 353 e 2188 × 356, incluindo padding. A altura restante pertence ao desenho das extremidades; não é área vazia da spritesheet.
+- Molduras refinadas: 2172 × 337 e 2172 × 340, sem padding adicional. A altura restante pertence ao desenho das extremidades; não é área vazia da spritesheet.
 - Stack: 400 × 400; contatos: 440 × 440; chips: 536 × 180. Escala proporcional, sem deformação; fontes em resolução original preservadas.
 - Katana: 1265 × 150, 63 frames. Recorte pela união de TODOS os frames; derivado WebP lossless; original GIF preservado.
 - Os PNGs do ZIP têm alpha real, mas continham resíduos com alpha mínimo espalhados por grandes áreas. Recortes descartam somente alpha <= 8/255. Preto visível interno não foi convertido em transparência.
 - Risco pendente: os três WebPs somam 131,10 MiB. O envio Git comporta cada arquivo, mas o carregamento frio do README pode ser demorado; validar o carregamento remoto antes de decidir por uma versão otimizada.
 - Restam ausentes apenas a placa de Projetos, a placa de Contato e o ícone de stack REST API. Jardim está fora do escopo por decisão do usuário.
+
+## Refinamento de limpeza e encaixe
+
+Branch confirmada pelo usuário: `feat/profile-readme-v3`. Jardim permanece fora.
+
+- Molduras superior e inferior: retirados os 8px de padding dos quatro lados, sem reamostragem. Arte e transparência interna preservadas. Largura de 100%, o máximo da área de conteúdo do GitHub. Não é possível ultrapassar essa área com HTML de README.
+- Topo e banner agora compartilham um parágrafo; Vergil e moldura inferior também. Removida a margem de parágrafo que separava cada moldura do conteúdo, com o recuo leve de largura autorizado depois pelo usuário.
+- Katana aprovada e reservada em `dividers/katana-acento.webp`; original em `source/katana_asset_transparente_v4.gif`. Ambos intactos. Não aparece no README e não foi reposicionada.
+- Header sem flores em `headers/sobre-mim-limpo.png`; original floral em `source/header-sobre-mim.png` e derivado anterior em `headers/sobre-mim.png`. Edição feita com a ferramenta de imagem integrada. O fundo quadriculado opaco da saída foi removido por conectividade do fundo claro neutro às bordas; PNG final tem alpha real, recorte justo e 4px de padding, sem blur ou reamostragem.
+- Pedido de edição usado: “Remover flores, pétalas e galhos laterais; reconstruir somente linhas arquitetônicas ocultas; preservar moldura, texto Sobre mim, lanternas, placas de kanji, cores cyan/vermelho e proporções; sem novas decorações, blur ou fundo opaco.”
+- Banner, personagem, divisor interno e Vergil permanecem com os mesmos arquivos, comprovados por comparação binária. Após autorização do usuário para reduzir levemente o conteúdo, banner e Vergil passaram de 100% para 94% de largura somente no HTML. Personagem continua em 36%, divisor em 92% e header em 60%. Textos provisórios preservados.
+
+| Nome lógico | Path relativo a assets/v3 | Origem | Status | Dimensões | Uso |
+|---|---|---|---|---|---|
+| Sobre mim limpo | headers/sobre-mim-limpo.png | Edição de headers/sobre-mim.png | final | 2001 × 543 | PNG com alpha real; 60% no README. |
+
+### Validação do refinamento
+
+- Sete imagens carregadas no preview feito com HTML sanitizado pelo GitHub; conferência visual a 1100px e 390px, sem rolagem horizontal.
+- Comparação antes/depois: eliminados o intervalo da katana e as flores laterais; as molduras envolvem visualmente banner e rodapé com pequeno recuo lateral do conteúdo.
+- Comparação binária confirma banner, personagem, Vergil, divisor e dois arquivos da katana intactos. Nas molduras, todos os pixels do recorte são idênticos aos da versão anterior.
+- Workflows, árvore e demais famílias de assets não foram alterados.

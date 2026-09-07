@@ -15,7 +15,7 @@
       502
     ],
     "canvas": null,
-    "padding": 8
+    "padding": 0
   },
   {
     "path": "frame/frame-bottom.png",
@@ -33,7 +33,7 @@
       653
     ],
     "canvas": null,
-    "padding": 8
+    "padding": 0
   },
   {
     "path": "dividers/divisor-principal.png",
