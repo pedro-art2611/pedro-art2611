@@ -163,3 +163,12 @@ Branch reconfirmada pelo usuário: `feat/profile-readme-v3`. Inserida somente a 
 | REST API original | source/rest-api-original.png | PNG anexado pelo usuário | source | 1254 × 1254 | Preservado; não usar no README. |
 | REST API | stack/rest-api.png | source/rest-api-original.png | final | 400 × 400 | 44px no grupo Automação e Integrações. |
 | Forja técnica limpa | headers/forja-tecnica-limpa.png | Edição de headers/forja-tecnica.png | final | 1773 × 475 | PNG com alpha real, sem flores; 60% no README. |
+
+## Divisor abaixo do banner
+
+- Nome: divisor de katana do banner.
+- Path: `dividers/divisor-banner.png`.
+- Origem: `codex-clipboard-2fd76c49-43a0-4b39-8155-df5d56d01656.png`, anexo do usuário.
+- Status: final; 790 × 42 px, PNG RGBA.
+- Uso: 92% de largura, entre o banner e o header Sobre mim.
+- Transparência: fundo externo conectado às bordas removido por código; apenas alpha alterado, RGB e dimensões preservados.

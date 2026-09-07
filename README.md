@@ -3,6 +3,9 @@
   <img src="./assets/v3/banner/banner-emoldurado.webp" width="100%" alt="Pedro Artur em cenário noturno cyber oriental em pixel art" />
 </p>
 <p align="center">
+  <img src="./assets/v3/dividers/divisor-banner.png" width="92%" alt="" />
+</p>
+<p align="center">
   <img src="./assets/v3/headers/sobre-mim-limpo.png" width="60%" alt="Sobre mim" />
 </p>
 
