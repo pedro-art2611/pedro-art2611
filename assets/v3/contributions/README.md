@@ -41,3 +41,23 @@ Workflow: `.github/workflows/update-contributions.yml`. Agendamento `0 3 * * *` 
 **O agendamento diário ainda não fica ativo enquanto o workflow existir apenas na V3.** O GitHub exige o arquivo na branch padrão para `schedule` e para registrar `workflow_dispatch`. A branch padrão continua `main`. Esta implementação não altera `main`, não muda a branch padrão e não faz merge. O gatilho por push permite validar o workflow agora. Na futura migração, será necessário aprovar a instalação na branch padrão e ajustar explicitamente a guarda e o destino de publicação; não remover essas proteções durante esta etapa.
 
 Fontes: [calendário e read:user](https://docs.github.com/en/graphql/reference/users#contributionscollection), [atividade privada](https://docs.github.com/en/account-and-profile/how-tos/contribution-settings/manage-visibility-settings-for-private-contributions-and-achievements), [agendamento do Actions](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#onschedule).
+
+## Evidência da primeira execução, 07/09/2026
+
+- [Execução do Actions concluída com sucesso](https://github.com/pedro-art2611/pedro-art2611/actions/runs/34161262202), usando `PROFILE_CONTRIBUTIONS_TOKEN` e confirmando `read:user`.
+- GraphQL autenticada local, GraphQL no Actions, calendário visível no perfil e SVG: **641 contribuições**. O Actions reproduziu o SVG sem alteração e não criou commit redundante.
+- **366 dias, 53 semanas, 13 entradas de mês**: período de 07/09/2025 a 07/09/2026, inclusivo, com meses parciais nas extremidades. Conferência integral de datas, contagens, níveis e coordenadas; virada de 31/12/2025 para 01/01/2026; última semana contém apenas domingo e segunda, sem preencher o futuro.
+- **Contribuições privadas da organização confirmadas**: o perfil autenticado mostra 11 contribuições de commits em dois repositórios privados em setembro; a visibilidade privada foi conferida separadamente. O calendário contém 8 contribuições em 03/09 e 3 em 04/09, além das 3 contribuições de discussões em 06/09. Essa inspeção não foi usada para gerar ou reconstruir o calendário, e nenhum identificador privado é publicado aqui.
+- O GitHub retornou `restrictedContributionsCount: 0` também no Actions; esse indicador não foi usado para excluir, recalcular ou classificar células. O total completo confere com o perfil. O escopo cobre repositórios privados e internos conforme a API; não foi identificada atividade separada em repositórios de visibilidade **internal**, portanto não se afirma uma quantidade específica dessa categoria.
+- Preview com HTML renderizado pela API de Markdown do GitHub: imagens carregadas e sem overflow horizontal em desktop (1280 px) e celular (390 px). No celular o painel horizontal reduz proporcionalmente; o link no README permite abrir e ampliar o SVG.
+- A opção **Private contributions** já estava ativa. A sessão do CLI recebeu `read:user` e o usuário cadastrou o secret dedicado. Nenhuma mudança de branch padrão, de `main`, do workflow da árvore ou de outras seções aprovadas.
+
+| Data conferida | Contagem da API e SVG | Nível oficial |
+|---|---:|---|
+| 31/12/2025 | 0 | NONE |
+| 01/01/2026 | 0 | NONE |
+| 04/08/2026 | 80 | FOURTH_QUARTILE |
+| 03/09/2026 | 8 | SECOND_QUARTILE |
+| 06/09/2026 | 3 | FIRST_QUARTILE |
+
+Esses valores registram a validação inicial; o valor exibido no painel é sempre gerado novamente a partir da API.
