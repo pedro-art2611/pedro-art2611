@@ -27,8 +27,11 @@
   <img src="./assets/v3/forja/forja-tecnica.png" width="100%" alt="Forja técnica com grupos de tecnologias em uma oficina cyber oriental" />
 </p>
 
+<!-- Contribuições: painel temporário para validação com dados reais. -->
 <p align="center">
-  <img src="./assets/v3/dividers/divisor-principal.png" width="92%" alt="" />
+  <a href="./assets/v3/contributions/contributions.svg">
+    <img src="./assets/v3/contributions/contributions.svg" width="100%" alt="Contribuições de Pedro Artur nos últimos 12 meses no GitHub, incluindo atividade privada anonimizada" />
+  </a>
 </p>
 
 <!-- Fim da montagem inicial. Rodapé aprovado preservado visível. -->
