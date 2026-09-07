@@ -1,0 +1,82 @@
+[
+  {
+    "name": "codigo",
+    "source": "../../source/micro-assets.png",
+    "bbox": [
+      445,
+      489,
+      650,
+      634
+    ],
+    "padding": 4,
+    "size": [
+      213,
+      153
+    ],
+    "alpha": "preservado integralmente"
+  },
+  {
+    "name": "colchetes",
+    "source": "../../source/micro-assets.png",
+    "bbox": [
+      1151,
+      483,
+      1322,
+      638
+    ],
+    "padding": 4,
+    "size": [
+      179,
+      163
+    ],
+    "alpha": "preservado integralmente"
+  },
+  {
+    "name": "losango",
+    "source": "../../source/micro-assets.png",
+    "bbox": [
+      805,
+      157,
+      965,
+      318
+    ],
+    "padding": 4,
+    "size": [
+      168,
+      169
+    ],
+    "alpha": "preservado integralmente"
+  },
+  {
+    "name": "estrela",
+    "source": "../../source/micro-assets.png",
+    "bbox": [
+      121,
+      782,
+      297,
+      962
+    ],
+    "padding": 4,
+    "size": [
+      184,
+      188
+    ],
+    "alpha": "preservado integralmente"
+  },
+  {
+    "name": "lua",
+    "source": "../../source/micro-assets.png",
+    "bbox": [
+      808,
+      783,
+      990,
+      970
+    ],
+    "padding": 4,
+    "size": [
+      190,
+      195
+    ],
+    "alpha": "preservado integralmente"
+  }
+]

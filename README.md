@@ -28,11 +28,12 @@
 </p>
 
 <!-- Projetos: início da timeline. -->
+<p align="center"><img src="./assets/v3/dividers/divisor-projetos.png" width="92%" alt="" /></p>
 <p align="center">
   <img src="./assets/v3/headers/projetos.png" width="60%" alt="Projetos" />
 </p>
 
-<p align="center"><img src="./assets/v3/projects/node-01.svg" width="30" height="40" alt="01" /></p>
+<p align="center"><img src="./assets/v3/projects/node-01.svg" width="30" height="40" alt="01" /> <img src="./assets/v3/projects/details/losango.png" width="14" alt="" /></p>
 <picture>
   <source media="(max-width: 767px)" srcset="./assets/v3/projects/01-unimangas.png" width="1536" />
   <source media="(min-width: 768px)" srcset="./assets/v3/projects/01-unimangas.png" width="300" />
@@ -41,11 +42,11 @@
 
 <p><strong>UNIMANGAS</strong><br />Acadêmico · Web II</p>
 <p>Meu primeiro projeto de desenvolvimento web, criado no 2º período para colocar em prática HTML, CSS e JavaScript. Desenvolvi uma plataforma fictícia de mangás com conteúdo mockado, trabalhando estrutura de páginas, navegação, estilização e interações no navegador.</p>
-<p>HTML · CSS · JavaScript</p>
-<p><a href="https://github.com/pedro-art2611/Unimang-s-2.0">REPOSITÓRIO ↗</a></p>
+<p><img src="./assets/v3/projects/details/colchetes.png" width="18" alt="" /> <kbd>HTML</kbd> <kbd>CSS</kbd> <kbd>JavaScript</kbd></p>
+<p><a href="https://github.com/pedro-art2611/Unimang-s-2.0"><img src="./assets/v3/projects/details/repositorio.svg" width="156" height="32" alt="Repositório" /></a></p>
 <br clear="all" />
 
-<p align="center"><img src="./assets/v3/projects/node-02.svg" width="30" height="40" alt="02" /></p>
+<p align="center"><img src="./assets/v3/projects/node-02.svg" width="30" height="40" alt="02" /> <img src="./assets/v3/projects/details/losango.png" width="14" alt="" /></p>
 <picture>
   <source media="(max-width: 767px)" srcset="./assets/v3/projects/02-casa-rara.png" width="1536" />
   <source media="(min-width: 768px)" srcset="./assets/v3/projects/02-casa-rara.png" width="300" />
@@ -54,11 +55,11 @@
 
 <p><strong>CASA RARA</strong><br />Acadêmico · Web III · Impacto social</p>
 <p>Site institucional desenvolvido em equipe para a ONG Casa Rara. Participei do levantamento de requisitos com a instituição, modelagem dos fluxos, construção do frontend responsivo e acessível, backend com Django e SQL, além de testes e melhorias a partir do feedback dos usuários.</p>
-<p>HTML · CSS · JavaScript · Python · Django · SQL</p>
-<p><a href="https://github.com/ozelfls/1.1.1_site_ong">REPOSITÓRIO ↗</a></p>
+<p><img src="./assets/v3/projects/details/colchetes.png" width="18" alt="" /> <kbd>HTML</kbd> <kbd>CSS</kbd> <kbd>JavaScript</kbd> <kbd>Python</kbd> <kbd>Django</kbd> <kbd>SQL</kbd></p>
+<p><a href="https://github.com/ozelfls/1.1.1_site_ong"><img src="./assets/v3/projects/details/repositorio.svg" width="156" height="32" alt="Repositório" /></a></p>
 <br clear="all" />
 
-<p align="center"><img src="./assets/v3/projects/node-03.svg" width="30" height="40" alt="03" /></p>
+<p align="center"><img src="./assets/v3/projects/details/estrela.png" width="16" alt="" /> <img src="./assets/v3/projects/node-03.svg" width="30" height="40" alt="03" /> <img src="./assets/v3/projects/details/losango.png" width="14" alt="" /></p>
 <picture>
   <source media="(max-width: 767px)" srcset="./assets/v3/projects/03-conferencia-quantitativa.png" width="1536" />
   <source media="(min-width: 768px)" srcset="./assets/v3/projects/03-conferencia-quantitativa.png" width="300" />
@@ -67,11 +68,11 @@
 
 <p><strong>CONFERÊNCIA QUANTITATIVA</strong><br />Projeto próprio · Automação · Dados</p>
 <p>Sistema em Python desenvolvido por iniciativa própria durante minha atuação na Arteris para automatizar a conferência de dados entre diferentes fontes. A solução buscava reduzir verificações manuais, facilitar a identificação de divergências e tornar uma rotina recorrente mais rápida e padronizada.</p>
-<p>Python · Automação · Análise de dados</p>
-<p><a href="https://github.com/pedro-art2611/Conferencia_Quantitativa">REPOSITÓRIO ↗</a></p>
+<p><img src="./assets/v3/projects/details/colchetes.png" width="18" alt="" /> <kbd>Python</kbd> <kbd>Automação</kbd> <kbd>Análise de dados</kbd></p>
+<p><a href="https://github.com/pedro-art2611/Conferencia_Quantitativa"><img src="./assets/v3/projects/details/repositorio.svg" width="156" height="32" alt="Repositório" /></a></p>
 <br clear="all" />
 
-<p align="center"><img src="./assets/v3/projects/node-04.svg" width="30" height="40" alt="04" /></p>
+<p align="center"><img src="./assets/v3/projects/node-04.svg" width="30" height="40" alt="04" /> <img src="./assets/v3/projects/details/losango.png" width="14" alt="" /></p>
 <picture>
   <source media="(max-width: 767px)" srcset="./assets/v3/projects/04-hermix.png" width="1536" />
   <source media="(min-width: 768px)" srcset="./assets/v3/projects/04-hermix.png" width="300" />
@@ -81,11 +82,11 @@
 <p><strong>HERMIX</strong><br />Profissional · Fullstack · IA · Privado</p>
 <p>O projeto que mais marcou minha evolução como desenvolvedor até aqui. Participei desde a concepção do produto, incluindo nome, identidade visual, experiência e regras de negócio, até a construção e evolução da plataforma, atuando em frontend, backend, banco de dados, filas, infraestrutura, mensageria, automações e integrações com IA.</p>
 <p>Foi minha principal prova de fogo como desenvolvedor fullstack, envolvendo não apenas código, mas também produto, arquitetura, UX, resiliência e operação de um sistema profissional.</p>
-<p>Node.js · React · PostgreSQL · Redis/BullMQ · Docker · OpenAI · n8n · ElevenLabs</p>
+<p><img src="./assets/v3/projects/details/colchetes.png" width="18" alt="" /> <kbd>Node.js</kbd> <kbd>React</kbd> <kbd>PostgreSQL</kbd> <kbd>Redis/BullMQ</kbd> <kbd>Docker</kbd> <kbd>OpenAI</kbd> <kbd>n8n</kbd> <kbd>ElevenLabs</kbd></p>
 <p><sub>PRIVATE REPOSITORY</sub></p>
 <br clear="all" />
 
-<p align="center"><img src="./assets/v3/projects/node-05.svg" width="30" height="40" alt="05" /></p>
+<p align="center"><img src="./assets/v3/projects/details/estrela.png" width="16" alt="" /> <img src="./assets/v3/projects/node-05.svg" width="30" height="40" alt="05" /> <img src="./assets/v3/projects/details/losango.png" width="14" alt="" /></p>
 <picture>
   <source media="(max-width: 767px)" srcset="./assets/v3/projects/05-maestro-crm.png" width="1536" />
   <source media="(min-width: 768px)" srcset="./assets/v3/projects/05-maestro-crm.png" width="300" />
@@ -95,11 +96,11 @@
 <p><strong>MAESTRO CRM</strong><br />Profissional · CRM · Em desenvolvimento · Privado</p>
 <p>CRM profissional voltado à operação e gestão de planos de saúde, atualmente em desenvolvimento. Participo de sua construção desde as primeiras etapas, trabalhando na base técnica, autenticação e sessões, controles de acesso, auditoria, navegação e evolução das primeiras interfaces e fluxos do produto.</p>
 <p>É um projeto ainda no início e que continuará evoluindo junto com a minha atuação profissional.</p>
-<p>TypeScript · React · Next.js · PostgreSQL · Tailwind CSS</p>
+<p><img src="./assets/v3/projects/details/colchetes.png" width="18" alt="" /> <kbd>TypeScript</kbd> <kbd>React</kbd> <kbd>Next.js</kbd> <kbd>PostgreSQL</kbd> <kbd>Tailwind CSS</kbd></p>
 <p><sub>PRIVATE REPOSITORY</sub></p>
 <br clear="all" />
 
-<p align="center"><img src="./assets/v3/projects/node-06.svg" width="30" height="40" alt="06" /></p>
+<p align="center"><img src="./assets/v3/projects/node-06.svg" width="30" height="40" alt="06" /> <img src="./assets/v3/projects/details/lua.png" width="20" alt="" /></p>
 <picture>
   <source media="(max-width: 767px)" srcset="./assets/v3/projects/06-next-chapter.png" width="1536" />
   <source media="(min-width: 768px)" srcset="./assets/v3/projects/06-next-chapter.png" width="260" />
