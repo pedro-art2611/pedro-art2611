@@ -32,11 +32,13 @@ Fonte: PNG `micro-assets.png` anexado, idêntico por SHA-256 a `../source/micro-
 | Recorte | Dimensões | Uso |
 |---|---|---|
 | `details/codigo.png` | 213 × 153 | Embutido no botão local `details/repositorio.svg`, 156 × 32, nos três links públicos. |
-| `details/colchetes.png` | 179 × 163 | Uma vez antes de cada uma das cinco stacks, a 18 px. |
-| `details/losango.png` | 168 × 169 | Nodes 01 a 05, a 14 px; números preservados. |
-| `details/estrela.png` | 184 × 188 | Duas aparições: transições 03 e 05, a 16 px. |
-| `details/lua.png` | 190 × 195 | Uso exclusivo junto ao node 06, a 20 px. |
+| `details/colchetes.png` | 179 × 163 | Original preservado; fonte dos dois recortes abaixo. |
+| `details/colchete-esquerdo.png` | 78 × 163 | Abre cada stack, altura de 22 px. |
+| `details/colchete-direito.png` | 76 × 163 | Fecha cada stack, altura de 22 px. |
+| `details/losango.png` | 168 × 169 | Antes dos títulos dos projetos 01 a 05, a 14 px. |
+| `details/estrela.png` | 184 × 188 | Na linha abaixo dos títulos 01 a 05, antes da identificação, a 14 px. |
+| `details/lua.png` | 190 × 195 | Uso exclusivo antes do título Next Chapter, a 20 px. |
 
-Stacks em `<kbd>`, com cada tecnologia como texto real e quebra de linha entre tags. Cores e bordas nativas do tema do GitHub; o ícone técnico fornece o accent cyan. O botão usa SVG local, sem serviço de badges, com fundo navy, borda cyan, texto claro e o recorte aprovado embutido. Nenhum link adicionado aos projetos privados.
+Stacks em `<kbd>`, com cada tecnologia como texto real entre os dois colchetes azuis e quebra de linha entre tags. Espaços inseparáveis mantêm cada colchete junto à primeira ou última tag. Cores e bordas nativas do tema do GitHub. Os números ficam sozinhos no eixo central da timeline. O botão usa SVG local, sem serviço de badges, com fundo navy, borda cyan, texto claro e o recorte aprovado embutido. Nenhum link adicionado aos projetos privados.
 
-`../dividers/divisor-projetos.png`: cópia exata do divisor anexado, 780 × 38, exibido a 92% entre o fim da Forja e o header Projetos. O fundo desse anexo é opaco; foi preservado como solicitado.
+`../dividers/divisor-projetos.png`: divisor anexado, 780 × 38, exibido a 92% entre o fim da Forja e o header Projetos. Fundo externo removido por código com autorização do usuário: preenchimento conectado às bordas, restrito à faixa RGB do fundo (R 23–34, G 28–36, B 34–50). Somente o alpha dos 21.621 pixels de fundo foi zerado; RGB, dimensões e demais pixels preservados.

@@ -78,5 +78,37 @@
       195
     ],
     "alpha": "preservado integralmente"
+  },
+  {
+    "name": "colchete-esquerdo",
+    "source": "colchetes.png",
+    "bbox": [
+      4,
+      4,
+      74,
+      159
+    ],
+    "padding": 4,
+    "size": [
+      78,
+      163
+    ],
+    "alpha": "preservado integralmente"
+  },
+  {
+    "name": "colchete-direito",
+    "source": "colchetes.png",
+    "bbox": [
+      107,
+      4,
+      175,
+      159
+    ],
+    "padding": 4,
+    "size": [
+      76,
+      163
+    ],
+    "alpha": "preservado integralmente"
   }
 ]
