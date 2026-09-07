@@ -1,0 +1,29 @@
+{
+  "origem": "footer/vergil-animado.webp",
+  "moldura": "frame/frame-bottom.png",
+  "tela": [
+    2560,
+    627
+  ],
+  "tamanho_moldura": [
+    2560,
+    401
+  ],
+  "posicao_moldura": [
+    0,
+    226
+  ],
+  "posicao_animacao": [
+    80,
+    0
+  ],
+  "escala_inteira": 2,
+  "destino": "footer/vergil-emoldurado.webp",
+  "quadros": 1395,
+  "duracao_ms": 77555,
+  "repeticoes": 0,
+  "bytes": 28360010,
+  "sha256_origem": "6263ef2a21f7e23298278207fcce2625766edb41e8b85dfab74af22603b23fa1",
+  "sha256_resultado": "b11862a3abe64a0c9873951d70f138a8f68630a00e5ef4cb8973bfdbb16a1c58",
+  "verificacao": "Todos os quadros decodificados são idênticos à composição sem perdas; tempos e repetição preservados."
+}

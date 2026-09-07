@@ -121,3 +121,27 @@ Branch confirmada pelo usuário: `feat/profile-readme-v3`. Jardim permanece fora
 - Comparação antes/depois: eliminados o intervalo da katana e as flores laterais; as molduras envolvem visualmente banner e rodapé com pequeno recuo lateral do conteúdo.
 - Comparação binária confirma banner, personagem, Vergil, divisor e dois arquivos da katana intactos. Nas molduras, todos os pixels do recorte são idênticos aos da versão anterior.
 - Workflows, árvore e demais famílias de assets não foram alterados.
+
+## Encaixe estrutural com referência no Canva
+
+Estado atual: as molduras são sobrepostas às cenas em dois derivados animados. O README usa cada composição em 100% da largura, sem depender de CSS de sobreposição. As descrições anteriores documentam as etapas anteriores.
+
+- Topo: banner original em resolução nativa (2172 × 724), posicionado em (74, 122) numa tela transparente de 2320 × 846. Moldura de 2320 × 360 sobreposta na borda superior. A faixa arquitetônica encontra a cena e as lanternas descem pelas laterais.
+- Rodapé: Vergil e chão ampliados exatamente 2x, sem interpolação, posicionados em (80, 0) numa tela de 2560 × 627. Moldura de 2560 × 401 sobreposta em (0, 226), cruzando a borda frontal da plataforma.
+- As molduras partem dos recortes justos existentes; não houve novo corte das artes originais. A tela dos derivados inclui somente o espaço necessário à composição. Transparência real preservada.
+- Sem blur, suavização ou compressão com perdas. Molduras ajustadas proporcionalmente com vizinho mais próximo. Cada pixel do Vergil vira um bloco 2x2; banner não é reamostrado.
+- Os WebPs originais e os PNGs das molduras permanecem intactos. Sobre mim, texto, personagem, header limpo e divisor interno não foram alterados. Katana continua reservada e ausente do README.
+- Reprodução em `scripts/compor-molduras-perfil.py`, com parâmetros e relatórios JSON junto aos derivados. A validação decodifica TODOS os quadros e compara seus pixels à composição esperada; verifica também quantidade de quadros, duração de cada quadro e repetição.
+
+| Nome lógico | Path relativo a assets/v3 | Origem | Status | Dimensões | Uso |
+|---|---|---|---|---|---|
+| Banner emoldurado | banner/banner-emoldurado.webp | banner/banner-animado.webp + frame/frame-top.png | final | 2320 × 846 | Abertura integrada, 100% no README. |
+| Banner emoldurado estático | banner/banner-emoldurado-estatico.png | Primeiro quadro da composição | fallback | 2320 × 846 | Inspeção e alternativa estática. |
+| Vergil emoldurado | footer/vergil-emoldurado.webp | footer/vergil-animado.webp + frame/frame-bottom.png | final | 2560 × 627 | Plataforma integrada, 100% no README. |
+| Vergil emoldurado estático | footer/vergil-emoldurado-estatico.png | Primeiro quadro da composição | fallback | 2560 × 627 | Inspeção e alternativa estática. |
+
+### Resultado da validação das composições
+
+- `banner/banner-emoldurado.webp`: 192 quadros, 7999 ms, 83.52 MiB. Todos os quadros passaram na comparação exata de pixels; tempos e loop preservados.
+- `footer/vergil-emoldurado.webp`: 1395 quadros, 77555 ms, 27.05 MiB. Todos os quadros passaram na comparação exata de pixels; tempos e loop preservados.
+- Preview do HTML sanitizado pelo GitHub validado em desktop e celular, sem rolagem horizontal.
