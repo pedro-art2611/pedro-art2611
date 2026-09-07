@@ -71,7 +71,7 @@ export function validateCalendar(calendar) {
 
 // Moldura e divisórias vetoriais: nenhum raster, recurso remoto ou script no SVG.
 function divider(y) {
-  return `<g transform="translate(0 ${y})" fill="none">
+  return `<g transform="translate(0 ${y}) scale(1 0.65)" fill="none">
     <path d="M86 0H964 M1198 0H2080" stroke="#031221" stroke-width="9"/>
     <path d="M86 0H964 M1198 0H2080" stroke="#074778" stroke-width="3"/>
     <path d="M200 -2H850 M1275 -2H1948" stroke="#08649c" stroke-width="1"/>
@@ -136,15 +136,15 @@ export function renderCalendar(calendar) {
   }).join('\n');
   const legend = Object.entries(COLORS).map(([level, color], i) => `<g transform="translate(1940 ${302 + i * 34})"><rect width="21" height="21" rx="2" fill="${color}" stroke="#0a3043"/><text x="35" y="16" font-size="16" fill="#a0bfd0">${['Nenhuma','Pouca','Média','Alta','Máxima'][i]}</text></g>`).join('\n');
   const total = new Intl.NumberFormat('pt-BR').format(calendar.totalContributions);
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="2164" height="727" viewBox="0 0 2164 727" fill="none" role="img" aria-labelledby="title description">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="2164" height="637" viewBox="0 0 2164 637" fill="none" role="img" aria-labelledby="title description">
 <title id="title">Contribuições de ${LOGIN}</title>
 <desc id="description">${total} contribuições nos últimos 12 meses no GitHub. ${calendar.weeks.length} semanas e ${days} dias, de ${calendar.weeks[0].contributionDays[0].date} a ${calendar.weeks.at(-1).contributionDays.at(-1).date}. Contagens e níveis oficiais, incluindo atividade privada anonimizada disponibilizada pelo GitHub.</desc>
 <defs>
-  <radialGradient id="background"><stop stop-color="#05131e"/><stop offset="1" stop-color="#080f15"/></radialGradient>
   <linearGradient id="panel" x2="0" y2="1"><stop stop-color="#03101c"/><stop offset="1" stop-color="#04111b"/></linearGradient>
 </defs>
-<rect width="2164" height="727" fill="url(#background)"/>
-${divider(79)}
+<rect width="2164" height="637" fill="#0d1117"/>
+${divider(45)}
+<g transform="translate(0 -35)">
 ${frame()}
 <g font-family="'Courier New',monospace">
 <text x="1082" y="187" text-anchor="middle" font-size="29" font-weight="bold" letter-spacing="5" fill="#b9edff">CONTRIBUIÇÕES</text>
@@ -155,7 +155,8 @@ ${legend}
 <path d="M826 507H914 M1250 507H1338" stroke="#04cde6" stroke-width="2"/>
 <text id="total" data-total="${calendar.totalContributions}" x="1082" y="515" text-anchor="middle" font-size="26" font-weight="bold" fill="#98eaff">${total} contribuições</text>
 </g>
-${divider(644)}
+</g>
+${divider(580)}
 </svg>\n`;
 }
 

@@ -1,6 +1,6 @@
 # Painel de contribuições V3
 
-`contributions.svg` é gerado integralmente por `scripts/generate-contributions.mjs`, em SVG estático de 2164 × 727. Referência visual: master aprovada `codex-clipboard-7b25d087-4618-4998-8dbd-cab20af4e640.png`. Moldura, divisórias `< | >`, texto e células são vetoriais. Não há imagem de fundo rasterizada, screenshot, fonte externa, animação ou dados de exemplo no gerador.
+`contributions.svg` é gerado integralmente por `scripts/generate-contributions.mjs`, em SVG estático de 2164 × 637. Referência visual: master aprovada `codex-clipboard-7b25d087-4618-4998-8dbd-cab20af4e640.png`. Moldura, divisórias `< | >`, texto e células são vetoriais. Fundo externo sólido `#0d1117`; divisórias com altura reduzida em 35% e menos espaço externo, conforme refinamento solicitado. Não há imagem de fundo rasterizada, screenshot, fonte externa, animação ou dados de exemplo no gerador.
 
 O README exibe o painel a 100% de largura, com proporção preservada. A árvore antiga e seu workflow permanecem preservados; a árvore já estava fora do README V3 antes desta integração temporária.
 
