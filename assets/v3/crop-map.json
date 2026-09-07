@@ -1,0 +1,1022 @@
+[
+  {
+    "path": "frame/frame-top.png",
+    "source": "border-top.png",
+    "region": [
+      0,
+      0,
+      2172,
+      724
+    ],
+    "bbox": [
+      0,
+      165,
+      2172,
+      502
+    ],
+    "canvas": null,
+    "padding": 8
+  },
+  {
+    "path": "frame/frame-bottom.png",
+    "source": "border-bottom.png",
+    "region": [
+      0,
+      0,
+      2172,
+      724
+    ],
+    "bbox": [
+      0,
+      313,
+      2172,
+      653
+    ],
+    "canvas": null,
+    "padding": 8
+  },
+  {
+    "path": "dividers/divisor-principal.png",
+    "source": "divisor principal.png",
+    "region": [
+      0,
+      0,
+      2172,
+      724
+    ],
+    "bbox": [
+      15,
+      282,
+      2158,
+      440
+    ],
+    "canvas": null,
+    "padding": 8
+  },
+  {
+    "path": "dividers/divisor-secundario.png",
+    "source": "divisor-secundario.png",
+    "region": [
+      0,
+      0,
+      2172,
+      724
+    ],
+    "bbox": [
+      75,
+      302,
+      2097,
+      416
+    ],
+    "canvas": null,
+    "padding": 8
+  },
+  {
+    "path": "headers/sobre-mim.png",
+    "source": "header-sobre-mim.png",
+    "region": [
+      0,
+      0,
+      2172,
+      724
+    ],
+    "bbox": [
+      113,
+      98,
+      2059,
+      627
+    ],
+    "canvas": null,
+    "padding": 8
+  },
+  {
+    "path": "headers/forja-tecnica.png",
+    "source": "header-tecnica.png",
+    "region": [
+      0,
+      0,
+      2172,
+      724
+    ],
+    "bbox": [
+      113,
+      138,
+      2059,
+      570
+    ],
+    "canvas": null,
+    "padding": 8
+  },
+  {
+    "path": "contact/github.png",
+    "source": "contatos-icons.png",
+    "region": [
+      0,
+      0,
+      627,
+      627
+    ],
+    "bbox": [
+      180,
+      189,
+      571,
+      584
+    ],
+    "canvas": [
+      440,
+      440
+    ],
+    "padding": 8
+  },
+  {
+    "path": "contact/linkedin.png",
+    "source": "contatos-icons.png",
+    "region": [
+      627,
+      0,
+      1254,
+      627
+    ],
+    "bbox": [
+      697,
+      196,
+      1107,
+      587
+    ],
+    "canvas": [
+      440,
+      440
+    ],
+    "padding": 8
+  },
+  {
+    "path": "contact/email.png",
+    "source": "contatos-icons.png",
+    "region": [
+      0,
+      627,
+      627,
+      1254
+    ],
+    "bbox": [
+      164,
+      705,
+      591,
+      1064
+    ],
+    "canvas": [
+      440,
+      440
+    ],
+    "padding": 8
+  },
+  {
+    "path": "contact/instagram.png",
+    "source": "contatos-icons.png",
+    "region": [
+      627,
+      627,
+      1254,
+      1254
+    ],
+    "bbox": [
+      701,
+      693,
+      1097,
+      1063
+    ],
+    "canvas": [
+      440,
+      440
+    ],
+    "padding": 8
+  },
+  {
+    "path": "stack/nodejs.png",
+    "source": "stack-icons-1.png",
+    "region": [
+      0,
+      120,
+      365,
+      535
+    ],
+    "bbox": [
+      24,
+      178,
+      359,
+      507
+    ],
+    "canvas": [
+      400,
+      400
+    ],
+    "padding": 8
+  },
+  {
+    "path": "stack/react.png",
+    "source": "stack-icons-1.png",
+    "region": [
+      365,
+      120,
+      730,
+      535
+    ],
+    "bbox": [
+      377,
+      178,
+      715,
+      507
+    ],
+    "canvas": [
+      400,
+      400
+    ],
+    "padding": 8
+  },
+  {
+    "path": "stack/postgresql.png",
+    "source": "stack-icons-1.png",
+    "region": [
+      730,
+      120,
+      1095,
+      535
+    ],
+    "bbox": [
+      734,
+      178,
+      1095,
+      507
+    ],
+    "canvas": [
+      400,
+      400
+    ],
+    "padding": 8
+  },
+  {
+    "path": "stack/redis.png",
+    "source": "stack-icons-1.png",
+    "region": [
+      1095,
+      120,
+      1448,
+      535
+    ],
+    "bbox": [
+      1095,
+      178,
+      1427,
+      509
+    ],
+    "canvas": [
+      400,
+      400
+    ],
+    "padding": 8
+  },
+  {
+    "path": "stack/docker.png",
+    "source": "stack-icons-1.png",
+    "region": [
+      0,
+      535,
+      365,
+      970
+    ],
+    "bbox": [
+      24,
+      562,
+      359,
+      892
+    ],
+    "canvas": [
+      400,
+      400
+    ],
+    "padding": 8
+  },
+  {
+    "path": "stack/n8n.png",
+    "source": "stack-icons-1.png",
+    "region": [
+      365,
+      535,
+      730,
+      970
+    ],
+    "bbox": [
+      377,
+      562,
+      715,
+      892
+    ],
+    "canvas": [
+      400,
+      400
+    ],
+    "padding": 8
+  },
+  {
+    "path": "stack/openai.png",
+    "source": "stack-icons-1.png",
+    "region": [
+      730,
+      535,
+      1095,
+      970
+    ],
+    "bbox": [
+      734,
+      562,
+      1095,
+      892
+    ],
+    "canvas": [
+      400,
+      400
+    ],
+    "padding": 8
+  },
+  {
+    "path": "stack/github.png",
+    "source": "stack-icons-1.png",
+    "region": [
+      1095,
+      535,
+      1448,
+      970
+    ],
+    "bbox": [
+      1095,
+      562,
+      1426,
+      892
+    ],
+    "canvas": [
+      400,
+      400
+    ],
+    "padding": 8
+  },
+  {
+    "path": "stack/typescript.png",
+    "source": "stack-icones-2.png",
+    "region": [
+      0,
+      0,
+      512,
+      512
+    ],
+    "bbox": [
+      72,
+      72,
+      512,
+      493
+    ],
+    "canvas": [
+      400,
+      400
+    ],
+    "padding": 8
+  },
+  {
+    "path": "stack/bullmq.png",
+    "source": "stack-icones-2.png",
+    "region": [
+      512,
+      0,
+      1024,
+      512
+    ],
+    "bbox": [
+      512,
+      72,
+      1024,
+      493
+    ],
+    "canvas": [
+      400,
+      400
+    ],
+    "padding": 8
+  },
+  {
+    "path": "stack/linux.png",
+    "source": "stack-icones-2.png",
+    "region": [
+      1024,
+      0,
+      1536,
+      512
+    ],
+    "bbox": [
+      1024,
+      72,
+      1464,
+      493
+    ],
+    "canvas": [
+      400,
+      400
+    ],
+    "padding": 8
+  },
+  {
+    "path": "stack/express.png",
+    "source": "stack-icones-2.png",
+    "region": [
+      0,
+      512,
+      512,
+      1024
+    ],
+    "bbox": [
+      74,
+      517,
+      512,
+      942
+    ],
+    "canvas": [
+      400,
+      400
+    ],
+    "padding": 8
+  },
+  {
+    "path": "stack/neon.png",
+    "source": "stack-icones-2.png",
+    "region": [
+      512,
+      512,
+      1024,
+      1024
+    ],
+    "bbox": [
+      512,
+      517,
+      1024,
+      940
+    ],
+    "canvas": [
+      400,
+      400
+    ],
+    "padding": 8
+  },
+  {
+    "path": "stack/nginx.png",
+    "source": "stack-icones-2.png",
+    "region": [
+      1024,
+      512,
+      1536,
+      1024
+    ],
+    "bbox": [
+      1024,
+      519,
+      1464,
+      940
+    ],
+    "canvas": [
+      400,
+      400
+    ],
+    "padding": 8
+  },
+  {
+    "path": "stack/elevenlabs.png",
+    "source": "elevenlabs-ico.png",
+    "region": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "bbox": [
+      184,
+      228,
+      1070,
+      1026
+    ],
+    "canvas": [
+      400,
+      400
+    ],
+    "padding": 8
+  },
+  {
+    "path": "stack/vite.png",
+    "source": "vite-ico.png",
+    "region": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "bbox": [
+      207,
+      210,
+      1049,
+      997
+    ],
+    "canvas": [
+      400,
+      400
+    ],
+    "padding": 8
+  },
+  {
+    "path": "chips/backend.png",
+    "source": "label-charts.png",
+    "region": [
+      0,
+      230,
+      724,
+      423
+    ],
+    "bbox": [
+      170,
+      259,
+      667,
+      410
+    ],
+    "canvas": [
+      536,
+      180
+    ],
+    "padding": 8
+  },
+  {
+    "path": "chips/frontend.png",
+    "source": "label-charts.png",
+    "region": [
+      724,
+      230,
+      1448,
+      423
+    ],
+    "bbox": [
+      778,
+      259,
+      1278,
+      413
+    ],
+    "canvas": [
+      536,
+      180
+    ],
+    "padding": 8
+  },
+  {
+    "path": "chips/banco-de-dados.png",
+    "source": "label-charts.png",
+    "region": [
+      0,
+      423,
+      724,
+      597
+    ],
+    "bbox": [
+      170,
+      433,
+      676,
+      587
+    ],
+    "canvas": [
+      536,
+      180
+    ],
+    "padding": 8
+  },
+  {
+    "path": "chips/ia.png",
+    "source": "label-charts.png",
+    "region": [
+      724,
+      423,
+      1448,
+      597
+    ],
+    "bbox": [
+      780,
+      433,
+      1278,
+      587
+    ],
+    "canvas": [
+      536,
+      180
+    ],
+    "padding": 8
+  },
+  {
+    "path": "chips/automacao.png",
+    "source": "label-charts.png",
+    "region": [
+      0,
+      597,
+      724,
+      774
+    ],
+    "bbox": [
+      170,
+      607,
+      675,
+      764
+    ],
+    "canvas": [
+      536,
+      180
+    ],
+    "padding": 8
+  },
+  {
+    "path": "chips/integracoes.png",
+    "source": "label-charts.png",
+    "region": [
+      724,
+      597,
+      1448,
+      774
+    ],
+    "bbox": [
+      777,
+      607,
+      1282,
+      764
+    ],
+    "canvas": [
+      536,
+      180
+    ],
+    "padding": 8
+  },
+  {
+    "path": "chips/apis.png",
+    "source": "label-charts.png",
+    "region": [
+      0,
+      774,
+      724,
+      970
+    ],
+    "bbox": [
+      169,
+      784,
+      675,
+      939
+    ],
+    "canvas": [
+      536,
+      180
+    ],
+    "padding": 8
+  },
+  {
+    "path": "chips/infra.png",
+    "source": "label-charts.png",
+    "region": [
+      724,
+      774,
+      1448,
+      970
+    ],
+    "bbox": [
+      779,
+      785,
+      1282,
+      939
+    ],
+    "canvas": [
+      536,
+      180
+    ],
+    "padding": 8
+  },
+  {
+    "path": "dividers/divisor-01.png",
+    "source": "divisors.png",
+    "region": [
+      0,
+      80,
+      1448,
+      210
+    ],
+    "bbox": [
+      48,
+      100,
+      1398,
+      180
+    ],
+    "canvas": null,
+    "padding": 6
+  },
+  {
+    "path": "dividers/divisor-02.png",
+    "source": "divisors.png",
+    "region": [
+      0,
+      235,
+      1448,
+      375
+    ],
+    "bbox": [
+      42,
+      255,
+      1406,
+      342
+    ],
+    "canvas": null,
+    "padding": 6
+  },
+  {
+    "path": "dividers/divisor-03.png",
+    "source": "divisors.png",
+    "region": [
+      0,
+      400,
+      1448,
+      525
+    ],
+    "bbox": [
+      50,
+      420,
+      1398,
+      495
+    ],
+    "canvas": null,
+    "padding": 6
+  },
+  {
+    "path": "dividers/divisor-04.png",
+    "source": "divisors.png",
+    "region": [
+      0,
+      570,
+      1448,
+      690
+    ],
+    "bbox": [
+      51,
+      592,
+      1398,
+      661
+    ],
+    "canvas": null,
+    "padding": 6
+  },
+  {
+    "path": "dividers/divisor-05.png",
+    "source": "divisors.png",
+    "region": [
+      0,
+      735,
+      1448,
+      845
+    ],
+    "bbox": [
+      51,
+      756,
+      1398,
+      815
+    ],
+    "canvas": null,
+    "padding": 6
+  },
+  {
+    "path": "dividers/divisor-06.png",
+    "source": "divisors.png",
+    "region": [
+      0,
+      905,
+      1448,
+      1020
+    ],
+    "bbox": [
+      49,
+      926,
+      1400,
+      990
+    ],
+    "canvas": null,
+    "padding": 6
+  },
+  {
+    "path": "dividers/micro-ponto-cyan.png",
+    "source": "micro-assets.png",
+    "region": [
+      0,
+      100,
+      362,
+      390
+    ],
+    "bbox": [
+      121,
+      149,
+      298,
+      318
+    ],
+    "canvas": null,
+    "padding": 6
+  },
+  {
+    "path": "dividers/micro-lanterna.png",
+    "source": "micro-assets.png",
+    "region": [
+      362,
+      100,
+      724,
+      390
+    ],
+    "bbox": [
+      455,
+      149,
+      628,
+      318
+    ],
+    "canvas": null,
+    "padding": 6
+  },
+  {
+    "path": "dividers/micro-losango.png",
+    "source": "micro-assets.png",
+    "region": [
+      724,
+      100,
+      1086,
+      390
+    ],
+    "bbox": [
+      805,
+      157,
+      965,
+      318
+    ],
+    "canvas": null,
+    "padding": 6
+  },
+  {
+    "path": "dividers/micro-seta-dupla.png",
+    "source": "micro-assets.png",
+    "region": [
+      1086,
+      100,
+      1448,
+      390
+    ],
+    "bbox": [
+      1151,
+      169,
+      1326,
+      306
+    ],
+    "canvas": null,
+    "padding": 6
+  },
+  {
+    "path": "dividers/micro-seta-tripla.png",
+    "source": "micro-assets.png",
+    "region": [
+      0,
+      390,
+      362,
+      700
+    ],
+    "bbox": [
+      101,
+      490,
+      312,
+      630
+    ],
+    "canvas": null,
+    "padding": 6
+  },
+  {
+    "path": "dividers/micro-codigo.png",
+    "source": "micro-assets.png",
+    "region": [
+      362,
+      390,
+      724,
+      700
+    ],
+    "bbox": [
+      445,
+      489,
+      650,
+      634
+    ],
+    "canvas": null,
+    "padding": 6
+  },
+  {
+    "path": "dividers/micro-conexao.png",
+    "source": "micro-assets.png",
+    "region": [
+      724,
+      390,
+      1086,
+      700
+    ],
+    "bbox": [
+      800,
+      475,
+      982,
+      647
+    ],
+    "canvas": null,
+    "padding": 6
+  },
+  {
+    "path": "dividers/micro-colchetes.png",
+    "source": "micro-assets.png",
+    "region": [
+      1086,
+      390,
+      1448,
+      700
+    ],
+    "bbox": [
+      1151,
+      483,
+      1322,
+      638
+    ],
+    "canvas": null,
+    "padding": 6
+  },
+  {
+    "path": "dividers/micro-estrela.png",
+    "source": "micro-assets.png",
+    "region": [
+      0,
+      700,
+      362,
+      1086
+    ],
+    "bbox": [
+      121,
+      782,
+      297,
+      962
+    ],
+    "canvas": null,
+    "padding": 6
+  },
+  {
+    "path": "dividers/micro-corte.png",
+    "source": "micro-assets.png",
+    "region": [
+      362,
+      700,
+      724,
+      1086
+    ],
+    "bbox": [
+      428,
+      755,
+      655,
+      985
+    ],
+    "canvas": null,
+    "padding": 6
+  },
+  {
+    "path": "dividers/micro-lua.png",
+    "source": "micro-assets.png",
+    "region": [
+      724,
+      700,
+      1086,
+      1086
+    ],
+    "bbox": [
+      808,
+      783,
+      990,
+      970
+    ],
+    "canvas": null,
+    "padding": 6
+  },
+  {
+    "path": "dividers/micro-torii.png",
+    "source": "micro-assets.png",
+    "region": [
+      1086,
+      700,
+      1448,
+      1086
+    ],
+    "bbox": [
+      1137,
+      782,
+      1350,
+      969
+    ],
+    "canvas": null,
+    "padding": 6
+  }
+]
