@@ -86,7 +86,6 @@ O checkpoint contém entrada, Sobre mim e divisor; Vergil permanece visível com
 | Katana acento | dividers/katana-acento.webp | katana_asset_transparente_v4.gif | reservado | 1265 × 150 | Recorte união de 63 frames (128, 133, 1377, 267); WebP lossless; tempos e loop preservados; Aprovada e reservada para reposicionamento futuro; fora do README. |
 | Projetos | headers/projetos.png | Não consta no ZIP | MISSING_APPROVED_ASSET | — | Não substituir por asset inventado. |
 | Contato (placa) | headers/contato.png | Não consta no ZIP | MISSING_APPROVED_ASSET | — | Não substituir por asset inventado. |
-| REST API | stack/rest-api.png | Não consta no ZIP | MISSING_APPROVED_ASSET | — | Não substituir por asset inventado. |
 
 ## Verificação do checkpoint
 
@@ -98,7 +97,7 @@ O checkpoint contém entrada, Sobre mim e divisor; Vergil permanece visível com
 - Katana: 1265 × 150, 63 frames. Recorte pela união de TODOS os frames; derivado WebP lossless; original GIF preservado.
 - Os PNGs do ZIP têm alpha real, mas continham resíduos com alpha mínimo espalhados por grandes áreas. Recortes descartam somente alpha <= 8/255. Preto visível interno não foi convertido em transparência.
 - Risco pendente: os três WebPs somam 131,10 MiB. O envio Git comporta cada arquivo, mas o carregamento frio do README pode ser demorado; validar o carregamento remoto antes de decidir por uma versão otimizada.
-- Restam ausentes apenas a placa de Projetos, a placa de Contato e o ícone de stack REST API. Jardim está fora do escopo por decisão do usuário.
+- Restam ausentes apenas a placa de Projetos e a placa de Contato. O ícone REST API foi recebido e integrado na etapa da Forja. Jardim está fora do escopo por decisão do usuário.
 
 ## Refinamento de limpeza e encaixe
 
@@ -145,3 +144,22 @@ Estado atual: as molduras são sobrepostas às cenas em dois derivados animados.
 - `banner/banner-emoldurado.webp`: 192 quadros, 7999 ms, 83.52 MiB. Todos os quadros passaram na comparação exata de pixels; tempos e loop preservados.
 - `footer/vergil-emoldurado.webp`: 1395 quadros, 77555 ms, 27.05 MiB. Todos os quadros passaram na comparação exata de pixels; tempos e loop preservados.
 - Preview do HTML sanitizado pelo GitHub validado em desktop e celular, sem rolagem horizontal.
+
+## Forja Técnica
+
+Branch reconfirmada pelo usuário: `feat/profile-readme-v3`. Inserida somente a Forja, entre o divisor após Sobre mim e o rodapé aprovado.
+
+- Composição vertical centralizada, sem tabelas, cards, fundos de grupo ou textos explicativos. Seis grupos separados por respiro, no máximo quatro ícones em cada linha.
+- Header limpo a 60%; chips a 136px de largura; ícones a 44 × 44px. As imagens de stack mantêm a família normalizada de 400 × 400px; área útil equivalente, sem padding excessivo.
+- Grupos: Backend (Node.js, Express, BullMQ, nginx); Frontend (React, TypeScript, Vite); Banco de Dados (PostgreSQL, Redis, Neon); IA (OpenAI, ElevenLabs); Automação e Integrações (n8n, REST API); Infra (Docker, Linux, GitHub). O chip APIs fica reservado.
+- REST API veio do PNG anexado pelo usuário. Original preservado em `source/rest-api-original.png`; alpha real confirmado. Recorte útil (195, 232, 1059, 1018), descarte somente de resíduos alpha <= 8/255, normalização proporcional em canvas de 400 × 400px. Arte mantida, sem redesenho.
+- Header da Forja editado pela ferramenta integrada de imagem: removidos flores, galhos e pequenos símbolos florais nas lanternas. Texto, conceito arquitetônico, paleta e lanternas preservados. Original em `source/header-tecnica.png` e versão floral anterior em `headers/forja-tecnica.png`.
+- Pedido de edição: “Remover apenas flores, pétalas, galhos laterais e emblemas florais nas lanternas; preservar Forja técnica, tipografia, acento, moldura, estrutura oriental e paleta; sem blur ou ornamentos novos.” Saída tinha quadriculado opaco: removido por conectividade do fundo claro neutro às bordas, mantendo a arte; recorte (202, 125, 1967, 592) com 4px transparentes.
+- Forja inteiramente estática. Divisor principal existente reaproveitado após a seção. Nenhuma animação adicional e katana continua reservada.
+- Preview com HTML sanitizado pelo GitHub: 31 imagens carregadas; conferido em 1100px, 768px e 390px. Sem rolagem horizontal, categorias legíveis e linhas estáveis no celular.
+
+| Nome lógico | Path relativo a assets/v3 | Origem | Status | Dimensões | Uso |
+|---|---|---|---|---|---|
+| REST API original | source/rest-api-original.png | PNG anexado pelo usuário | source | 1254 × 1254 | Preservado; não usar no README. |
+| REST API | stack/rest-api.png | source/rest-api-original.png | final | 400 × 400 | 44px no grupo Automação e Integrações. |
+| Forja técnica limpa | headers/forja-tecnica-limpa.png | Edição de headers/forja-tecnica.png | final | 1773 × 475 | PNG com alpha real, sem flores; 60% no README. |
