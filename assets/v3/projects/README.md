@@ -23,4 +23,4 @@ Header a 60%. Capas alternadas por `align`, com dimensões intrínsecas de 300 �
 
 Os únicos assets criados nesta montagem são os seis nodes leves `node-01.svg` a `node-06.svg`, explicitamente autorizados no prompt. Aparecem centralizados, com pequenos segmentos verticais; a linha é segmentada para funcionar no README sem CSS de posicionamento e sem bordas de tabela.
 
-Links públicos verificados: Unimangas e Conferência Quantitativa. Casa Rara permanece sem link. Hermix e Maestro CRM exibem apenas `PRIVATE REPOSITORY`, sem URLs ou dados internos adicionais. Next Chapter encerra a sequência com o texto e terminal fornecidos.
+Links públicos verificados: Unimangas, Casa Rara e Conferência Quantitativa. O repositório de Casa Rara é `https://github.com/ozelfls/1.1.1_site_ong`, informado pelo usuário, que participou usando sua conta acadêmica. Hermix e Maestro CRM exibem apenas `PRIVATE REPOSITORY`, sem URLs ou dados internos adicionais. Next Chapter encerra a sequência com o texto e terminal fornecidos.

@@ -55,6 +55,7 @@
 <p><strong>CASA RARA</strong><br />Acadêmico · Web III · Impacto social</p>
 <p>Site institucional desenvolvido em equipe para a ONG Casa Rara. Participei do levantamento de requisitos com a instituição, modelagem dos fluxos, construção do frontend responsivo e acessível, backend com Django e SQL, além de testes e melhorias a partir do feedback dos usuários.</p>
 <p>HTML · CSS · JavaScript · Python · Django · SQL</p>
+<p><a href="https://github.com/ozelfls/1.1.1_site_ong">REPOSITÓRIO ↗</a></p>
 <br clear="all" />
 
 <p align="center"><img src="./assets/v3/projects/node-03.svg" width="30" height="40" alt="03" /></p>
