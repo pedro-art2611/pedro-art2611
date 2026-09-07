@@ -34,9 +34,9 @@
 
 <p align="center"><img src="./assets/v3/projects/node-01.svg" width="30" height="40" alt="01" /></p>
 <picture>
-  <source media="(max-width: 767px)" srcset="./assets/v3/projects/01-unimangas.png" width="1536" height="1024" />
-  <source media="(min-width: 768px)" srcset="./assets/v3/projects/01-unimangas.png" width="300" height="200" />
-  <img align="left" hspace="12" src="./assets/v3/projects/01-unimangas.png" alt="Capa de UNIMANGAS" />
+  <source media="(max-width: 767px)" srcset="./assets/v3/projects/01-unimangas.png" width="1536" />
+  <source media="(min-width: 768px)" srcset="./assets/v3/projects/01-unimangas.png" width="300" />
+  <img align="left" src="./assets/v3/projects/01-unimangas.png" alt="Capa de UNIMANGAS" />
 </picture>
 
 <p><strong>UNIMANGAS</strong><br />Acadêmico · Web II</p>
@@ -47,9 +47,9 @@
 
 <p align="center"><img src="./assets/v3/projects/node-02.svg" width="30" height="40" alt="02" /></p>
 <picture>
-  <source media="(max-width: 767px)" srcset="./assets/v3/projects/02-casa-rara.png" width="1536" height="1024" />
-  <source media="(min-width: 768px)" srcset="./assets/v3/projects/02-casa-rara.png" width="300" height="200" />
-  <img align="right" hspace="12" src="./assets/v3/projects/02-casa-rara.png" alt="Capa de CASA RARA" />
+  <source media="(max-width: 767px)" srcset="./assets/v3/projects/02-casa-rara.png" width="1536" />
+  <source media="(min-width: 768px)" srcset="./assets/v3/projects/02-casa-rara.png" width="300" />
+  <img align="right" src="./assets/v3/projects/02-casa-rara.png" alt="Capa de CASA RARA" />
 </picture>
 
 <p><strong>CASA RARA</strong><br />Acadêmico · Web III · Impacto social</p>
@@ -59,9 +59,9 @@
 
 <p align="center"><img src="./assets/v3/projects/node-03.svg" width="30" height="40" alt="03" /></p>
 <picture>
-  <source media="(max-width: 767px)" srcset="./assets/v3/projects/03-conferencia-quantitativa.png" width="1536" height="1024" />
-  <source media="(min-width: 768px)" srcset="./assets/v3/projects/03-conferencia-quantitativa.png" width="300" height="200" />
-  <img align="left" hspace="12" src="./assets/v3/projects/03-conferencia-quantitativa.png" alt="Capa de CONFERÊNCIA QUANTITATIVA" />
+  <source media="(max-width: 767px)" srcset="./assets/v3/projects/03-conferencia-quantitativa.png" width="1536" />
+  <source media="(min-width: 768px)" srcset="./assets/v3/projects/03-conferencia-quantitativa.png" width="300" />
+  <img align="left" src="./assets/v3/projects/03-conferencia-quantitativa.png" alt="Capa de CONFERÊNCIA QUANTITATIVA" />
 </picture>
 
 <p><strong>CONFERÊNCIA QUANTITATIVA</strong><br />Projeto próprio · Automação · Dados</p>
@@ -72,9 +72,9 @@
 
 <p align="center"><img src="./assets/v3/projects/node-04.svg" width="30" height="40" alt="04" /></p>
 <picture>
-  <source media="(max-width: 767px)" srcset="./assets/v3/projects/04-hermix.png" width="1536" height="1024" />
-  <source media="(min-width: 768px)" srcset="./assets/v3/projects/04-hermix.png" width="300" height="200" />
-  <img align="right" hspace="12" src="./assets/v3/projects/04-hermix.png" alt="Capa de HERMIX" />
+  <source media="(max-width: 767px)" srcset="./assets/v3/projects/04-hermix.png" width="1536" />
+  <source media="(min-width: 768px)" srcset="./assets/v3/projects/04-hermix.png" width="300" />
+  <img align="right" src="./assets/v3/projects/04-hermix.png" alt="Capa de HERMIX" />
 </picture>
 
 <p><strong>HERMIX</strong><br />Profissional · Fullstack · IA · Privado</p>
@@ -86,9 +86,9 @@
 
 <p align="center"><img src="./assets/v3/projects/node-05.svg" width="30" height="40" alt="05" /></p>
 <picture>
-  <source media="(max-width: 767px)" srcset="./assets/v3/projects/05-maestro-crm.png" width="1536" height="1024" />
-  <source media="(min-width: 768px)" srcset="./assets/v3/projects/05-maestro-crm.png" width="300" height="200" />
-  <img align="left" hspace="12" src="./assets/v3/projects/05-maestro-crm.png" alt="Capa de MAESTRO CRM" />
+  <source media="(max-width: 767px)" srcset="./assets/v3/projects/05-maestro-crm.png" width="1536" />
+  <source media="(min-width: 768px)" srcset="./assets/v3/projects/05-maestro-crm.png" width="300" />
+  <img align="left" src="./assets/v3/projects/05-maestro-crm.png" alt="Capa de MAESTRO CRM" />
 </picture>
 
 <p><strong>MAESTRO CRM</strong><br />Profissional · CRM · Em desenvolvimento · Privado</p>
@@ -100,9 +100,9 @@
 
 <p align="center"><img src="./assets/v3/projects/node-06.svg" width="30" height="40" alt="06" /></p>
 <picture>
-  <source media="(max-width: 767px)" srcset="./assets/v3/projects/06-next-chapter.png" width="1536" height="1024" />
-  <source media="(min-width: 768px)" srcset="./assets/v3/projects/06-next-chapter.png" width="260" height="173.33333333333334" />
-  <img align="right" hspace="12" src="./assets/v3/projects/06-next-chapter.png" alt="Capa de NEXT CHAPTER" />
+  <source media="(max-width: 767px)" srcset="./assets/v3/projects/06-next-chapter.png" width="1536" />
+  <source media="(min-width: 768px)" srcset="./assets/v3/projects/06-next-chapter.png" width="260" />
+  <img align="right" src="./assets/v3/projects/06-next-chapter.png" alt="Capa de NEXT CHAPTER" />
 </picture>
 
 <p><strong>NEXT CHAPTER</strong><br />Próximo capítulo</p>
