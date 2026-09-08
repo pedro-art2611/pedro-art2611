@@ -1,0 +1,77 @@
+[
+  {
+    "path": "torii.png",
+    "source": "../../source/micro-assets-sobre-mim.png",
+    "box": [
+      1137,
+      782,
+      1350,
+      969
+    ],
+    "size": [
+      221,
+      195
+    ],
+    "padding": 4
+  },
+  {
+    "path": "orbe.png",
+    "source": "../../source/micro-assets-sobre-mim.png",
+    "box": [
+      121,
+      149,
+      298,
+      318
+    ],
+    "size": [
+      185,
+      177
+    ],
+    "padding": 4
+  },
+  {
+    "path": "seta-dupla.png",
+    "source": "../../source/micro-assets-sobre-mim.png",
+    "box": [
+      1151,
+      169,
+      1326,
+      306
+    ],
+    "size": [
+      183,
+      145
+    ],
+    "padding": 4
+  },
+  {
+    "path": "corte-curvo.png",
+    "source": "../../source/micro-assets-sobre-mim.png",
+    "box": [
+      428,
+      755,
+      655,
+      985
+    ],
+    "size": [
+      235,
+      238
+    ],
+    "padding": 4
+  },
+  {
+    "path": "conexao.png",
+    "source": "../../source/micro-assets-sobre-mim.png",
+    "box": [
+      800,
+      475,
+      982,
+      647
+    ],
+    "size": [
+      190,
+      180
+    ],
+    "padding": 4
+  }
+]

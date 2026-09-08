@@ -1,0 +1,186 @@
+# Assets V3
+
+Fonte autoritativa: `github-profile-assets-v3.zip`, fornecido em 2026-09-07. Branch: `feat/profile-readme-v3`.
+
+Os três WebPs animados são cópias byte a byte dos originais. PNGs: alpha real confirmado; removido apenas resíduo quase invisível (alpha <= 8/255) antes do bounding box, sem remover preto interno da arte. Padding transparente 8px (6px nos micro-assets); molduras sem padding após refinamento e header limpo com 4px. Famílias estáticas têm derivados proporcionais normalizados; os masters permanecem em `source/`, sem redução. Sem OCR. Coordenadas reproduzíveis em `crop-map.json`.
+
+Jardim de contribuições adiado por solicitação do usuário: não renderizar seção nem exigir sua placa neste checkpoint. Os seis arquivos `assets/arvore-*.jpg` foram recuperados de `origin/main` apenas para preservar o workflow existente, sem alterar a branch main.
+
+O checkpoint contém entrada, Sobre mim e divisor; Vergil permanece visível como footer provisório. Nenhuma seção adicional foi montada. Placas de Contato/Projetos estão ausentes; os QUATRO ÍCONES de contato estão presentes.
+
+| Nome lógico | Path relativo a assets/v3 | Origem no ZIP | Status | Dimensões | Uso |
+|---|---|---|---|---|---|
+| border-bottom | source/border-bottom.png | border-bottom.png | source | 2172 × 724 | Original do ZIP; não usar diretamente no README. |
+| border-top | source/border-top.png | border-top.png | source | 2172 × 724 | Original do ZIP; não usar diretamente no README. |
+| contatos-icons | source/contatos-icons.png | contatos-icons.png | source | 1254 × 1254 | Original do ZIP; não usar diretamente no README. |
+| divisor principal | source/divisor principal.png | divisor principal.png | source | 2172 × 724 | Original do ZIP; não usar diretamente no README. |
+| divisor-secundario | source/divisor-secundario.png | divisor-secundario.png | source | 2172 × 724 | Original do ZIP; não usar diretamente no README. |
+| divisors | source/divisors.png | divisors.png | source | 1448 × 1086 | Original do ZIP; não usar diretamente no README. |
+| elevenlabs-ico | source/elevenlabs-ico.png | elevenlabs-ico.png | source | 1254 × 1254 | Original do ZIP; não usar diretamente no README. |
+| header-sobre-mim | source/header-sobre-mim.png | header-sobre-mim.png | source | 2172 × 724 | Original do ZIP; não usar diretamente no README. |
+| header-tecnica | source/header-tecnica.png | header-tecnica.png | source | 2172 × 724 | Original do ZIP; não usar diretamente no README. |
+| label-charts | source/label-charts.png | label-charts.png | source | 1448 × 1086 | Original do ZIP; não usar diretamente no README. |
+| micro-assets | source/micro-assets.png | micro-assets.png | source | 1448 × 1086 | Original do ZIP; não usar diretamente no README. |
+| stack-icones-2 | source/stack-icones-2.png | stack-icones-2.png | source | 1536 × 1024 | Original do ZIP; não usar diretamente no README. |
+| stack-icons-1 | source/stack-icons-1.png | stack-icons-1.png | source | 1448 × 1086 | Original do ZIP; não usar diretamente no README. |
+| vite-ico | source/vite-ico.png | vite-ico.png | source | 1254 × 1254 | Original do ZIP; não usar diretamente no README. |
+| Katana original | source/katana_asset_transparente_v4.gif | katana_asset_transparente_v4.gif | source | 1600 × 380 | GIF original preservado. |
+| frame-top | frame/frame-top.png | border-top.png | final | 2172 × 337 | Recorte [0, 165, 2172, 502]; padding 0px. Escala nativa.  Encaixada diretamente ao conteúdo no mesmo parágrafo. |
+| frame-bottom | frame/frame-bottom.png | border-bottom.png | final | 2172 × 340 | Recorte [0, 313, 2172, 653]; padding 0px. Escala nativa.  Encaixada diretamente ao conteúdo no mesmo parágrafo. |
+| divisor-principal | dividers/divisor-principal.png | divisor principal.png | final | 2159 × 174 | Recorte [15, 282, 2158, 440]; padding 8px. Escala nativa. |
+| divisor-secundario | dividers/divisor-secundario.png | divisor-secundario.png | final | 2038 × 130 | Recorte [75, 302, 2097, 416]; padding 8px. Escala nativa. |
+| sobre-mim | headers/sobre-mim.png | header-sobre-mim.png | source | 1962 × 545 | Recorte [113, 98, 2059, 627]; padding 8px. Versão floral anterior preservada; substituída no README pela versão limpa. |
+| forja-tecnica | headers/forja-tecnica.png | header-tecnica.png | final | 1962 × 448 | Recorte [113, 138, 2059, 570]; padding 8px. Escala nativa. |
+| github | contact/github.png | contatos-icons.png | final | 440 × 440 | Recorte [180, 189, 571, 584]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| linkedin | contact/linkedin.png | contatos-icons.png | final | 440 × 440 | Recorte [697, 196, 1107, 587]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| email | contact/email.png | contatos-icons.png | final | 440 × 440 | Recorte [164, 705, 591, 1064]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| instagram | contact/instagram.png | contatos-icons.png | final | 440 × 440 | Recorte [701, 693, 1097, 1063]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| nodejs | stack/nodejs.png | stack-icons-1.png | final | 400 × 400 | Recorte [24, 178, 359, 507]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| react | stack/react.png | stack-icons-1.png | final | 400 × 400 | Recorte [377, 178, 715, 507]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| postgresql | stack/postgresql.png | stack-icons-1.png | final | 400 × 400 | Recorte [734, 178, 1095, 507]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| redis | stack/redis.png | stack-icons-1.png | final | 400 × 400 | Recorte [1095, 178, 1427, 509]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| docker | stack/docker.png | stack-icons-1.png | final | 400 × 400 | Recorte [24, 562, 359, 892]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| n8n | stack/n8n.png | stack-icons-1.png | final | 400 × 400 | Recorte [377, 562, 715, 892]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| openai | stack/openai.png | stack-icons-1.png | final | 400 × 400 | Recorte [734, 562, 1095, 892]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| github | stack/github.png | stack-icons-1.png | final | 400 × 400 | Recorte [1095, 562, 1426, 892]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| typescript | stack/typescript.png | stack-icones-2.png | final | 400 × 400 | Recorte [72, 72, 512, 493]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| bullmq | stack/bullmq.png | stack-icones-2.png | final | 400 × 400 | Recorte [512, 72, 1024, 493]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| linux | stack/linux.png | stack-icones-2.png | final | 400 × 400 | Recorte [1024, 72, 1464, 493]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| express | stack/express.png | stack-icones-2.png | final | 400 × 400 | Recorte [74, 517, 512, 942]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| neon | stack/neon.png | stack-icones-2.png | final | 400 × 400 | Recorte [512, 517, 1024, 940]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| nginx | stack/nginx.png | stack-icones-2.png | final | 400 × 400 | Recorte [1024, 519, 1464, 940]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| elevenlabs | stack/elevenlabs.png | elevenlabs-ico.png | final | 400 × 400 | Recorte [184, 228, 1070, 1026]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| vite | stack/vite.png | vite-ico.png | final | 400 × 400 | Recorte [207, 210, 1049, 997]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| backend | chips/backend.png | label-charts.png | final | 536 × 180 | Recorte [170, 259, 667, 410]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| frontend | chips/frontend.png | label-charts.png | final | 536 × 180 | Recorte [778, 259, 1278, 413]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| banco-de-dados | chips/banco-de-dados.png | label-charts.png | final | 536 × 180 | Recorte [170, 433, 676, 587]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| ia | chips/ia.png | label-charts.png | final | 536 × 180 | Recorte [780, 433, 1278, 587]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| automacao | chips/automacao.png | label-charts.png | final | 536 × 180 | Recorte [170, 607, 675, 764]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| integracoes | chips/integracoes.png | label-charts.png | final | 536 × 180 | Recorte [777, 607, 1282, 764]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| apis | chips/apis.png | label-charts.png | final | 536 × 180 | Recorte [169, 784, 675, 939]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| infra | chips/infra.png | label-charts.png | final | 536 × 180 | Recorte [779, 785, 1282, 939]; padding 8px. Derivado normalizado proporcionalmente; master intacto em source/. |
+| divisor-01 | dividers/divisor-01.png | divisors.png | final | 1362 × 92 | Recorte [48, 100, 1398, 180]; padding 6px. Escala nativa. |
+| divisor-02 | dividers/divisor-02.png | divisors.png | final | 1376 × 99 | Recorte [42, 255, 1406, 342]; padding 6px. Escala nativa. |
+| divisor-03 | dividers/divisor-03.png | divisors.png | final | 1360 × 87 | Recorte [50, 420, 1398, 495]; padding 6px. Escala nativa. |
+| divisor-04 | dividers/divisor-04.png | divisors.png | final | 1359 × 81 | Recorte [51, 592, 1398, 661]; padding 6px. Escala nativa. |
+| divisor-05 | dividers/divisor-05.png | divisors.png | final | 1359 × 71 | Recorte [51, 756, 1398, 815]; padding 6px. Escala nativa. |
+| divisor-06 | dividers/divisor-06.png | divisors.png | final | 1363 × 76 | Recorte [49, 926, 1400, 990]; padding 6px. Escala nativa. |
+| micro-ponto-cyan | dividers/micro-ponto-cyan.png | micro-assets.png | final | 189 × 181 | Recorte [121, 149, 298, 318]; padding 6px. Escala nativa. |
+| micro-lanterna | dividers/micro-lanterna.png | micro-assets.png | final | 185 × 181 | Recorte [455, 149, 628, 318]; padding 6px. Escala nativa. |
+| micro-losango | dividers/micro-losango.png | micro-assets.png | final | 172 × 173 | Recorte [805, 157, 965, 318]; padding 6px. Escala nativa. |
+| micro-seta-dupla | dividers/micro-seta-dupla.png | micro-assets.png | final | 187 × 149 | Recorte [1151, 169, 1326, 306]; padding 6px. Escala nativa. |
+| micro-seta-tripla | dividers/micro-seta-tripla.png | micro-assets.png | final | 223 × 152 | Recorte [101, 490, 312, 630]; padding 6px. Escala nativa. |
+| micro-codigo | dividers/micro-codigo.png | micro-assets.png | final | 217 × 157 | Recorte [445, 489, 650, 634]; padding 6px. Escala nativa. |
+| micro-conexao | dividers/micro-conexao.png | micro-assets.png | final | 194 × 184 | Recorte [800, 475, 982, 647]; padding 6px. Escala nativa. |
+| micro-colchetes | dividers/micro-colchetes.png | micro-assets.png | final | 183 × 167 | Recorte [1151, 483, 1322, 638]; padding 6px. Escala nativa. |
+| micro-estrela | dividers/micro-estrela.png | micro-assets.png | final | 188 × 192 | Recorte [121, 782, 297, 962]; padding 6px. Escala nativa. |
+| micro-corte | dividers/micro-corte.png | micro-assets.png | final | 239 × 242 | Recorte [428, 755, 655, 985]; padding 6px. Escala nativa. |
+| micro-lua | dividers/micro-lua.png | micro-assets.png | final | 194 × 199 | Recorte [808, 783, 990, 970]; padding 6px. Escala nativa. |
+| micro-torii | dividers/micro-torii.png | micro-assets.png | final | 225 × 199 | Recorte [1137, 782, 1350, 969]; padding 6px. Escala nativa. |
+| banner-animado | banner/banner-animado.webp | pedro-artur-v2-animado.webp | final | 2172 × 724 | WebP original intacto; 74.71 MiB. |
+| banner-fallback | banner/banner-fallback.png | pedro-artur-v2-animado.webp | fallback | 2172 × 724 | Primeiro frame; não substitui animação nesta montagem. |
+| personagem-animado | about/personagem-animado.webp | programador-transparente.webp | final | 448 × 528 | WebP original intacto; 35.79 MiB. |
+| personagem-fallback | about/personagem-fallback.png | programador-transparente.webp | fallback | 448 × 528 | Primeiro frame; não substitui animação nesta montagem. |
+| vergil-animado | footer/vergil-animado.webp | vergil-runtime-v3.7-exact-color.webp | final | 1200 × 240 | WebP original intacto; 20.60 MiB. |
+| vergil-fallback | footer/vergil-fallback.png | vergil-runtime-v3.7-exact-color.webp | fallback | 1200 × 240 | Primeiro frame; não substitui animação nesta montagem. |
+| Katana acento | dividers/katana-acento.webp | katana_asset_transparente_v4.gif | reservado | 1265 × 150 | Recorte união de 63 frames (128, 133, 1377, 267); WebP lossless; tempos e loop preservados; Aprovada e reservada para reposicionamento futuro; fora do README. |
+| Projetos | headers/projetos.png | Não consta no ZIP | MISSING_APPROVED_ASSET | — | Não substituir por asset inventado. |
+| Contato (placa) | headers/contato.png | Não consta no ZIP | MISSING_APPROVED_ASSET | — | Não substituir por asset inventado. |
+
+## Verificação do checkpoint
+
+- README passou pelo endpoint Markdown do GitHub: percentuais, `align="right"` e `br clear="right"` foram preservados pelo sanitizador.
+- Preview local usa esse HTML e aproxima o tema escuro do GitHub; conferido a 1100px e 390px, com as oito imagens da primeira montagem carregadas e sem overflow horizontal. Não é screenshot da página remota.
+- Banner: 2172 × 724; personagem: 448 × 528; Vergil: 1200 × 240. Os três WebPs são byte a byte iguais ao ZIP, sem recompressão.
+- Molduras refinadas: 2172 × 337 e 2172 × 340, sem padding adicional. A altura restante pertence ao desenho das extremidades; não é área vazia da spritesheet.
+- Stack: 400 × 400; contatos: 440 × 440; chips: 536 × 180. Escala proporcional, sem deformação; fontes em resolução original preservadas.
+- Katana: 1265 × 150, 63 frames. Recorte pela união de TODOS os frames; derivado WebP lossless; original GIF preservado.
+- Os PNGs do ZIP têm alpha real, mas continham resíduos com alpha mínimo espalhados por grandes áreas. Recortes descartam somente alpha <= 8/255. Preto visível interno não foi convertido em transparência.
+- Risco pendente: os três WebPs somam 131,10 MiB. O envio Git comporta cada arquivo, mas o carregamento frio do README pode ser demorado; validar o carregamento remoto antes de decidir por uma versão otimizada.
+- Restam ausentes apenas a placa de Projetos e a placa de Contato. O ícone REST API foi recebido e integrado na etapa da Forja. Jardim está fora do escopo por decisão do usuário.
+
+## Refinamento de limpeza e encaixe
+
+Branch confirmada pelo usuário: `feat/profile-readme-v3`. Jardim permanece fora.
+
+- Molduras superior e inferior: retirados os 8px de padding dos quatro lados, sem reamostragem. Arte e transparência interna preservadas. Largura de 100%, o máximo da área de conteúdo do GitHub. Não é possível ultrapassar essa área com HTML de README.
+- Topo e banner agora compartilham um parágrafo; Vergil e moldura inferior também. Removida a margem de parágrafo que separava cada moldura do conteúdo, com o recuo leve de largura autorizado depois pelo usuário.
+- Katana aprovada e reservada em `dividers/katana-acento.webp`; original em `source/katana_asset_transparente_v4.gif`. Ambos intactos. Não aparece no README e não foi reposicionada.
+- Header sem flores em `headers/sobre-mim-limpo.png`; original floral em `source/header-sobre-mim.png` e derivado anterior em `headers/sobre-mim.png`. Edição feita com a ferramenta de imagem integrada. O fundo quadriculado opaco da saída foi removido por conectividade do fundo claro neutro às bordas; PNG final tem alpha real, recorte justo e 4px de padding, sem blur ou reamostragem.
+- Pedido de edição usado: “Remover flores, pétalas e galhos laterais; reconstruir somente linhas arquitetônicas ocultas; preservar moldura, texto Sobre mim, lanternas, placas de kanji, cores cyan/vermelho e proporções; sem novas decorações, blur ou fundo opaco.”
+- Banner, personagem, divisor interno e Vergil permanecem com os mesmos arquivos, comprovados por comparação binária. Após autorização do usuário para reduzir levemente o conteúdo, banner e Vergil passaram de 100% para 94% de largura somente no HTML. Personagem continua em 36%, divisor em 92% e header em 60%. Textos provisórios preservados.
+
+| Nome lógico | Path relativo a assets/v3 | Origem | Status | Dimensões | Uso |
+|---|---|---|---|---|---|
+| Sobre mim limpo | headers/sobre-mim-limpo.png | Edição de headers/sobre-mim.png | final | 2001 × 543 | PNG com alpha real; 60% no README. |
+
+### Validação do refinamento
+
+- Sete imagens carregadas no preview feito com HTML sanitizado pelo GitHub; conferência visual a 1100px e 390px, sem rolagem horizontal.
+- Comparação antes/depois: eliminados o intervalo da katana e as flores laterais; as molduras envolvem visualmente banner e rodapé com pequeno recuo lateral do conteúdo.
+- Comparação binária confirma banner, personagem, Vergil, divisor e dois arquivos da katana intactos. Nas molduras, todos os pixels do recorte são idênticos aos da versão anterior.
+- Workflows, árvore e demais famílias de assets não foram alterados.
+
+## Encaixe estrutural com referência no Canva
+
+Estado atual: as molduras são sobrepostas às cenas em dois derivados animados. O README usa cada composição em 100% da largura, sem depender de CSS de sobreposição. As descrições anteriores documentam as etapas anteriores.
+
+- Topo: banner original em resolução nativa (2172 × 724), posicionado em (74, 122) numa tela transparente de 2320 × 846. Moldura de 2320 × 360 sobreposta na borda superior. A faixa arquitetônica encontra a cena e as lanternas descem pelas laterais.
+- Rodapé: Vergil e chão ampliados exatamente 2x, sem interpolação, posicionados em (80, 0) numa tela de 2560 × 627. Moldura de 2560 × 401 sobreposta em (0, 226), cruzando a borda frontal da plataforma.
+- As molduras partem dos recortes justos existentes; não houve novo corte das artes originais. A tela dos derivados inclui somente o espaço necessário à composição. Transparência real preservada.
+- Sem blur, suavização ou compressão com perdas. Molduras ajustadas proporcionalmente com vizinho mais próximo. Cada pixel do Vergil vira um bloco 2x2; banner não é reamostrado.
+- Os WebPs originais e os PNGs das molduras permanecem intactos. Sobre mim, texto, personagem, header limpo e divisor interno não foram alterados. Katana continua reservada e ausente do README.
+- Reprodução em `scripts/compor-molduras-perfil.py`, com parâmetros e relatórios JSON junto aos derivados. A validação decodifica TODOS os quadros e compara seus pixels à composição esperada; verifica também quantidade de quadros, duração de cada quadro e repetição.
+
+| Nome lógico | Path relativo a assets/v3 | Origem | Status | Dimensões | Uso |
+|---|---|---|---|---|---|
+| Banner emoldurado | banner/banner-emoldurado.webp | banner/banner-animado.webp + frame/frame-top.png | final | 2320 × 846 | Abertura integrada, 100% no README. |
+| Banner emoldurado estático | banner/banner-emoldurado-estatico.png | Primeiro quadro da composição | fallback | 2320 × 846 | Inspeção e alternativa estática. |
+| Vergil emoldurado | footer/vergil-emoldurado.webp | footer/vergil-animado.webp + frame/frame-bottom.png | final | 2560 × 627 | Plataforma integrada, 100% no README. |
+| Vergil emoldurado estático | footer/vergil-emoldurado-estatico.png | Primeiro quadro da composição | fallback | 2560 × 627 | Inspeção e alternativa estática. |
+
+### Resultado da validação das composições
+
+- `banner/banner-emoldurado.webp`: 192 quadros, 7999 ms, 83.52 MiB. Todos os quadros passaram na comparação exata de pixels; tempos e loop preservados.
+- `footer/vergil-emoldurado.webp`: 1395 quadros, 77555 ms, 27.05 MiB. Todos os quadros passaram na comparação exata de pixels; tempos e loop preservados.
+- Preview do HTML sanitizado pelo GitHub validado em desktop e celular, sem rolagem horizontal.
+
+## Forja Técnica
+
+Branch reconfirmada pelo usuário: `feat/profile-readme-v3`. Inserida somente a Forja, entre o divisor após Sobre mim e o rodapé aprovado.
+
+- Composição vertical centralizada, sem tabelas, cards, fundos de grupo ou textos explicativos. Seis grupos separados por respiro, no máximo quatro ícones em cada linha.
+- Header limpo a 60%; chips a 136px de largura; ícones a 44 × 44px. As imagens de stack mantêm a família normalizada de 400 × 400px; área útil equivalente, sem padding excessivo.
+- Grupos: Backend (Node.js, Express, BullMQ, nginx); Frontend (React, TypeScript, Vite); Banco de Dados (PostgreSQL, Redis, Neon); IA (OpenAI, ElevenLabs); Automação e Integrações (n8n, REST API); Infra (Docker, Linux, GitHub). O chip APIs fica reservado.
+- REST API veio do PNG anexado pelo usuário. Original preservado em `source/rest-api-original.png`; alpha real confirmado. Recorte útil (195, 232, 1059, 1018), descarte somente de resíduos alpha <= 8/255, normalização proporcional em canvas de 400 × 400px. Arte mantida, sem redesenho.
+- Header da Forja editado pela ferramenta integrada de imagem: removidos flores, galhos e pequenos símbolos florais nas lanternas. Texto, conceito arquitetônico, paleta e lanternas preservados. Original em `source/header-tecnica.png` e versão floral anterior em `headers/forja-tecnica.png`.
+- Pedido de edição: “Remover apenas flores, pétalas, galhos laterais e emblemas florais nas lanternas; preservar Forja técnica, tipografia, acento, moldura, estrutura oriental e paleta; sem blur ou ornamentos novos.” Saída tinha quadriculado opaco: removido por conectividade do fundo claro neutro às bordas, mantendo a arte; recorte (202, 125, 1967, 592) com 4px transparentes.
+- Forja inteiramente estática. Divisor principal existente reaproveitado após a seção. Nenhuma animação adicional e katana continua reservada.
+- Preview com HTML sanitizado pelo GitHub: 31 imagens carregadas; conferido em 1100px, 768px e 390px. Sem rolagem horizontal, categorias legíveis e linhas estáveis no celular.
+
+| Nome lógico | Path relativo a assets/v3 | Origem | Status | Dimensões | Uso |
+|---|---|---|---|---|---|
+| REST API original | source/rest-api-original.png | PNG anexado pelo usuário | source | 1254 × 1254 | Preservado; não usar no README. |
+| REST API | stack/rest-api.png | source/rest-api-original.png | final | 400 × 400 | 44px no grupo Automação e Integrações. |
+| Forja técnica limpa | headers/forja-tecnica-limpa.png | Edição de headers/forja-tecnica.png | final | 1773 × 475 | PNG com alpha real, sem flores; 60% no README. |
+
+## Divisor abaixo do banner
+
+O rodapé também possui uma divisória animada independente: `footer/divisor-vergil/divisor-vergil.webp`, final, 1600 × 277 px, 60 quadros, 3 segundos, transparência real. Fontes: os quatro PNGs enviados pelo usuário, preservados em `footer/divisor-vergil/source/`. Fallback estático e parâmetros em `footer/divisor-vergil/`. Substitui a divisória inferior do painel de Contribuições; painel agora com 2164 × 534 px e dados preservados.
+
+- Nome: divisor de katana do banner.
+- Path: `dividers/divisor-banner.png`.
+- Origem: `codex-clipboard-2fd76c49-43a0-4b39-8155-df5d56d01656.png`, anexo do usuário.
+- Status: final; 790 × 42 px, PNG RGBA.
+- Uso: 92% de largura, entre o banner e o header Sobre mim.
+- Transparência: fundo externo conectado às bordas removido por código; apenas alpha alterado, RGB e dimensões preservados.
+
+## Sobre mim final
+
+- Fontes intactas: `source/micro-assets-sobre-mim.png` e `source/contatos-sobre-mim.png`.
+- Micro-assets finais: `about/details/{torii,orbe,seta-dupla,corte-curvo,conexao}.png`; dimensões e recortes em `about/details/crop-map.json`.
+- Destaques inline finais: `about/details/hermix.svg` (52 × 16) e `about/details/maestro-crm.svg` (105 × 16).
+- Contatos finais: `contact/linkedin-limpo.png` (331 × 343), `contact/email-limpo.png` (359 × 278), `contact/instagram-limpo.png` (336 × 339). Alpha real e símbolos preservados; pontos periféricos removidos por máscara autorizada.
+- Documentação: `about/README.md` e `contact/limpeza-sobre-mim.json`. Nenhum original anterior substituído.
+
+- Sobre mim: orbe reservado e removido do README no refinamento final; demais quatro micro-assets permanecem nas posições aprovadas.

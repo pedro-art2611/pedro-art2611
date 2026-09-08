@@ -1,0 +1,549 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2164" height="534" viewBox="0 0 2164 534" fill="none" role="img" aria-labelledby="title description">
+<title id="title">Contribuições de pedro-art2611</title>
+<desc id="description">641 contribuições nos últimos 12 meses no GitHub. 53 semanas e 366 dias, de 2025-09-07 a 2026-09-07. Contagens e níveis oficiais, incluindo atividade privada anonimizada disponibilizada pelo GitHub.</desc>
+<defs>
+  <linearGradient id="panel" x2="0" y2="1"><stop stop-color="#03101c"/><stop offset="1" stop-color="#04111b"/></linearGradient>
+</defs>
+<rect width="2164" height="534" fill="#0d1117"/>
+<g transform="translate(0 45) scale(1 0.65)" fill="none">
+    <path d="M86 0H964 M1198 0H2080" stroke="#031221" stroke-width="9"/>
+    <path d="M86 0H964 M1198 0H2080" stroke="#074778" stroke-width="3"/>
+    <path d="M200 -2H850 M1275 -2H1948" stroke="#08649c" stroke-width="1"/>
+    <g id="arrow-45" stroke-linejoin="miter">
+      <path d="M96 -20H114L136 0 114 20H96L116 0Z" fill="#031629" stroke="#07558b" stroke-width="3"/>
+      <path d="M106 -15H115L131 0 115 15H106L120 0Z" fill="#22ddfa"/>
+      <path d="M137 -5H150L155 0 150 5H137" fill="#ff444a"/>
+      <path d="M144 -2H154" stroke="#ffad6f" stroke-width="3"/>
+      <path d="M166 -3V3 M180 -5V5 M198 -3V3" stroke="#0589c7" stroke-width="4"/>
+    </g>
+    <use href="#arrow-45" transform="translate(2164 0) scale(-1 1)"/>
+    <path d="M900 -26V15 M1262 -26V15" stroke="#ff394a" stroke-width="3"/>
+    <path d="M855 -5V5 M877 -3V3 M1960 -4V4 M1990 -2V2" stroke="#1477a6" stroke-width="3"/>
+    <path d="M1032 -34H1012L976 0 1012 34H1032L996 0Z" fill="#043669" stroke="#061527" stroke-width="7"/>
+    <path d="M1025 -28H1015L985 0 1015 28H1025L995 0Z" fill="#28dbff"/>
+    <path d="M1132 -34H1152L1188 0 1152 34H1132L1168 0Z" fill="#612a36" stroke="#061527" stroke-width="7"/>
+    <path d="M1139 -28H1149L1179 0 1149 28H1139L1169 0Z" fill="#ff9569"/>
+    <path d="M1081 -29V29" stroke="#943142" stroke-width="6"/>
+    <path d="M1080 -29V29" stroke="#ff646c" stroke-width="2"/>
+  </g>
+<g transform="translate(0 -35)">
+<path d="M94 173H793L807 155H1357L1371 173H2069L2095 197V525L2069 551H95L68 525V198Z" fill="url(#panel)" stroke="#020b14" stroke-width="14"/>
+    <path d="M94 173H793L807 155H1357L1371 173H2069L2095 197V525L2069 551H95L68 525V198Z" fill="none" stroke="#063958" stroke-width="7"/>
+    <path d="M94 173H793L807 155H1357L1371 173H2069L2095 197V525L2069 551H95L68 525V198Z" fill="none" stroke="#0a82b5" stroke-width="2"/>
+    <path d="M116 179H796 M1368 179H2053 M119 545H2047" stroke="#073457" stroke-width="3"/>
+    <g id="corner"><path d="M67 224V198L91 173H127" fill="none" stroke="#032b4b" stroke-width="13"/>
+    <path d="M68 219V198L93 173H126" fill="none" stroke="#078ac6" stroke-width="5"/>
+    <path d="M76 197L88 184 M100 173H120" stroke="#6bf4ff" stroke-width="5"/>
+    <path d="M79 195L86 188" stroke="#ff4e56" stroke-width="3"/>
+    <path d="M90 211L106 197" stroke="#00e0e7" stroke-width="3"/>
+    <path d="M71 267V343" stroke="#0388cf" stroke-width="6"/>
+    <path d="M73 270V340" stroke="#a2f7ff" stroke-width="2"/>
+    <path d="M65 371V438L71 442 77 436V366L71 362Z" fill="#061625" stroke="#125582" stroke-width="2"/>
+    <path d="M67 376V430" stroke="#00b2df" stroke-width="2"/></g><use href="#corner" transform="translate(2164 0) scale(-1 1)"/>
+    <g transform="translate(0 724) scale(1 -1)"><path d="M68 198L94 173H127 M2037 173H2070L2095 198" fill="none" stroke="#078ac6" stroke-width="5"/>
+    <path d="M91 175H118 M2046 175H2071" stroke="#affbff" stroke-width="3"/>
+    <path d="M82 194L93 184 M2070 184L2082 194" stroke="#ff555a" stroke-width="4"/>
+    <path d="M89 218L105 201 M2059 201L2075 218" stroke="#02cce7" stroke-width="3"/></g>
+    <path d="M793 175L819 147H1345L1371 175 1345 205H819Z" fill="#020e19" stroke="#05314b" stroke-width="8"/>
+    <path d="M802 175L823 151H1341L1362 175 1341 201H823Z" fill="none" stroke="#0c6991" stroke-width="2"/>
+    <path d="M841 153H1323 M841 198H1323" stroke="#18cee0" stroke-width="2"/>
+    <path d="M825 164V187 M1339 164V187" stroke="#fa3d51" stroke-width="6"/>
+    <path d="M827 165V185 M1337 165V185" stroke="#ff9c85" stroke-width="2"/>
+<g font-family="'Courier New',monospace">
+<text x="1082" y="187" text-anchor="middle" font-size="29" font-weight="bold" letter-spacing="5" fill="#b9edff">CONTRIBUIÇÕES</text>
+<text x="1082" y="232" text-anchor="middle" font-size="21" letter-spacing="2" fill="#82a9c5">Últimos 12 meses no GitHub</text>
+<text data-month="2025-09-01" data-year="2025" data-total-weeks="4" x="177.00" y="278" font-size="18" fill="#79a1bc"><title>Sep 2025</title>Sep</text>
+<text data-month="2025-10-01" data-year="2025" data-total-weeks="4" x="305.53" y="278" font-size="18" fill="#79a1bc"><title>Oct 2025</title>Oct</text>
+<text data-month="2025-11-01" data-year="2025" data-total-weeks="5" x="434.06" y="278" font-size="18" fill="#79a1bc"><title>Nov 2025</title>Nov</text>
+<text data-month="2025-12-01" data-year="2025" data-total-weeks="4" x="594.72" y="278" font-size="18" fill="#79a1bc"><title>Dec 2025</title>Dec</text>
+<text data-month="2026-01-01" data-year="2026" data-total-weeks="4" x="723.25" y="278" font-size="18" fill="#79a1bc"><title>Jan 2026</title>Jan</text>
+<text data-month="2026-02-01" data-year="2026" data-total-weeks="4" x="851.77" y="278" font-size="18" fill="#79a1bc"><title>Feb 2026</title>Feb</text>
+<text data-month="2026-03-01" data-year="2026" data-total-weeks="5" x="980.30" y="278" font-size="18" fill="#79a1bc"><title>Mar 2026</title>Mar</text>
+<text data-month="2026-04-01" data-year="2026" data-total-weeks="4" x="1140.96" y="278" font-size="18" fill="#79a1bc"><title>Apr 2026</title>Apr</text>
+<text data-month="2026-05-01" data-year="2026" data-total-weeks="5" x="1269.49" y="278" font-size="18" fill="#79a1bc"><title>May 2026</title>May</text>
+<text data-month="2026-06-01" data-year="2026" data-total-weeks="4" x="1430.15" y="278" font-size="18" fill="#79a1bc"><title>Jun 2026</title>Jun</text>
+<text data-month="2026-07-01" data-year="2026" data-total-weeks="4" x="1558.68" y="278" font-size="18" fill="#79a1bc"><title>Jul 2026</title>Jul</text>
+<text data-month="2026-08-01" data-year="2026" data-total-weeks="5" x="1687.21" y="278" font-size="18" fill="#79a1bc"><title>Aug 2026</title>Aug</text>
+<text data-month="2026-09-01" data-year="2026" data-total-weeks="1" x="1847.87" y="278" font-size="18" fill="#79a1bc"><title>Sep 2026</title>Sep</text>
+<g data-week="2025-09-07">
+<rect data-date="2025-09-07" data-count="0" data-level="NONE" data-weekday="0" x="177.00" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-09-07: 0 contribuições</title></rect>
+<rect data-date="2025-09-08" data-count="0" data-level="NONE" data-weekday="1" x="177.00" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-09-08: 0 contribuições</title></rect>
+<rect data-date="2025-09-09" data-count="0" data-level="NONE" data-weekday="2" x="177.00" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-09-09: 0 contribuições</title></rect>
+<rect data-date="2025-09-10" data-count="0" data-level="NONE" data-weekday="3" x="177.00" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-09-10: 0 contribuições</title></rect>
+<rect data-date="2025-09-11" data-count="0" data-level="NONE" data-weekday="4" x="177.00" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-09-11: 0 contribuições</title></rect>
+<rect data-date="2025-09-12" data-count="0" data-level="NONE" data-weekday="5" x="177.00" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-09-12: 0 contribuições</title></rect>
+<rect data-date="2025-09-13" data-count="0" data-level="NONE" data-weekday="6" x="177.00" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-09-13: 0 contribuições</title></rect>
+</g>
+<g data-week="2025-09-14">
+<rect data-date="2025-09-14" data-count="0" data-level="NONE" data-weekday="0" x="209.13" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-09-14: 0 contribuições</title></rect>
+<rect data-date="2025-09-15" data-count="0" data-level="NONE" data-weekday="1" x="209.13" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-09-15: 0 contribuições</title></rect>
+<rect data-date="2025-09-16" data-count="0" data-level="NONE" data-weekday="2" x="209.13" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-09-16: 0 contribuições</title></rect>
+<rect data-date="2025-09-17" data-count="0" data-level="NONE" data-weekday="3" x="209.13" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-09-17: 0 contribuições</title></rect>
+<rect data-date="2025-09-18" data-count="0" data-level="NONE" data-weekday="4" x="209.13" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-09-18: 0 contribuições</title></rect>
+<rect data-date="2025-09-19" data-count="0" data-level="NONE" data-weekday="5" x="209.13" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-09-19: 0 contribuições</title></rect>
+<rect data-date="2025-09-20" data-count="0" data-level="NONE" data-weekday="6" x="209.13" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-09-20: 0 contribuições</title></rect>
+</g>
+<g data-week="2025-09-21">
+<rect data-date="2025-09-21" data-count="0" data-level="NONE" data-weekday="0" x="241.26" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-09-21: 0 contribuições</title></rect>
+<rect data-date="2025-09-22" data-count="0" data-level="NONE" data-weekday="1" x="241.26" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-09-22: 0 contribuições</title></rect>
+<rect data-date="2025-09-23" data-count="0" data-level="NONE" data-weekday="2" x="241.26" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-09-23: 0 contribuições</title></rect>
+<rect data-date="2025-09-24" data-count="0" data-level="NONE" data-weekday="3" x="241.26" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-09-24: 0 contribuições</title></rect>
+<rect data-date="2025-09-25" data-count="0" data-level="NONE" data-weekday="4" x="241.26" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-09-25: 0 contribuições</title></rect>
+<rect data-date="2025-09-26" data-count="0" data-level="NONE" data-weekday="5" x="241.26" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-09-26: 0 contribuições</title></rect>
+<rect data-date="2025-09-27" data-count="0" data-level="NONE" data-weekday="6" x="241.26" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-09-27: 0 contribuições</title></rect>
+</g>
+<g data-week="2025-09-28">
+<rect data-date="2025-09-28" data-count="0" data-level="NONE" data-weekday="0" x="273.40" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-09-28: 0 contribuições</title></rect>
+<rect data-date="2025-09-29" data-count="0" data-level="NONE" data-weekday="1" x="273.40" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-09-29: 0 contribuições</title></rect>
+<rect data-date="2025-09-30" data-count="0" data-level="NONE" data-weekday="2" x="273.40" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-09-30: 0 contribuições</title></rect>
+<rect data-date="2025-10-01" data-count="0" data-level="NONE" data-weekday="3" x="273.40" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-01: 0 contribuições</title></rect>
+<rect data-date="2025-10-02" data-count="0" data-level="NONE" data-weekday="4" x="273.40" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-02: 0 contribuições</title></rect>
+<rect data-date="2025-10-03" data-count="0" data-level="NONE" data-weekday="5" x="273.40" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-03: 0 contribuições</title></rect>
+<rect data-date="2025-10-04" data-count="0" data-level="NONE" data-weekday="6" x="273.40" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-04: 0 contribuições</title></rect>
+</g>
+<g data-week="2025-10-05">
+<rect data-date="2025-10-05" data-count="0" data-level="NONE" data-weekday="0" x="305.53" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-05: 0 contribuições</title></rect>
+<rect data-date="2025-10-06" data-count="0" data-level="NONE" data-weekday="1" x="305.53" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-06: 0 contribuições</title></rect>
+<rect data-date="2025-10-07" data-count="0" data-level="NONE" data-weekday="2" x="305.53" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-07: 0 contribuições</title></rect>
+<rect data-date="2025-10-08" data-count="0" data-level="NONE" data-weekday="3" x="305.53" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-08: 0 contribuições</title></rect>
+<rect data-date="2025-10-09" data-count="0" data-level="NONE" data-weekday="4" x="305.53" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-09: 0 contribuições</title></rect>
+<rect data-date="2025-10-10" data-count="0" data-level="NONE" data-weekday="5" x="305.53" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-10: 0 contribuições</title></rect>
+<rect data-date="2025-10-11" data-count="0" data-level="NONE" data-weekday="6" x="305.53" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-11: 0 contribuições</title></rect>
+</g>
+<g data-week="2025-10-12">
+<rect data-date="2025-10-12" data-count="0" data-level="NONE" data-weekday="0" x="337.66" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-12: 0 contribuições</title></rect>
+<rect data-date="2025-10-13" data-count="0" data-level="NONE" data-weekday="1" x="337.66" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-13: 0 contribuições</title></rect>
+<rect data-date="2025-10-14" data-count="0" data-level="NONE" data-weekday="2" x="337.66" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-14: 0 contribuições</title></rect>
+<rect data-date="2025-10-15" data-count="0" data-level="NONE" data-weekday="3" x="337.66" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-15: 0 contribuições</title></rect>
+<rect data-date="2025-10-16" data-count="0" data-level="NONE" data-weekday="4" x="337.66" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-16: 0 contribuições</title></rect>
+<rect data-date="2025-10-17" data-count="0" data-level="NONE" data-weekday="5" x="337.66" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-17: 0 contribuições</title></rect>
+<rect data-date="2025-10-18" data-count="0" data-level="NONE" data-weekday="6" x="337.66" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-18: 0 contribuições</title></rect>
+</g>
+<g data-week="2025-10-19">
+<rect data-date="2025-10-19" data-count="0" data-level="NONE" data-weekday="0" x="369.79" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-19: 0 contribuições</title></rect>
+<rect data-date="2025-10-20" data-count="0" data-level="NONE" data-weekday="1" x="369.79" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-20: 0 contribuições</title></rect>
+<rect data-date="2025-10-21" data-count="0" data-level="NONE" data-weekday="2" x="369.79" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-21: 0 contribuições</title></rect>
+<rect data-date="2025-10-22" data-count="0" data-level="NONE" data-weekday="3" x="369.79" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-22: 0 contribuições</title></rect>
+<rect data-date="2025-10-23" data-count="0" data-level="NONE" data-weekday="4" x="369.79" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-23: 0 contribuições</title></rect>
+<rect data-date="2025-10-24" data-count="0" data-level="NONE" data-weekday="5" x="369.79" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-24: 0 contribuições</title></rect>
+<rect data-date="2025-10-25" data-count="0" data-level="NONE" data-weekday="6" x="369.79" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-25: 0 contribuições</title></rect>
+</g>
+<g data-week="2025-10-26">
+<rect data-date="2025-10-26" data-count="0" data-level="NONE" data-weekday="0" x="401.92" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-26: 0 contribuições</title></rect>
+<rect data-date="2025-10-27" data-count="0" data-level="NONE" data-weekday="1" x="401.92" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-27: 0 contribuições</title></rect>
+<rect data-date="2025-10-28" data-count="0" data-level="NONE" data-weekday="2" x="401.92" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-28: 0 contribuições</title></rect>
+<rect data-date="2025-10-29" data-count="0" data-level="NONE" data-weekday="3" x="401.92" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-29: 0 contribuições</title></rect>
+<rect data-date="2025-10-30" data-count="0" data-level="NONE" data-weekday="4" x="401.92" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-30: 0 contribuições</title></rect>
+<rect data-date="2025-10-31" data-count="0" data-level="NONE" data-weekday="5" x="401.92" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-10-31: 0 contribuições</title></rect>
+<rect data-date="2025-11-01" data-count="0" data-level="NONE" data-weekday="6" x="401.92" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-01: 0 contribuições</title></rect>
+</g>
+<g data-week="2025-11-02">
+<rect data-date="2025-11-02" data-count="0" data-level="NONE" data-weekday="0" x="434.06" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-02: 0 contribuições</title></rect>
+<rect data-date="2025-11-03" data-count="0" data-level="NONE" data-weekday="1" x="434.06" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-03: 0 contribuições</title></rect>
+<rect data-date="2025-11-04" data-count="0" data-level="NONE" data-weekday="2" x="434.06" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-04: 0 contribuições</title></rect>
+<rect data-date="2025-11-05" data-count="0" data-level="NONE" data-weekday="3" x="434.06" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-05: 0 contribuições</title></rect>
+<rect data-date="2025-11-06" data-count="0" data-level="NONE" data-weekday="4" x="434.06" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-06: 0 contribuições</title></rect>
+<rect data-date="2025-11-07" data-count="0" data-level="NONE" data-weekday="5" x="434.06" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-07: 0 contribuições</title></rect>
+<rect data-date="2025-11-08" data-count="0" data-level="NONE" data-weekday="6" x="434.06" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-08: 0 contribuições</title></rect>
+</g>
+<g data-week="2025-11-09">
+<rect data-date="2025-11-09" data-count="0" data-level="NONE" data-weekday="0" x="466.19" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-09: 0 contribuições</title></rect>
+<rect data-date="2025-11-10" data-count="0" data-level="NONE" data-weekday="1" x="466.19" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-10: 0 contribuições</title></rect>
+<rect data-date="2025-11-11" data-count="0" data-level="NONE" data-weekday="2" x="466.19" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-11: 0 contribuições</title></rect>
+<rect data-date="2025-11-12" data-count="0" data-level="NONE" data-weekday="3" x="466.19" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-12: 0 contribuições</title></rect>
+<rect data-date="2025-11-13" data-count="0" data-level="NONE" data-weekday="4" x="466.19" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-13: 0 contribuições</title></rect>
+<rect data-date="2025-11-14" data-count="0" data-level="NONE" data-weekday="5" x="466.19" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-14: 0 contribuições</title></rect>
+<rect data-date="2025-11-15" data-count="0" data-level="NONE" data-weekday="6" x="466.19" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-15: 0 contribuições</title></rect>
+</g>
+<g data-week="2025-11-16">
+<rect data-date="2025-11-16" data-count="0" data-level="NONE" data-weekday="0" x="498.32" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-16: 0 contribuições</title></rect>
+<rect data-date="2025-11-17" data-count="0" data-level="NONE" data-weekday="1" x="498.32" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-17: 0 contribuições</title></rect>
+<rect data-date="2025-11-18" data-count="0" data-level="NONE" data-weekday="2" x="498.32" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-18: 0 contribuições</title></rect>
+<rect data-date="2025-11-19" data-count="0" data-level="NONE" data-weekday="3" x="498.32" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-19: 0 contribuições</title></rect>
+<rect data-date="2025-11-20" data-count="0" data-level="NONE" data-weekday="4" x="498.32" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-20: 0 contribuições</title></rect>
+<rect data-date="2025-11-21" data-count="0" data-level="NONE" data-weekday="5" x="498.32" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-21: 0 contribuições</title></rect>
+<rect data-date="2025-11-22" data-count="0" data-level="NONE" data-weekday="6" x="498.32" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-22: 0 contribuições</title></rect>
+</g>
+<g data-week="2025-11-23">
+<rect data-date="2025-11-23" data-count="0" data-level="NONE" data-weekday="0" x="530.45" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-23: 0 contribuições</title></rect>
+<rect data-date="2025-11-24" data-count="0" data-level="NONE" data-weekday="1" x="530.45" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-24: 0 contribuições</title></rect>
+<rect data-date="2025-11-25" data-count="0" data-level="NONE" data-weekday="2" x="530.45" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-25: 0 contribuições</title></rect>
+<rect data-date="2025-11-26" data-count="0" data-level="NONE" data-weekday="3" x="530.45" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-26: 0 contribuições</title></rect>
+<rect data-date="2025-11-27" data-count="0" data-level="NONE" data-weekday="4" x="530.45" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-27: 0 contribuições</title></rect>
+<rect data-date="2025-11-28" data-count="0" data-level="NONE" data-weekday="5" x="530.45" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-28: 0 contribuições</title></rect>
+<rect data-date="2025-11-29" data-count="0" data-level="NONE" data-weekday="6" x="530.45" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-29: 0 contribuições</title></rect>
+</g>
+<g data-week="2025-11-30">
+<rect data-date="2025-11-30" data-count="0" data-level="NONE" data-weekday="0" x="562.58" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-11-30: 0 contribuições</title></rect>
+<rect data-date="2025-12-01" data-count="0" data-level="NONE" data-weekday="1" x="562.58" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-12-01: 0 contribuições</title></rect>
+<rect data-date="2025-12-02" data-count="0" data-level="NONE" data-weekday="2" x="562.58" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-12-02: 0 contribuições</title></rect>
+<rect data-date="2025-12-03" data-count="0" data-level="NONE" data-weekday="3" x="562.58" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-12-03: 0 contribuições</title></rect>
+<rect data-date="2025-12-04" data-count="0" data-level="NONE" data-weekday="4" x="562.58" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-12-04: 0 contribuições</title></rect>
+<rect data-date="2025-12-05" data-count="0" data-level="NONE" data-weekday="5" x="562.58" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-12-05: 0 contribuições</title></rect>
+<rect data-date="2025-12-06" data-count="0" data-level="NONE" data-weekday="6" x="562.58" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-12-06: 0 contribuições</title></rect>
+</g>
+<g data-week="2025-12-07">
+<rect data-date="2025-12-07" data-count="0" data-level="NONE" data-weekday="0" x="594.72" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-12-07: 0 contribuições</title></rect>
+<rect data-date="2025-12-08" data-count="0" data-level="NONE" data-weekday="1" x="594.72" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-12-08: 0 contribuições</title></rect>
+<rect data-date="2025-12-09" data-count="0" data-level="NONE" data-weekday="2" x="594.72" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-12-09: 0 contribuições</title></rect>
+<rect data-date="2025-12-10" data-count="0" data-level="NONE" data-weekday="3" x="594.72" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-12-10: 0 contribuições</title></rect>
+<rect data-date="2025-12-11" data-count="0" data-level="NONE" data-weekday="4" x="594.72" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-12-11: 0 contribuições</title></rect>
+<rect data-date="2025-12-12" data-count="0" data-level="NONE" data-weekday="5" x="594.72" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-12-12: 0 contribuições</title></rect>
+<rect data-date="2025-12-13" data-count="0" data-level="NONE" data-weekday="6" x="594.72" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-12-13: 0 contribuições</title></rect>
+</g>
+<g data-week="2025-12-14">
+<rect data-date="2025-12-14" data-count="0" data-level="NONE" data-weekday="0" x="626.85" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-12-14: 0 contribuições</title></rect>
+<rect data-date="2025-12-15" data-count="0" data-level="NONE" data-weekday="1" x="626.85" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-12-15: 0 contribuições</title></rect>
+<rect data-date="2025-12-16" data-count="0" data-level="NONE" data-weekday="2" x="626.85" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-12-16: 0 contribuições</title></rect>
+<rect data-date="2025-12-17" data-count="0" data-level="NONE" data-weekday="3" x="626.85" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-12-17: 0 contribuições</title></rect>
+<rect data-date="2025-12-18" data-count="0" data-level="NONE" data-weekday="4" x="626.85" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-12-18: 0 contribuições</title></rect>
+<rect data-date="2025-12-19" data-count="1" data-level="FIRST_QUARTILE" data-weekday="5" x="626.85" y="427" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2025-12-19: 1 contribuições</title></rect>
+<rect data-date="2025-12-20" data-count="0" data-level="NONE" data-weekday="6" x="626.85" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-12-20: 0 contribuições</title></rect>
+</g>
+<g data-week="2025-12-21">
+<rect data-date="2025-12-21" data-count="0" data-level="NONE" data-weekday="0" x="658.98" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-12-21: 0 contribuições</title></rect>
+<rect data-date="2025-12-22" data-count="1" data-level="FIRST_QUARTILE" data-weekday="1" x="658.98" y="327" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2025-12-22: 1 contribuições</title></rect>
+<rect data-date="2025-12-23" data-count="1" data-level="FIRST_QUARTILE" data-weekday="2" x="658.98" y="352" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2025-12-23: 1 contribuições</title></rect>
+<rect data-date="2025-12-24" data-count="0" data-level="NONE" data-weekday="3" x="658.98" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-12-24: 0 contribuições</title></rect>
+<rect data-date="2025-12-25" data-count="0" data-level="NONE" data-weekday="4" x="658.98" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-12-25: 0 contribuições</title></rect>
+<rect data-date="2025-12-26" data-count="0" data-level="NONE" data-weekday="5" x="658.98" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-12-26: 0 contribuições</title></rect>
+<rect data-date="2025-12-27" data-count="0" data-level="NONE" data-weekday="6" x="658.98" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-12-27: 0 contribuições</title></rect>
+</g>
+<g data-week="2025-12-28">
+<rect data-date="2025-12-28" data-count="0" data-level="NONE" data-weekday="0" x="691.11" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-12-28: 0 contribuições</title></rect>
+<rect data-date="2025-12-29" data-count="2" data-level="FIRST_QUARTILE" data-weekday="1" x="691.11" y="327" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2025-12-29: 2 contribuições</title></rect>
+<rect data-date="2025-12-30" data-count="0" data-level="NONE" data-weekday="2" x="691.11" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-12-30: 0 contribuições</title></rect>
+<rect data-date="2025-12-31" data-count="0" data-level="NONE" data-weekday="3" x="691.11" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2025-12-31: 0 contribuições</title></rect>
+<rect data-date="2026-01-01" data-count="0" data-level="NONE" data-weekday="4" x="691.11" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-01-01: 0 contribuições</title></rect>
+<rect data-date="2026-01-02" data-count="0" data-level="NONE" data-weekday="5" x="691.11" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-01-02: 0 contribuições</title></rect>
+<rect data-date="2026-01-03" data-count="0" data-level="NONE" data-weekday="6" x="691.11" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-01-03: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-01-04">
+<rect data-date="2026-01-04" data-count="0" data-level="NONE" data-weekday="0" x="723.25" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-01-04: 0 contribuições</title></rect>
+<rect data-date="2026-01-05" data-count="3" data-level="FIRST_QUARTILE" data-weekday="1" x="723.25" y="327" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-01-05: 3 contribuições</title></rect>
+<rect data-date="2026-01-06" data-count="5" data-level="FIRST_QUARTILE" data-weekday="2" x="723.25" y="352" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-01-06: 5 contribuições</title></rect>
+<rect data-date="2026-01-07" data-count="0" data-level="NONE" data-weekday="3" x="723.25" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-01-07: 0 contribuições</title></rect>
+<rect data-date="2026-01-08" data-count="3" data-level="FIRST_QUARTILE" data-weekday="4" x="723.25" y="402" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-01-08: 3 contribuições</title></rect>
+<rect data-date="2026-01-09" data-count="3" data-level="FIRST_QUARTILE" data-weekday="5" x="723.25" y="427" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-01-09: 3 contribuições</title></rect>
+<rect data-date="2026-01-10" data-count="0" data-level="NONE" data-weekday="6" x="723.25" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-01-10: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-01-11">
+<rect data-date="2026-01-11" data-count="0" data-level="NONE" data-weekday="0" x="755.38" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-01-11: 0 contribuições</title></rect>
+<rect data-date="2026-01-12" data-count="1" data-level="FIRST_QUARTILE" data-weekday="1" x="755.38" y="327" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-01-12: 1 contribuições</title></rect>
+<rect data-date="2026-01-13" data-count="0" data-level="NONE" data-weekday="2" x="755.38" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-01-13: 0 contribuições</title></rect>
+<rect data-date="2026-01-14" data-count="0" data-level="NONE" data-weekday="3" x="755.38" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-01-14: 0 contribuições</title></rect>
+<rect data-date="2026-01-15" data-count="0" data-level="NONE" data-weekday="4" x="755.38" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-01-15: 0 contribuições</title></rect>
+<rect data-date="2026-01-16" data-count="0" data-level="NONE" data-weekday="5" x="755.38" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-01-16: 0 contribuições</title></rect>
+<rect data-date="2026-01-17" data-count="0" data-level="NONE" data-weekday="6" x="755.38" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-01-17: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-01-18">
+<rect data-date="2026-01-18" data-count="0" data-level="NONE" data-weekday="0" x="787.51" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-01-18: 0 contribuições</title></rect>
+<rect data-date="2026-01-19" data-count="0" data-level="NONE" data-weekday="1" x="787.51" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-01-19: 0 contribuições</title></rect>
+<rect data-date="2026-01-20" data-count="0" data-level="NONE" data-weekday="2" x="787.51" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-01-20: 0 contribuições</title></rect>
+<rect data-date="2026-01-21" data-count="0" data-level="NONE" data-weekday="3" x="787.51" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-01-21: 0 contribuições</title></rect>
+<rect data-date="2026-01-22" data-count="0" data-level="NONE" data-weekday="4" x="787.51" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-01-22: 0 contribuições</title></rect>
+<rect data-date="2026-01-23" data-count="0" data-level="NONE" data-weekday="5" x="787.51" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-01-23: 0 contribuições</title></rect>
+<rect data-date="2026-01-24" data-count="0" data-level="NONE" data-weekday="6" x="787.51" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-01-24: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-01-25">
+<rect data-date="2026-01-25" data-count="0" data-level="NONE" data-weekday="0" x="819.64" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-01-25: 0 contribuições</title></rect>
+<rect data-date="2026-01-26" data-count="0" data-level="NONE" data-weekday="1" x="819.64" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-01-26: 0 contribuições</title></rect>
+<rect data-date="2026-01-27" data-count="0" data-level="NONE" data-weekday="2" x="819.64" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-01-27: 0 contribuições</title></rect>
+<rect data-date="2026-01-28" data-count="0" data-level="NONE" data-weekday="3" x="819.64" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-01-28: 0 contribuições</title></rect>
+<rect data-date="2026-01-29" data-count="0" data-level="NONE" data-weekday="4" x="819.64" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-01-29: 0 contribuições</title></rect>
+<rect data-date="2026-01-30" data-count="0" data-level="NONE" data-weekday="5" x="819.64" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-01-30: 0 contribuições</title></rect>
+<rect data-date="2026-01-31" data-count="0" data-level="NONE" data-weekday="6" x="819.64" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-01-31: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-02-01">
+<rect data-date="2026-02-01" data-count="0" data-level="NONE" data-weekday="0" x="851.77" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-01: 0 contribuições</title></rect>
+<rect data-date="2026-02-02" data-count="0" data-level="NONE" data-weekday="1" x="851.77" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-02: 0 contribuições</title></rect>
+<rect data-date="2026-02-03" data-count="0" data-level="NONE" data-weekday="2" x="851.77" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-03: 0 contribuições</title></rect>
+<rect data-date="2026-02-04" data-count="0" data-level="NONE" data-weekday="3" x="851.77" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-04: 0 contribuições</title></rect>
+<rect data-date="2026-02-05" data-count="0" data-level="NONE" data-weekday="4" x="851.77" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-05: 0 contribuições</title></rect>
+<rect data-date="2026-02-06" data-count="0" data-level="NONE" data-weekday="5" x="851.77" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-06: 0 contribuições</title></rect>
+<rect data-date="2026-02-07" data-count="0" data-level="NONE" data-weekday="6" x="851.77" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-07: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-02-08">
+<rect data-date="2026-02-08" data-count="0" data-level="NONE" data-weekday="0" x="883.91" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-08: 0 contribuições</title></rect>
+<rect data-date="2026-02-09" data-count="0" data-level="NONE" data-weekday="1" x="883.91" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-09: 0 contribuições</title></rect>
+<rect data-date="2026-02-10" data-count="0" data-level="NONE" data-weekday="2" x="883.91" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-10: 0 contribuições</title></rect>
+<rect data-date="2026-02-11" data-count="0" data-level="NONE" data-weekday="3" x="883.91" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-11: 0 contribuições</title></rect>
+<rect data-date="2026-02-12" data-count="0" data-level="NONE" data-weekday="4" x="883.91" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-12: 0 contribuições</title></rect>
+<rect data-date="2026-02-13" data-count="0" data-level="NONE" data-weekday="5" x="883.91" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-13: 0 contribuições</title></rect>
+<rect data-date="2026-02-14" data-count="0" data-level="NONE" data-weekday="6" x="883.91" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-14: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-02-15">
+<rect data-date="2026-02-15" data-count="0" data-level="NONE" data-weekday="0" x="916.04" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-15: 0 contribuições</title></rect>
+<rect data-date="2026-02-16" data-count="0" data-level="NONE" data-weekday="1" x="916.04" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-16: 0 contribuições</title></rect>
+<rect data-date="2026-02-17" data-count="0" data-level="NONE" data-weekday="2" x="916.04" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-17: 0 contribuições</title></rect>
+<rect data-date="2026-02-18" data-count="0" data-level="NONE" data-weekday="3" x="916.04" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-18: 0 contribuições</title></rect>
+<rect data-date="2026-02-19" data-count="0" data-level="NONE" data-weekday="4" x="916.04" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-19: 0 contribuições</title></rect>
+<rect data-date="2026-02-20" data-count="0" data-level="NONE" data-weekday="5" x="916.04" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-20: 0 contribuições</title></rect>
+<rect data-date="2026-02-21" data-count="0" data-level="NONE" data-weekday="6" x="916.04" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-21: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-02-22">
+<rect data-date="2026-02-22" data-count="0" data-level="NONE" data-weekday="0" x="948.17" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-22: 0 contribuições</title></rect>
+<rect data-date="2026-02-23" data-count="0" data-level="NONE" data-weekday="1" x="948.17" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-23: 0 contribuições</title></rect>
+<rect data-date="2026-02-24" data-count="0" data-level="NONE" data-weekday="2" x="948.17" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-24: 0 contribuições</title></rect>
+<rect data-date="2026-02-25" data-count="0" data-level="NONE" data-weekday="3" x="948.17" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-25: 0 contribuições</title></rect>
+<rect data-date="2026-02-26" data-count="0" data-level="NONE" data-weekday="4" x="948.17" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-26: 0 contribuições</title></rect>
+<rect data-date="2026-02-27" data-count="0" data-level="NONE" data-weekday="5" x="948.17" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-27: 0 contribuições</title></rect>
+<rect data-date="2026-02-28" data-count="0" data-level="NONE" data-weekday="6" x="948.17" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-02-28: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-03-01">
+<rect data-date="2026-03-01" data-count="0" data-level="NONE" data-weekday="0" x="980.30" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-01: 0 contribuições</title></rect>
+<rect data-date="2026-03-02" data-count="0" data-level="NONE" data-weekday="1" x="980.30" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-02: 0 contribuições</title></rect>
+<rect data-date="2026-03-03" data-count="0" data-level="NONE" data-weekday="2" x="980.30" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-03: 0 contribuições</title></rect>
+<rect data-date="2026-03-04" data-count="0" data-level="NONE" data-weekday="3" x="980.30" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-04: 0 contribuições</title></rect>
+<rect data-date="2026-03-05" data-count="0" data-level="NONE" data-weekday="4" x="980.30" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-05: 0 contribuições</title></rect>
+<rect data-date="2026-03-06" data-count="0" data-level="NONE" data-weekday="5" x="980.30" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-06: 0 contribuições</title></rect>
+<rect data-date="2026-03-07" data-count="0" data-level="NONE" data-weekday="6" x="980.30" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-07: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-03-08">
+<rect data-date="2026-03-08" data-count="0" data-level="NONE" data-weekday="0" x="1012.43" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-08: 0 contribuições</title></rect>
+<rect data-date="2026-03-09" data-count="0" data-level="NONE" data-weekday="1" x="1012.43" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-09: 0 contribuições</title></rect>
+<rect data-date="2026-03-10" data-count="0" data-level="NONE" data-weekday="2" x="1012.43" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-10: 0 contribuições</title></rect>
+<rect data-date="2026-03-11" data-count="0" data-level="NONE" data-weekday="3" x="1012.43" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-11: 0 contribuições</title></rect>
+<rect data-date="2026-03-12" data-count="0" data-level="NONE" data-weekday="4" x="1012.43" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-12: 0 contribuições</title></rect>
+<rect data-date="2026-03-13" data-count="0" data-level="NONE" data-weekday="5" x="1012.43" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-13: 0 contribuições</title></rect>
+<rect data-date="2026-03-14" data-count="0" data-level="NONE" data-weekday="6" x="1012.43" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-14: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-03-15">
+<rect data-date="2026-03-15" data-count="0" data-level="NONE" data-weekday="0" x="1044.57" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-15: 0 contribuições</title></rect>
+<rect data-date="2026-03-16" data-count="0" data-level="NONE" data-weekday="1" x="1044.57" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-16: 0 contribuições</title></rect>
+<rect data-date="2026-03-17" data-count="0" data-level="NONE" data-weekday="2" x="1044.57" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-17: 0 contribuições</title></rect>
+<rect data-date="2026-03-18" data-count="0" data-level="NONE" data-weekday="3" x="1044.57" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-18: 0 contribuições</title></rect>
+<rect data-date="2026-03-19" data-count="0" data-level="NONE" data-weekday="4" x="1044.57" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-19: 0 contribuições</title></rect>
+<rect data-date="2026-03-20" data-count="0" data-level="NONE" data-weekday="5" x="1044.57" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-20: 0 contribuições</title></rect>
+<rect data-date="2026-03-21" data-count="0" data-level="NONE" data-weekday="6" x="1044.57" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-21: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-03-22">
+<rect data-date="2026-03-22" data-count="0" data-level="NONE" data-weekday="0" x="1076.70" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-22: 0 contribuições</title></rect>
+<rect data-date="2026-03-23" data-count="0" data-level="NONE" data-weekday="1" x="1076.70" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-23: 0 contribuições</title></rect>
+<rect data-date="2026-03-24" data-count="0" data-level="NONE" data-weekday="2" x="1076.70" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-24: 0 contribuições</title></rect>
+<rect data-date="2026-03-25" data-count="0" data-level="NONE" data-weekday="3" x="1076.70" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-25: 0 contribuições</title></rect>
+<rect data-date="2026-03-26" data-count="0" data-level="NONE" data-weekday="4" x="1076.70" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-26: 0 contribuições</title></rect>
+<rect data-date="2026-03-27" data-count="0" data-level="NONE" data-weekday="5" x="1076.70" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-27: 0 contribuições</title></rect>
+<rect data-date="2026-03-28" data-count="0" data-level="NONE" data-weekday="6" x="1076.70" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-28: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-03-29">
+<rect data-date="2026-03-29" data-count="0" data-level="NONE" data-weekday="0" x="1108.83" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-29: 0 contribuições</title></rect>
+<rect data-date="2026-03-30" data-count="0" data-level="NONE" data-weekday="1" x="1108.83" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-30: 0 contribuições</title></rect>
+<rect data-date="2026-03-31" data-count="0" data-level="NONE" data-weekday="2" x="1108.83" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-03-31: 0 contribuições</title></rect>
+<rect data-date="2026-04-01" data-count="0" data-level="NONE" data-weekday="3" x="1108.83" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-01: 0 contribuições</title></rect>
+<rect data-date="2026-04-02" data-count="0" data-level="NONE" data-weekday="4" x="1108.83" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-02: 0 contribuições</title></rect>
+<rect data-date="2026-04-03" data-count="0" data-level="NONE" data-weekday="5" x="1108.83" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-03: 0 contribuições</title></rect>
+<rect data-date="2026-04-04" data-count="0" data-level="NONE" data-weekday="6" x="1108.83" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-04: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-04-05">
+<rect data-date="2026-04-05" data-count="0" data-level="NONE" data-weekday="0" x="1140.96" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-05: 0 contribuições</title></rect>
+<rect data-date="2026-04-06" data-count="0" data-level="NONE" data-weekday="1" x="1140.96" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-06: 0 contribuições</title></rect>
+<rect data-date="2026-04-07" data-count="0" data-level="NONE" data-weekday="2" x="1140.96" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-07: 0 contribuições</title></rect>
+<rect data-date="2026-04-08" data-count="0" data-level="NONE" data-weekday="3" x="1140.96" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-08: 0 contribuições</title></rect>
+<rect data-date="2026-04-09" data-count="0" data-level="NONE" data-weekday="4" x="1140.96" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-09: 0 contribuições</title></rect>
+<rect data-date="2026-04-10" data-count="0" data-level="NONE" data-weekday="5" x="1140.96" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-10: 0 contribuições</title></rect>
+<rect data-date="2026-04-11" data-count="0" data-level="NONE" data-weekday="6" x="1140.96" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-11: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-04-12">
+<rect data-date="2026-04-12" data-count="0" data-level="NONE" data-weekday="0" x="1173.09" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-12: 0 contribuições</title></rect>
+<rect data-date="2026-04-13" data-count="0" data-level="NONE" data-weekday="1" x="1173.09" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-13: 0 contribuições</title></rect>
+<rect data-date="2026-04-14" data-count="0" data-level="NONE" data-weekday="2" x="1173.09" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-14: 0 contribuições</title></rect>
+<rect data-date="2026-04-15" data-count="0" data-level="NONE" data-weekday="3" x="1173.09" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-15: 0 contribuições</title></rect>
+<rect data-date="2026-04-16" data-count="0" data-level="NONE" data-weekday="4" x="1173.09" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-16: 0 contribuições</title></rect>
+<rect data-date="2026-04-17" data-count="0" data-level="NONE" data-weekday="5" x="1173.09" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-17: 0 contribuições</title></rect>
+<rect data-date="2026-04-18" data-count="0" data-level="NONE" data-weekday="6" x="1173.09" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-18: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-04-19">
+<rect data-date="2026-04-19" data-count="0" data-level="NONE" data-weekday="0" x="1205.23" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-19: 0 contribuições</title></rect>
+<rect data-date="2026-04-20" data-count="0" data-level="NONE" data-weekday="1" x="1205.23" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-20: 0 contribuições</title></rect>
+<rect data-date="2026-04-21" data-count="0" data-level="NONE" data-weekday="2" x="1205.23" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-21: 0 contribuições</title></rect>
+<rect data-date="2026-04-22" data-count="0" data-level="NONE" data-weekday="3" x="1205.23" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-22: 0 contribuições</title></rect>
+<rect data-date="2026-04-23" data-count="0" data-level="NONE" data-weekday="4" x="1205.23" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-23: 0 contribuições</title></rect>
+<rect data-date="2026-04-24" data-count="0" data-level="NONE" data-weekday="5" x="1205.23" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-24: 0 contribuições</title></rect>
+<rect data-date="2026-04-25" data-count="0" data-level="NONE" data-weekday="6" x="1205.23" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-25: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-04-26">
+<rect data-date="2026-04-26" data-count="0" data-level="NONE" data-weekday="0" x="1237.36" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-26: 0 contribuições</title></rect>
+<rect data-date="2026-04-27" data-count="0" data-level="NONE" data-weekday="1" x="1237.36" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-27: 0 contribuições</title></rect>
+<rect data-date="2026-04-28" data-count="0" data-level="NONE" data-weekday="2" x="1237.36" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-28: 0 contribuições</title></rect>
+<rect data-date="2026-04-29" data-count="0" data-level="NONE" data-weekday="3" x="1237.36" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-29: 0 contribuições</title></rect>
+<rect data-date="2026-04-30" data-count="0" data-level="NONE" data-weekday="4" x="1237.36" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-04-30: 0 contribuições</title></rect>
+<rect data-date="2026-05-01" data-count="0" data-level="NONE" data-weekday="5" x="1237.36" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-01: 0 contribuições</title></rect>
+<rect data-date="2026-05-02" data-count="0" data-level="NONE" data-weekday="6" x="1237.36" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-02: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-05-03">
+<rect data-date="2026-05-03" data-count="0" data-level="NONE" data-weekday="0" x="1269.49" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-03: 0 contribuições</title></rect>
+<rect data-date="2026-05-04" data-count="0" data-level="NONE" data-weekday="1" x="1269.49" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-04: 0 contribuições</title></rect>
+<rect data-date="2026-05-05" data-count="0" data-level="NONE" data-weekday="2" x="1269.49" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-05: 0 contribuições</title></rect>
+<rect data-date="2026-05-06" data-count="0" data-level="NONE" data-weekday="3" x="1269.49" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-06: 0 contribuições</title></rect>
+<rect data-date="2026-05-07" data-count="0" data-level="NONE" data-weekday="4" x="1269.49" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-07: 0 contribuições</title></rect>
+<rect data-date="2026-05-08" data-count="0" data-level="NONE" data-weekday="5" x="1269.49" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-08: 0 contribuições</title></rect>
+<rect data-date="2026-05-09" data-count="0" data-level="NONE" data-weekday="6" x="1269.49" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-09: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-05-10">
+<rect data-date="2026-05-10" data-count="0" data-level="NONE" data-weekday="0" x="1301.62" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-10: 0 contribuições</title></rect>
+<rect data-date="2026-05-11" data-count="0" data-level="NONE" data-weekday="1" x="1301.62" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-11: 0 contribuições</title></rect>
+<rect data-date="2026-05-12" data-count="0" data-level="NONE" data-weekday="2" x="1301.62" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-12: 0 contribuições</title></rect>
+<rect data-date="2026-05-13" data-count="0" data-level="NONE" data-weekday="3" x="1301.62" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-13: 0 contribuições</title></rect>
+<rect data-date="2026-05-14" data-count="0" data-level="NONE" data-weekday="4" x="1301.62" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-14: 0 contribuições</title></rect>
+<rect data-date="2026-05-15" data-count="0" data-level="NONE" data-weekday="5" x="1301.62" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-15: 0 contribuições</title></rect>
+<rect data-date="2026-05-16" data-count="0" data-level="NONE" data-weekday="6" x="1301.62" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-16: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-05-17">
+<rect data-date="2026-05-17" data-count="0" data-level="NONE" data-weekday="0" x="1333.75" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-17: 0 contribuições</title></rect>
+<rect data-date="2026-05-18" data-count="0" data-level="NONE" data-weekday="1" x="1333.75" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-18: 0 contribuições</title></rect>
+<rect data-date="2026-05-19" data-count="0" data-level="NONE" data-weekday="2" x="1333.75" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-19: 0 contribuições</title></rect>
+<rect data-date="2026-05-20" data-count="0" data-level="NONE" data-weekday="3" x="1333.75" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-20: 0 contribuições</title></rect>
+<rect data-date="2026-05-21" data-count="0" data-level="NONE" data-weekday="4" x="1333.75" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-21: 0 contribuições</title></rect>
+<rect data-date="2026-05-22" data-count="0" data-level="NONE" data-weekday="5" x="1333.75" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-22: 0 contribuições</title></rect>
+<rect data-date="2026-05-23" data-count="0" data-level="NONE" data-weekday="6" x="1333.75" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-23: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-05-24">
+<rect data-date="2026-05-24" data-count="0" data-level="NONE" data-weekday="0" x="1365.89" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-24: 0 contribuições</title></rect>
+<rect data-date="2026-05-25" data-count="0" data-level="NONE" data-weekday="1" x="1365.89" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-25: 0 contribuições</title></rect>
+<rect data-date="2026-05-26" data-count="0" data-level="NONE" data-weekday="2" x="1365.89" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-26: 0 contribuições</title></rect>
+<rect data-date="2026-05-27" data-count="0" data-level="NONE" data-weekday="3" x="1365.89" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-27: 0 contribuições</title></rect>
+<rect data-date="2026-05-28" data-count="0" data-level="NONE" data-weekday="4" x="1365.89" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-28: 0 contribuições</title></rect>
+<rect data-date="2026-05-29" data-count="0" data-level="NONE" data-weekday="5" x="1365.89" y="427" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-29: 0 contribuições</title></rect>
+<rect data-date="2026-05-30" data-count="0" data-level="NONE" data-weekday="6" x="1365.89" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-30: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-05-31">
+<rect data-date="2026-05-31" data-count="0" data-level="NONE" data-weekday="0" x="1398.02" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-05-31: 0 contribuições</title></rect>
+<rect data-date="2026-06-01" data-count="0" data-level="NONE" data-weekday="1" x="1398.02" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-06-01: 0 contribuições</title></rect>
+<rect data-date="2026-06-02" data-count="0" data-level="NONE" data-weekday="2" x="1398.02" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-06-02: 0 contribuições</title></rect>
+<rect data-date="2026-06-03" data-count="0" data-level="NONE" data-weekday="3" x="1398.02" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-06-03: 0 contribuições</title></rect>
+<rect data-date="2026-06-04" data-count="0" data-level="NONE" data-weekday="4" x="1398.02" y="402" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-06-04: 0 contribuições</title></rect>
+<rect data-date="2026-06-05" data-count="4" data-level="FIRST_QUARTILE" data-weekday="5" x="1398.02" y="427" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-06-05: 4 contribuições</title></rect>
+<rect data-date="2026-06-06" data-count="0" data-level="NONE" data-weekday="6" x="1398.02" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-06-06: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-06-07">
+<rect data-date="2026-06-07" data-count="0" data-level="NONE" data-weekday="0" x="1430.15" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-06-07: 0 contribuições</title></rect>
+<rect data-date="2026-06-08" data-count="4" data-level="FIRST_QUARTILE" data-weekday="1" x="1430.15" y="327" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-06-08: 4 contribuições</title></rect>
+<rect data-date="2026-06-09" data-count="4" data-level="FIRST_QUARTILE" data-weekday="2" x="1430.15" y="352" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-06-09: 4 contribuições</title></rect>
+<rect data-date="2026-06-10" data-count="2" data-level="FIRST_QUARTILE" data-weekday="3" x="1430.15" y="377" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-06-10: 2 contribuições</title></rect>
+<rect data-date="2026-06-11" data-count="6" data-level="FIRST_QUARTILE" data-weekday="4" x="1430.15" y="402" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-06-11: 6 contribuições</title></rect>
+<rect data-date="2026-06-12" data-count="6" data-level="FIRST_QUARTILE" data-weekday="5" x="1430.15" y="427" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-06-12: 6 contribuições</title></rect>
+<rect data-date="2026-06-13" data-count="0" data-level="NONE" data-weekday="6" x="1430.15" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-06-13: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-06-14">
+<rect data-date="2026-06-14" data-count="0" data-level="NONE" data-weekday="0" x="1462.28" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-06-14: 0 contribuições</title></rect>
+<rect data-date="2026-06-15" data-count="6" data-level="FIRST_QUARTILE" data-weekday="1" x="1462.28" y="327" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-06-15: 6 contribuições</title></rect>
+<rect data-date="2026-06-16" data-count="10" data-level="SECOND_QUARTILE" data-weekday="2" x="1462.28" y="352" width="21" height="21" rx="3" fill="#087cba" stroke="#0a3043" stroke-width="1"><title>2026-06-16: 10 contribuições</title></rect>
+<rect data-date="2026-06-17" data-count="6" data-level="FIRST_QUARTILE" data-weekday="3" x="1462.28" y="377" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-06-17: 6 contribuições</title></rect>
+<rect data-date="2026-06-18" data-count="6" data-level="FIRST_QUARTILE" data-weekday="4" x="1462.28" y="402" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-06-18: 6 contribuições</title></rect>
+<rect data-date="2026-06-19" data-count="4" data-level="FIRST_QUARTILE" data-weekday="5" x="1462.28" y="427" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-06-19: 4 contribuições</title></rect>
+<rect data-date="2026-06-20" data-count="0" data-level="NONE" data-weekday="6" x="1462.28" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-06-20: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-06-21">
+<rect data-date="2026-06-21" data-count="0" data-level="NONE" data-weekday="0" x="1494.42" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-06-21: 0 contribuições</title></rect>
+<rect data-date="2026-06-22" data-count="10" data-level="SECOND_QUARTILE" data-weekday="1" x="1494.42" y="327" width="21" height="21" rx="3" fill="#087cba" stroke="#0a3043" stroke-width="1"><title>2026-06-22: 10 contribuições</title></rect>
+<rect data-date="2026-06-23" data-count="12" data-level="SECOND_QUARTILE" data-weekday="2" x="1494.42" y="352" width="21" height="21" rx="3" fill="#087cba" stroke="#0a3043" stroke-width="1"><title>2026-06-23: 12 contribuições</title></rect>
+<rect data-date="2026-06-24" data-count="14" data-level="SECOND_QUARTILE" data-weekday="3" x="1494.42" y="377" width="21" height="21" rx="3" fill="#087cba" stroke="#0a3043" stroke-width="1"><title>2026-06-24: 14 contribuições</title></rect>
+<rect data-date="2026-06-25" data-count="8" data-level="SECOND_QUARTILE" data-weekday="4" x="1494.42" y="402" width="21" height="21" rx="3" fill="#087cba" stroke="#0a3043" stroke-width="1"><title>2026-06-25: 8 contribuições</title></rect>
+<rect data-date="2026-06-26" data-count="7" data-level="FIRST_QUARTILE" data-weekday="5" x="1494.42" y="427" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-06-26: 7 contribuições</title></rect>
+<rect data-date="2026-06-27" data-count="0" data-level="NONE" data-weekday="6" x="1494.42" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-06-27: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-06-28">
+<rect data-date="2026-06-28" data-count="0" data-level="NONE" data-weekday="0" x="1526.55" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-06-28: 0 contribuições</title></rect>
+<rect data-date="2026-06-29" data-count="4" data-level="FIRST_QUARTILE" data-weekday="1" x="1526.55" y="327" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-06-29: 4 contribuições</title></rect>
+<rect data-date="2026-06-30" data-count="10" data-level="SECOND_QUARTILE" data-weekday="2" x="1526.55" y="352" width="21" height="21" rx="3" fill="#087cba" stroke="#0a3043" stroke-width="1"><title>2026-06-30: 10 contribuições</title></rect>
+<rect data-date="2026-07-01" data-count="10" data-level="SECOND_QUARTILE" data-weekday="3" x="1526.55" y="377" width="21" height="21" rx="3" fill="#087cba" stroke="#0a3043" stroke-width="1"><title>2026-07-01: 10 contribuições</title></rect>
+<rect data-date="2026-07-02" data-count="9" data-level="SECOND_QUARTILE" data-weekday="4" x="1526.55" y="402" width="21" height="21" rx="3" fill="#087cba" stroke="#0a3043" stroke-width="1"><title>2026-07-02: 9 contribuições</title></rect>
+<rect data-date="2026-07-03" data-count="10" data-level="SECOND_QUARTILE" data-weekday="5" x="1526.55" y="427" width="21" height="21" rx="3" fill="#087cba" stroke="#0a3043" stroke-width="1"><title>2026-07-03: 10 contribuições</title></rect>
+<rect data-date="2026-07-04" data-count="0" data-level="NONE" data-weekday="6" x="1526.55" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-07-04: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-07-05">
+<rect data-date="2026-07-05" data-count="0" data-level="NONE" data-weekday="0" x="1558.68" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-07-05: 0 contribuições</title></rect>
+<rect data-date="2026-07-06" data-count="10" data-level="SECOND_QUARTILE" data-weekday="1" x="1558.68" y="327" width="21" height="21" rx="3" fill="#087cba" stroke="#0a3043" stroke-width="1"><title>2026-07-06: 10 contribuições</title></rect>
+<rect data-date="2026-07-07" data-count="6" data-level="FIRST_QUARTILE" data-weekday="2" x="1558.68" y="352" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-07-07: 6 contribuições</title></rect>
+<rect data-date="2026-07-08" data-count="2" data-level="FIRST_QUARTILE" data-weekday="3" x="1558.68" y="377" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-07-08: 2 contribuições</title></rect>
+<rect data-date="2026-07-09" data-count="6" data-level="FIRST_QUARTILE" data-weekday="4" x="1558.68" y="402" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-07-09: 6 contribuições</title></rect>
+<rect data-date="2026-07-10" data-count="6" data-level="FIRST_QUARTILE" data-weekday="5" x="1558.68" y="427" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-07-10: 6 contribuições</title></rect>
+<rect data-date="2026-07-11" data-count="0" data-level="NONE" data-weekday="6" x="1558.68" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-07-11: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-07-12">
+<rect data-date="2026-07-12" data-count="0" data-level="NONE" data-weekday="0" x="1590.81" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-07-12: 0 contribuições</title></rect>
+<rect data-date="2026-07-13" data-count="4" data-level="FIRST_QUARTILE" data-weekday="1" x="1590.81" y="327" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-07-13: 4 contribuições</title></rect>
+<rect data-date="2026-07-14" data-count="4" data-level="FIRST_QUARTILE" data-weekday="2" x="1590.81" y="352" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-07-14: 4 contribuições</title></rect>
+<rect data-date="2026-07-15" data-count="0" data-level="NONE" data-weekday="3" x="1590.81" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-07-15: 0 contribuições</title></rect>
+<rect data-date="2026-07-16" data-count="4" data-level="FIRST_QUARTILE" data-weekday="4" x="1590.81" y="402" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-07-16: 4 contribuições</title></rect>
+<rect data-date="2026-07-17" data-count="8" data-level="SECOND_QUARTILE" data-weekday="5" x="1590.81" y="427" width="21" height="21" rx="3" fill="#087cba" stroke="#0a3043" stroke-width="1"><title>2026-07-17: 8 contribuições</title></rect>
+<rect data-date="2026-07-18" data-count="0" data-level="NONE" data-weekday="6" x="1590.81" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-07-18: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-07-19">
+<rect data-date="2026-07-19" data-count="0" data-level="NONE" data-weekday="0" x="1622.94" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-07-19: 0 contribuições</title></rect>
+<rect data-date="2026-07-20" data-count="4" data-level="FIRST_QUARTILE" data-weekday="1" x="1622.94" y="327" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-07-20: 4 contribuições</title></rect>
+<rect data-date="2026-07-21" data-count="10" data-level="SECOND_QUARTILE" data-weekday="2" x="1622.94" y="352" width="21" height="21" rx="3" fill="#087cba" stroke="#0a3043" stroke-width="1"><title>2026-07-21: 10 contribuições</title></rect>
+<rect data-date="2026-07-22" data-count="2" data-level="FIRST_QUARTILE" data-weekday="3" x="1622.94" y="377" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-07-22: 2 contribuições</title></rect>
+<rect data-date="2026-07-23" data-count="6" data-level="FIRST_QUARTILE" data-weekday="4" x="1622.94" y="402" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-07-23: 6 contribuições</title></rect>
+<rect data-date="2026-07-24" data-count="12" data-level="SECOND_QUARTILE" data-weekday="5" x="1622.94" y="427" width="21" height="21" rx="3" fill="#087cba" stroke="#0a3043" stroke-width="1"><title>2026-07-24: 12 contribuições</title></rect>
+<rect data-date="2026-07-25" data-count="0" data-level="NONE" data-weekday="6" x="1622.94" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-07-25: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-07-26">
+<rect data-date="2026-07-26" data-count="0" data-level="NONE" data-weekday="0" x="1655.08" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-07-26: 0 contribuições</title></rect>
+<rect data-date="2026-07-27" data-count="0" data-level="NONE" data-weekday="1" x="1655.08" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-07-27: 0 contribuições</title></rect>
+<rect data-date="2026-07-28" data-count="4" data-level="FIRST_QUARTILE" data-weekday="2" x="1655.08" y="352" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-07-28: 4 contribuições</title></rect>
+<rect data-date="2026-07-29" data-count="20" data-level="THIRD_QUARTILE" data-weekday="3" x="1655.08" y="377" width="21" height="21" rx="3" fill="#00c7e6" stroke="#0a3043" stroke-width="1"><title>2026-07-29: 20 contribuições</title></rect>
+<rect data-date="2026-07-30" data-count="4" data-level="FIRST_QUARTILE" data-weekday="4" x="1655.08" y="402" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-07-30: 4 contribuições</title></rect>
+<rect data-date="2026-07-31" data-count="2" data-level="FIRST_QUARTILE" data-weekday="5" x="1655.08" y="427" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-07-31: 2 contribuições</title></rect>
+<rect data-date="2026-08-01" data-count="0" data-level="NONE" data-weekday="6" x="1655.08" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-08-01: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-08-02">
+<rect data-date="2026-08-02" data-count="0" data-level="NONE" data-weekday="0" x="1687.21" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-08-02: 0 contribuições</title></rect>
+<rect data-date="2026-08-03" data-count="6" data-level="FIRST_QUARTILE" data-weekday="1" x="1687.21" y="327" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-08-03: 6 contribuições</title></rect>
+<rect data-date="2026-08-04" data-count="80" data-level="FOURTH_QUARTILE" data-weekday="2" x="1687.21" y="352" width="21" height="21" rx="3" fill="#9cf7ff" stroke="#0a3043" stroke-width="1"><title>2026-08-04: 80 contribuições</title></rect>
+<rect data-date="2026-08-05" data-count="34" data-level="FOURTH_QUARTILE" data-weekday="3" x="1687.21" y="377" width="21" height="21" rx="3" fill="#9cf7ff" stroke="#0a3043" stroke-width="1"><title>2026-08-05: 34 contribuições</title></rect>
+<rect data-date="2026-08-06" data-count="18" data-level="THIRD_QUARTILE" data-weekday="4" x="1687.21" y="402" width="21" height="21" rx="3" fill="#00c7e6" stroke="#0a3043" stroke-width="1"><title>2026-08-06: 18 contribuições</title></rect>
+<rect data-date="2026-08-07" data-count="12" data-level="SECOND_QUARTILE" data-weekday="5" x="1687.21" y="427" width="21" height="21" rx="3" fill="#087cba" stroke="#0a3043" stroke-width="1"><title>2026-08-07: 12 contribuições</title></rect>
+<rect data-date="2026-08-08" data-count="0" data-level="NONE" data-weekday="6" x="1687.21" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-08-08: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-08-09">
+<rect data-date="2026-08-09" data-count="0" data-level="NONE" data-weekday="0" x="1719.34" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-08-09: 0 contribuições</title></rect>
+<rect data-date="2026-08-10" data-count="28" data-level="FOURTH_QUARTILE" data-weekday="1" x="1719.34" y="327" width="21" height="21" rx="3" fill="#9cf7ff" stroke="#0a3043" stroke-width="1"><title>2026-08-10: 28 contribuições</title></rect>
+<rect data-date="2026-08-11" data-count="24" data-level="FOURTH_QUARTILE" data-weekday="2" x="1719.34" y="352" width="21" height="21" rx="3" fill="#9cf7ff" stroke="#0a3043" stroke-width="1"><title>2026-08-11: 24 contribuições</title></rect>
+<rect data-date="2026-08-12" data-count="18" data-level="THIRD_QUARTILE" data-weekday="3" x="1719.34" y="377" width="21" height="21" rx="3" fill="#00c7e6" stroke="#0a3043" stroke-width="1"><title>2026-08-12: 18 contribuições</title></rect>
+<rect data-date="2026-08-13" data-count="31" data-level="FOURTH_QUARTILE" data-weekday="4" x="1719.34" y="402" width="21" height="21" rx="3" fill="#9cf7ff" stroke="#0a3043" stroke-width="1"><title>2026-08-13: 31 contribuições</title></rect>
+<rect data-date="2026-08-14" data-count="1" data-level="FIRST_QUARTILE" data-weekday="5" x="1719.34" y="427" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-08-14: 1 contribuições</title></rect>
+<rect data-date="2026-08-15" data-count="0" data-level="NONE" data-weekday="6" x="1719.34" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-08-15: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-08-16">
+<rect data-date="2026-08-16" data-count="0" data-level="NONE" data-weekday="0" x="1751.47" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-08-16: 0 contribuições</title></rect>
+<rect data-date="2026-08-17" data-count="2" data-level="FIRST_QUARTILE" data-weekday="1" x="1751.47" y="327" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-08-17: 2 contribuições</title></rect>
+<rect data-date="2026-08-18" data-count="8" data-level="SECOND_QUARTILE" data-weekday="2" x="1751.47" y="352" width="21" height="21" rx="3" fill="#087cba" stroke="#0a3043" stroke-width="1"><title>2026-08-18: 8 contribuições</title></rect>
+<rect data-date="2026-08-19" data-count="27" data-level="FOURTH_QUARTILE" data-weekday="3" x="1751.47" y="377" width="21" height="21" rx="3" fill="#9cf7ff" stroke="#0a3043" stroke-width="1"><title>2026-08-19: 27 contribuições</title></rect>
+<rect data-date="2026-08-20" data-count="12" data-level="SECOND_QUARTILE" data-weekday="4" x="1751.47" y="402" width="21" height="21" rx="3" fill="#087cba" stroke="#0a3043" stroke-width="1"><title>2026-08-20: 12 contribuições</title></rect>
+<rect data-date="2026-08-21" data-count="2" data-level="FIRST_QUARTILE" data-weekday="5" x="1751.47" y="427" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-08-21: 2 contribuições</title></rect>
+<rect data-date="2026-08-22" data-count="0" data-level="NONE" data-weekday="6" x="1751.47" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-08-22: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-08-23">
+<rect data-date="2026-08-23" data-count="0" data-level="NONE" data-weekday="0" x="1783.60" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-08-23: 0 contribuições</title></rect>
+<rect data-date="2026-08-24" data-count="1" data-level="FIRST_QUARTILE" data-weekday="1" x="1783.60" y="327" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-08-24: 1 contribuições</title></rect>
+<rect data-date="2026-08-25" data-count="14" data-level="SECOND_QUARTILE" data-weekday="2" x="1783.60" y="352" width="21" height="21" rx="3" fill="#087cba" stroke="#0a3043" stroke-width="1"><title>2026-08-25: 14 contribuições</title></rect>
+<rect data-date="2026-08-26" data-count="1" data-level="FIRST_QUARTILE" data-weekday="3" x="1783.60" y="377" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-08-26: 1 contribuições</title></rect>
+<rect data-date="2026-08-27" data-count="11" data-level="SECOND_QUARTILE" data-weekday="4" x="1783.60" y="402" width="21" height="21" rx="3" fill="#087cba" stroke="#0a3043" stroke-width="1"><title>2026-08-27: 11 contribuições</title></rect>
+<rect data-date="2026-08-28" data-count="11" data-level="SECOND_QUARTILE" data-weekday="5" x="1783.60" y="427" width="21" height="21" rx="3" fill="#087cba" stroke="#0a3043" stroke-width="1"><title>2026-08-28: 11 contribuições</title></rect>
+<rect data-date="2026-08-29" data-count="0" data-level="NONE" data-weekday="6" x="1783.60" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-08-29: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-08-30">
+<rect data-date="2026-08-30" data-count="0" data-level="NONE" data-weekday="0" x="1815.74" y="302" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-08-30: 0 contribuições</title></rect>
+<rect data-date="2026-08-31" data-count="0" data-level="NONE" data-weekday="1" x="1815.74" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-08-31: 0 contribuições</title></rect>
+<rect data-date="2026-09-01" data-count="0" data-level="NONE" data-weekday="2" x="1815.74" y="352" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-09-01: 0 contribuições</title></rect>
+<rect data-date="2026-09-02" data-count="0" data-level="NONE" data-weekday="3" x="1815.74" y="377" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-09-02: 0 contribuições</title></rect>
+<rect data-date="2026-09-03" data-count="8" data-level="SECOND_QUARTILE" data-weekday="4" x="1815.74" y="402" width="21" height="21" rx="3" fill="#087cba" stroke="#0a3043" stroke-width="1"><title>2026-09-03: 8 contribuições</title></rect>
+<rect data-date="2026-09-04" data-count="3" data-level="FIRST_QUARTILE" data-weekday="5" x="1815.74" y="427" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-09-04: 3 contribuições</title></rect>
+<rect data-date="2026-09-05" data-count="0" data-level="NONE" data-weekday="6" x="1815.74" y="452" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-09-05: 0 contribuições</title></rect>
+</g>
+<g data-week="2026-09-06">
+<rect data-date="2026-09-06" data-count="3" data-level="FIRST_QUARTILE" data-weekday="0" x="1847.87" y="302" width="21" height="21" rx="3" fill="#063c65" stroke="#0a3043" stroke-width="1"><title>2026-09-06: 3 contribuições</title></rect>
+<rect data-date="2026-09-07" data-count="0" data-level="NONE" data-weekday="1" x="1847.87" y="327" width="21" height="21" rx="3" fill="#071b29" stroke="#0a3043" stroke-width="1"><title>2026-09-07: 0 contribuições</title></rect>
+</g>
+<g transform="translate(1940 302)"><rect width="21" height="21" rx="2" fill="#071b29" stroke="#0a3043"/><text x="35" y="16" font-size="16" fill="#a0bfd0">Nenhuma</text></g>
+<g transform="translate(1940 336)"><rect width="21" height="21" rx="2" fill="#063c65" stroke="#0a3043"/><text x="35" y="16" font-size="16" fill="#a0bfd0">Pouca</text></g>
+<g transform="translate(1940 370)"><rect width="21" height="21" rx="2" fill="#087cba" stroke="#0a3043"/><text x="35" y="16" font-size="16" fill="#a0bfd0">Média</text></g>
+<g transform="translate(1940 404)"><rect width="21" height="21" rx="2" fill="#00c7e6" stroke="#0a3043"/><text x="35" y="16" font-size="16" fill="#a0bfd0">Alta</text></g>
+<g transform="translate(1940 438)"><rect width="21" height="21" rx="2" fill="#9cf7ff" stroke="#0a3043"/><text x="35" y="16" font-size="16" fill="#a0bfd0">Máxima</text></g>
+<path d="M826 507H914 M1250 507H1338" stroke="#04cde6" stroke-width="2"/>
+<text id="total" data-total="641" x="1082" y="515" text-anchor="middle" font-size="26" font-weight="bold" fill="#98eaff">641 contribuições</text>
+</g>
+</g>
+</svg>

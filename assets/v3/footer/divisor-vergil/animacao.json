@@ -1,0 +1,19 @@
+{
+  "size": [
+    1600,
+    277
+  ],
+  "source_crop": [
+    21,
+    166,
+    2152,
+    535
+  ],
+  "frames": 60,
+  "duration_ms": 3000,
+  "frame_duration_ms": 50,
+  "format": "WebP qualidade 94, alpha RGBA",
+  "loop": "infinito",
+  "originals": "source/energia-01.png a energia-04.png",
+  "motion": "Transições suaves de energia e raios horizontais periódicos; placa e texto estabilizados."
+}

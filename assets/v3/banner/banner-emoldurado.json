@@ -1,0 +1,29 @@
+{
+  "origem": "banner/banner-animado.webp",
+  "moldura": "frame/frame-top.png",
+  "tela": [
+    2320,
+    846
+  ],
+  "tamanho_moldura": [
+    2320,
+    360
+  ],
+  "posicao_moldura": [
+    0,
+    0
+  ],
+  "posicao_animacao": [
+    74,
+    122
+  ],
+  "escala_inteira": 1,
+  "destino": "banner/banner-emoldurado.webp",
+  "quadros": 192,
+  "duracao_ms": 7999,
+  "repeticoes": 0,
+  "bytes": 87577180,
+  "sha256_origem": "8b5bca65ad39c4ee50417aff400115a7fb1986c83bed74ba2be3ce455199a508",
+  "sha256_resultado": "feb4f780d374a91837553d5cdb9ba80998412dc384368070b2b938493a988edc",
+  "verificacao": "Todos os quadros decodificados são idênticos à composição sem perdas; tempos e repetição preservados."
+}

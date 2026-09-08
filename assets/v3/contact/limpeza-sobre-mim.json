@@ -1,0 +1,53 @@
+[
+  {
+    "path": "linkedin-limpo.png",
+    "source": "../source/contatos-sobre-mim.png",
+    "mask_box": [
+      748,
+      252,
+      1056,
+      576
+    ],
+    "radius": 70,
+    "feather": 3,
+    "padding": 4,
+    "size": [
+      331,
+      343
+    ]
+  },
+  {
+    "path": "email-limpo.png",
+    "source": "../source/contatos-sobre-mim.png",
+    "mask_box": [
+      207,
+      765,
+      543,
+      1020
+    ],
+    "radius": 22,
+    "feather": 3,
+    "padding": 4,
+    "size": [
+      359,
+      278
+    ]
+  },
+  {
+    "path": "instagram-limpo.png",
+    "source": "../source/contatos-sobre-mim.png",
+    "mask_box": [
+      744,
+      738,
+      1057,
+      1058
+    ],
+    "radius": 86,
+    "feather": 3,
+    "padding": 4,
+    "size": [
+      336,
+      339
+    ]
+  }
+]

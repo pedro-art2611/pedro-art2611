@@ -1,0 +1,47 @@
+name: Render Vergil Footer
+
+on:
+  push:
+    branches:
+      - feat/profile-readme-v2
+    paths:
+      - ".github/workflows/render-vergil-footer.yml"
+      - "scripts/build_vergil_footer.py"
+      - "assets/v2/vergil/source_raw/**"
+      - "floor.jpg"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/profile-readme-v2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --disable-pip-version-check pillow
+      - name: Render frame-by-frame footer with diagnostics
+        shell: bash
+        run: |
+          mkdir -p assets/v2/vergil/rendered
+          set +e
+          python scripts/build_vergil_footer.py > assets/v2/vergil/rendered/render-v3.log 2>&1
+          code=$?
+          echo "exit_code=$code" >> assets/v2/vergil/rendered/render-v3.log
+          exit 0
+      - name: Commit render or diagnostic log
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/v2/vergil/rendered assets/v2/vergil/BUILD_REPORT.md
+          if git diff --cached --quiet; then
+            echo "No render changes."
+            exit 0
+          fi
+          git commit -m "feat: atualiza animacao do Vergil v3"
+          git push origin HEAD:feat/profile-readme-v2
