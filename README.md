@@ -1,4 +1,4 @@
-<!-- V3: montagem inicial da entrada e Sobre mim. Texto provisório. -->
+<!-- V3: entrada e Sobre mim. -->
 <p align="center">
   <img src="./assets/v3/banner/banner-emoldurado.webp" width="100%" alt="Pedro Artur em cenário noturno cyber oriental em pixel art" />
 </p>
@@ -9,15 +9,25 @@
   <img src="./assets/v3/headers/sobre-mim-limpo.png" width="60%" alt="Sobre mim" />
 </p>
 
-<img align="right" src="./assets/v3/about/personagem-animado.webp" width="36%" alt="Personagem de Pedro com gato no ombro interagindo com uma interface holográfica" />
+<picture>
+  <source media="(max-width: 767px)" srcset="./assets/v3/about/personagem-animado.webp" width="448" />
+  <source media="(min-width: 768px)" srcset="./assets/v3/about/personagem-animado.webp" width="340" />
+  <img align="right" src="./assets/v3/about/personagem-animado.webp" alt="Personagem de Pedro com gato no ombro interagindo com uma interface holográfica" />
+</picture>
 
-**Pedro Artur**
+<p><strong>Pedro Artur</strong>&nbsp; <img src="./assets/v3/about/details/torii.png" width="24" align="absmiddle" alt="" /></p>
 
-[Texto provisório: apresentação pessoal.]
+<p>Sou estudante do 6º período de Sistemas de Informação e estagiário em Engenharia de Software na Mb Finance. Minha trajetória começou entre desenvolvimento web, dados e automação, e foi evoluindo conforme comecei a usar software para resolver problemas cada vez mais reais.</p>
 
-[Texto provisório: interesses e áreas de atuação.]
+<p>Hoje trabalho na construção de produtos completos, passando por frontend, backend, banco de dados, filas, infraestrutura, integrações, automações e IA. Projetos profissionais como <img src="./assets/v3/about/details/hermix.svg" width="52" height="16" alt="Hermix" /> e <img src="./assets/v3/about/details/maestro-crm.svg" width="105" height="16" alt="Maestro CRM" /> têm sido centrais nessa evolução, colocando em prática não apenas código, mas também produto, arquitetura, UX e regras de negócio.</p>
 
-[Texto provisório: o que estou construindo e aprendendo.]
+<p>Ainda tenho muito para aprender, e é justamente isso que quero registrar por aqui: a evolução de alguém que aprende construindo.</p>
+
+<p><img src="./assets/v3/about/details/corte-curvo.png" width="22" align="absmiddle" alt="" /> <strong>Construindo software e aprendendo na prática.</strong></p>
+
+<p><img src="./assets/v3/about/details/seta-dupla.png" width="18" align="absmiddle" alt="" /> <small>Onde me encontrar</small></p>
+
+<p><img src="./assets/v3/about/details/conexao.png" width="18" align="absmiddle" alt="" />&nbsp; <a href="https://www.linkedin.com/in/pedroart-bm/"><img src="./assets/v3/contact/linkedin-limpo.png" width="32" align="absmiddle" alt="LinkedIn" /></a>&emsp;<a href="mailto:pedroart2611@gmail.com"><img src="./assets/v3/contact/email-limpo.png" width="34" align="absmiddle" alt="E-mail" /></a>&emsp;<a href="https://www.instagram.com/_pedrobrandao_/"><img src="./assets/v3/contact/instagram-limpo.png" width="32" align="absmiddle" alt="Instagram" /></a></p>
 
 <br clear="right" />
 

@@ -174,3 +174,13 @@ O rodapé também possui uma divisória animada independente: `footer/divisor-ve
 - Status: final; 790 × 42 px, PNG RGBA.
 - Uso: 92% de largura, entre o banner e o header Sobre mim.
 - Transparência: fundo externo conectado às bordas removido por código; apenas alpha alterado, RGB e dimensões preservados.
+
+## Sobre mim final
+
+- Fontes intactas: `source/micro-assets-sobre-mim.png` e `source/contatos-sobre-mim.png`.
+- Micro-assets finais: `about/details/{torii,orbe,seta-dupla,corte-curvo,conexao}.png`; dimensões e recortes em `about/details/crop-map.json`.
+- Destaques inline finais: `about/details/hermix.svg` (52 × 16) e `about/details/maestro-crm.svg` (105 × 16).
+- Contatos finais: `contact/linkedin-limpo.png` (331 × 343), `contact/email-limpo.png` (359 × 278), `contact/instagram-limpo.png` (336 × 339). Alpha real e símbolos preservados; pontos periféricos removidos por máscara autorizada.
+- Documentação: `about/README.md` e `contact/limpeza-sobre-mim.json`. Nenhum original anterior substituído.
+
+- Sobre mim: orbe reservado e removido do README no refinamento final; demais quatro micro-assets permanecem nas posições aprovadas.
