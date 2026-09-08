@@ -36,9 +36,9 @@ O período padrão vem de `contributionsCollection`, sem reconstrução de hist�
 
 ## Automação e limite da branch de trabalho
 
-Workflow: `.github/workflows/update-contributions.yml`. Agendamento `0 3 * * *` (00h de Brasília), `workflow_dispatch` e push de alterações do gerador/testes/workflow exclusivamente na V3. Publica apenas o SVG quando há mudança, com commit semântico em português; o filtro de paths e o token do Actions evitam ciclos. Falhas não substituem o SVG publicado.
+Workflow: `.github/workflows/update-contributions.yml`. Agendamento `0 3 * * *` (00h de Brasília) na branch padrão, `workflow_dispatch` e push de alterações do gerador/testes/workflow em `main` ou `feat/profile-readme-v3`. Publica apenas o SVG na mesma branch da execução quando há mudança, com commit semântico em português; o filtro de paths e o token do Actions evitam ciclos. Falhas não substituem o SVG publicado.
 
-**O agendamento diário ainda não fica ativo enquanto o workflow existir apenas na V3.** O GitHub exige o arquivo na branch padrão para `schedule` e para registrar `workflow_dispatch`. A branch padrão continua `main`. Esta implementação não altera `main`, não muda a branch padrão e não faz merge. O gatilho por push permite validar o workflow agora. Na futura migração, será necessário aprovar a instalação na branch padrão e ajustar explicitamente a guarda e o destino de publicação; não remover essas proteções durante esta etapa.
+Publicação na `main` autorizada pelo usuário ao finalizar o perfil. O workflow aceita somente `main` e `feat/profile-readme-v3`, com guarda tanto no job quanto na etapa de push. Checkout, concorrência e destino acompanham a branch da execução. Após o merge, o agendamento diário passa a atualizar a `main`; a automação antiga da árvore permanece preservada.
 
 Fontes: [calendário e read:user](https://docs.github.com/en/graphql/reference/users#contributionscollection), [atividade privada](https://docs.github.com/en/account-and-profile/how-tos/contribution-settings/manage-visibility-settings-for-private-contributions-and-achievements), [agendamento do Actions](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#onschedule).
 

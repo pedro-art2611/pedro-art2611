@@ -4,10 +4,10 @@ on:
   schedule:
     - cron: '0 3 * * *'
   workflow_dispatch:
-  # Validação na V3: schedule e workflow_dispatch dependem da branch padrão.
+  # A agenda atualiza a branch padrão; a V3 mantém validação por push.
   # O SVG não está neste filtro, evitando ciclos de atualização.
   push:
-    branches: [feat/profile-readme-v3]
+    branches: [main, feat/profile-readme-v3]
     paths:
       - scripts/generate-contributions.mjs
       - scripts/test-contributions.mjs
@@ -17,19 +17,19 @@ permissions:
   contents: write
 
 concurrency:
-  group: painel-contribuicoes-v3
+  group: painel-contribuicoes-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
   atualizar:
-    if: github.repository == 'pedro-art2611/pedro-art2611' && github.ref == 'refs/heads/feat/profile-readme-v3'
+    if: github.repository == 'pedro-art2611/pedro-art2611' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/feat/profile-readme-v3')
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Obtém somente a V3
+      - name: Obtém a branch da execução
         uses: actions/checkout@v4
         with:
-          ref: feat/profile-readme-v3
+          ref: ${{ github.ref_name }}
       - name: Prepara Node.js
         uses: actions/setup-node@v4
         with:
@@ -44,9 +44,15 @@ jobs:
         run: node scripts/test-contributions.mjs "$RUNNER_TEMP/calendario-real.json"
       - name: Registra somente alterações do SVG
         shell: bash
+        env:
+          TARGET_BRANCH: ${{ github.ref_name }}
         run: |
           set -euo pipefail
-          test "$(git branch --show-current)" = 'feat/profile-readme-v3'
+          case "$TARGET_BRANCH" in
+            main|feat/profile-readme-v3) ;;
+            *) echo 'Branch não autorizada para publicação.'; exit 1 ;;
+          esac
+          test "$(git branch --show-current)" = "$TARGET_BRANCH"
           git add -- assets/v3/contributions/contributions.svg
           if git diff --cached --quiet; then
             echo 'O calendário não mudou.'
@@ -55,4 +61,4 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git commit -m 'chore(contribuicoes): atualiza calendário do perfil'
-          git push origin HEAD:refs/heads/feat/profile-readme-v3
+          git push origin "HEAD:refs/heads/$TARGET_BRANCH"
