@@ -25,9 +25,9 @@
 
 <p><img src="./assets/v3/about/details/corte-curvo.png" width="22" align="absmiddle" alt="" /> <strong>Construindo software e aprendendo na prática.</strong></p>
 
-<p><img src="./assets/v3/about/details/seta-dupla.png" width="18" align="absmiddle" alt="" /> <small>Onde me encontrar</small></p>
+<p><img src="./assets/v3/dividers/micro-seta-tripla.png" width="22" align="absmiddle" alt="" /> <small>Onde me encontrar:</small></p>
 
-<p><img src="./assets/v3/about/details/conexao.png" width="18" align="absmiddle" alt="" />&nbsp; <a href="https://www.linkedin.com/in/pedroart-bm/"><img src="./assets/v3/contact/linkedin-limpo.png" width="32" align="absmiddle" alt="LinkedIn" /></a>&emsp;<a href="mailto:pedroart2611@gmail.com"><img src="./assets/v3/contact/email-limpo.png" width="34" align="absmiddle" alt="E-mail" /></a>&emsp;<a href="https://www.instagram.com/_pedrobrandao_/"><img src="./assets/v3/contact/instagram-limpo.png" width="32" align="absmiddle" alt="Instagram" /></a></p>
+<p><a href="https://www.linkedin.com/in/pedroart-bm/"><img src="./assets/v3/contact/linkedin-limpo.png" width="32" align="absmiddle" alt="LinkedIn" /></a>&emsp;<a href="mailto:pedroart2611@gmail.com"><img src="./assets/v3/contact/email-limpo.png" width="34" align="absmiddle" alt="E-mail" /></a>&emsp;<a href="https://www.instagram.com/_pedrobrandao_/"><img src="./assets/v3/contact/instagram-limpo.png" width="32" align="absmiddle" alt="Instagram" /></a></p>
 
 <br clear="right" />
 
