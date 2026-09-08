@@ -19,7 +19,7 @@
 
 <p>Sou estudante do 6º período de Sistemas de Informação e estagiário em Engenharia de Software na Mb Finance. Minha trajetória começou entre desenvolvimento web, dados e automação, e foi evoluindo conforme comecei a usar software para resolver problemas cada vez mais reais.</p>
 
-<p>Hoje trabalho na construção de produtos completos, passando por frontend, backend, banco de dados, filas, infraestrutura, integrações, automações e IA. Projetos profissionais como <img src="./assets/v3/about/details/hermix.svg" width="52" height="16" alt="Hermix" /> e <img src="./assets/v3/about/details/maestro-crm.svg" width="105" height="16" alt="Maestro CRM" /> têm sido centrais nessa evolução, colocando em prática não apenas código, mas também produto, arquitetura, UX e regras de negócio.</p>
+<p>Hoje trabalho na construção de produtos completos, passando por frontend, backend, banco de dados, filas, infraestrutura, integrações, automações e IA. Projetos profissionais como <a href="#projeto-hermix"><img src="./assets/v3/about/details/hermix.svg" width="52" height="16" alt="Hermix" /></a> e <a href="#projeto-maestro-crm"><img src="./assets/v3/about/details/maestro-crm.svg" width="105" height="16" alt="Maestro CRM" /></a> têm sido centrais nessa evolução, colocando em prática não apenas código, mas também produto, arquitetura, UX e regras de negócio.</p>
 
 <p>Ainda tenho muito para aprender, e é justamente isso que quero registrar por aqui: a evolução de alguém que aprende construindo.</p>
 
@@ -85,7 +85,7 @@
 <p><a href="https://github.com/pedro-art2611/Conferencia_Quantitativa"><img src="./assets/v3/projects/details/repositorio.svg" width="156" height="32" alt="Repositório" /></a></p>
 <br clear="all" />
 
-<p align="center"><img src="./assets/v3/projects/node-04.svg" width="30" height="40" alt="04" /></p>
+<p align="center"><a name="projeto-hermix"></a><img src="./assets/v3/projects/node-04.svg" width="30" height="40" alt="04" /></p>
 <picture>
   <source media="(max-width: 767px)" srcset="./assets/v3/projects/04-hermix.png" width="1536" />
   <source media="(min-width: 768px)" srcset="./assets/v3/projects/04-hermix.png" width="300" />
@@ -99,7 +99,7 @@
 <p><img src="./assets/v3/projects/details/cadeado.svg" width="16" height="18" align="absmiddle" alt="" /> <sub>PRIVATE REPOSITORY</sub></p>
 <br clear="all" />
 
-<p align="center"><img src="./assets/v3/projects/node-05.svg" width="30" height="40" alt="05" /></p>
+<p align="center"><a name="projeto-maestro-crm"></a><img src="./assets/v3/projects/node-05.svg" width="30" height="40" alt="05" /></p>
 <picture>
   <source media="(max-width: 767px)" srcset="./assets/v3/projects/05-maestro-crm.png" width="1536" />
   <source media="(min-width: 768px)" srcset="./assets/v3/projects/layout/05-maestro-crm.svg" width="316" />
