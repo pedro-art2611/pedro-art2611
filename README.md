@@ -19,7 +19,7 @@
 
 <p>Sou estudante do 6º período de Sistemas de Informação e estagiário em Engenharia de Software na Mb Finance. Minha trajetória começou entre desenvolvimento web, dados e automação, e foi evoluindo conforme comecei a usar software para resolver problemas cada vez mais reais.</p>
 
-<p>Hoje trabalho na construção de produtos completos, passando por frontend, backend, banco de dados, filas, infraestrutura, integrações, automações e IA. Projetos profissionais como <a href="#projeto-hermix"><img src="./assets/v3/about/details/hermix.svg" width="52" height="16" alt="Hermix" /></a> e <a href="#projeto-maestro-crm"><img src="./assets/v3/about/details/maestro-crm.svg" width="105" height="16" alt="Maestro CRM" /></a> têm sido centrais nessa evolução, colocando em prática não apenas código, mas também produto, arquitetura, UX e regras de negócio.</p>
+<p>Hoje trabalho na construção de produtos completos, passando por frontend, backend, banco de dados, filas, infraestrutura, integrações, automações e IA. Projetos profissionais como <a href="#projeto-hermix"><img src="./assets/v3/about/details/hermix.svg" width="52" height="16" alt="Hermix" /></a> e <a href="#projeto-maestro-crm"><img src="./assets/v3/about/details/maestro-crm.svg" width="105" height="16" alt="Maestro CRM" /></a>têm sido centrais nessa evolução, colocando em prática não apenas código, mas também produto, arquitetura, UX e regras de negócio.</p>
 
 <p>Ainda tenho muito para aprender, e é justamente isso que quero registrar por aqui: a evolução de alguém que aprende construindo.</p>
 
